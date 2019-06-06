@@ -1,0 +1,336 @@
+<HTML><!-- saved from url=(0014)about:internet -->
+
+
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<TITLE>Localization</TITLE>
+<META NAME="keywords" CONTENT="Localization&nbsp;event">
+<LINK REL="stylesheet" TYPE="text/css" HREF="stylesheet.css" TITLE="Style">
+<SCRIPT type="text/javascript">function windowTitle()
+          {
+          parent.document.title="Localization";
+          }
+          </SCRIPT>
+<NOSCRIPT></NOSCRIPT>
+</HEAD>
+<BODY BGCOLOR="white" onload="windowTitle();">
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2"><A target="_top" HREF="../../../index.html?apama/analyticskit/framework/Localization.html"><B>FRAMES</B></A>  &nbsp;
+
+            &nbsp;<A target="_top" HREF="Localization.html"><B>NO FRAMES</B></A>  &nbsp;
+            &nbsp;<SCRIPT type="text/javascript"></SCRIPT>
+<NOSCRIPT>
+<A HREF="../../../alltypes-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+</FONT></TD>
+</TR>
+<TR>
+<TD COLSPAN="2" BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+<TR ALIGN="center" VALIGN="top">
+<TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"><A HREF="../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;
+              </TD><TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1"><A HREF="../../..//apama/analyticskit/framework/package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A></TD><TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"><A HREF="../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;
+              </TD><TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"><A HREF="../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT>&nbsp;
+                </A></TD><TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1" WIDTH="100%" ALIGN="RIGHT"><FONT CLASS="NavBarFont1"><B>Apama Analytics Builder 10.5.0</B></FONT></TD>
+</TR>
+</TABLE>
+</TD><TD ALIGN="right" VALIGN="top" ROWSPAN="3"><EM></EM></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">SUMMARY:&nbsp;IMPORT&nbsp;|&nbsp;<A HREF="#constant_summary">CONSTANT</A>&nbsp;|&nbsp;MEMBER&nbsp;|&nbsp;<A HREF="#action_summary">ACTION</A></FONT></TD><TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">DETAIL:&nbsp;IMPORT&nbsp;|&nbsp;<A HREF="#constant_detail">CONSTANT</A>&nbsp;|&nbsp;MEMBER&nbsp;|&nbsp;<A HREF="#action_detail">ACTION</A></FONT></TD>
+</TR>
+</TABLE>
+<HR>
+<H2>
+<FONT SIZE="-1">apama.analyticskit.framework</FONT>
+<BR>Event Localization</H2>
+<HR>Helper utilities for localization.<HR>
+<A NAME="constant_summary"></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2"><B>Constant summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;constant string</CODE></FONT></TD><TD><CODE><B><A HREF="Localization.html#LOCALIZED_EXCEPTION">LOCALIZED_EXCEPTION</A> := "LocalizedException"</B></CODE>
+<br>
+<br>The Exception Type for localized exceptions</TD>
+</TR>
+</TABLE>&nbsp;<A NAME="action_summary"></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2"><B>Action summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;any</CODE></FONT></TD><TD><CODE>static </CODE><CODE><B><A HREF="Localization.html#extractLocalizedBlob()">extractLocalizedBlob</A></B>(com.apama.exceptions.Exception&nbsp;e)</CODE>
+<br>
+<br>Get the localized blob from an exception (if it is a localized exception)</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;com.apama.exceptions.Exception</CODE></FONT></TD><TD><CODE>static </CODE><CODE><B><A HREF="Localization.html#getLocalizedException()">getLocalizedException</A></B>(string&nbsp;msgId,&nbsp;sequence&lt;any&gt;&nbsp;params)</CODE>
+<br>
+<br>Get a localized exception with parameters.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;com.apama.exceptions.Exception</CODE></FONT></TD><TD><CODE>static </CODE><CODE><B><A HREF="Localization.html#getLocalizedException_basic()">getLocalizedException_basic</A></B>(string&nbsp;msgId)</CODE>
+<br>
+<br>Get a localized exception with no parameters.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;com.apama.exceptions.Exception</CODE></FONT></TD><TD><CODE>static </CODE><CODE><B><A HREF="Localization.html#getLocalizedException_extra()">getLocalizedException_extra</A></B>(string&nbsp;msgId,&nbsp;sequence&lt;any&gt;&nbsp;params,&nbsp;dictionary&lt;string,&nbsp;any&gt;&nbsp;extraDetails)</CODE>
+<br>
+<br>Get a localized exception with parameters and extra details.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;any</CODE></FONT></TD><TD><CODE>static </CODE><CODE><B><A HREF="Localization.html#getLocalizedSubMsg()">getLocalizedSubMsg</A></B>(string&nbsp;msgId,&nbsp;sequence&lt;any&gt;&nbsp;params)</CODE>
+<br>
+<br>Get a localized sub-message.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;string</CODE></FONT></TD><TD><CODE>static </CODE><CODE><B><A HREF="Localization.html#getLocalizedSubMsg_json()">getLocalizedSubMsg_json</A></B>(string&nbsp;msgId,&nbsp;sequence&lt;any&gt;&nbsp;params)</CODE>
+<br>
+<br>Get a localized sub-message in JSON form.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;boolean</CODE></FONT></TD><TD><CODE>static </CODE><CODE><B><A HREF="Localization.html#isExceptionLocalized()">isExceptionLocalized</A></B>(com.apama.exceptions.Exception&nbsp;e)</CODE>
+<br>
+<br>Return if this exception is a localized exception.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;string</CODE></FONT></TD><TD><CODE>static </CODE><CODE><B><A HREF="Localization.html#renderImpl()">renderImpl</A></B>(any&nbsp;obj,&nbsp;com.apama.memorystore.Table&nbsp;t)</CODE>
+<br>
+<br>Implementation of rendering an error.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;string</CODE></FONT></TD><TD><CODE>static </CODE><CODE><B><A HREF="Localization.html#renderLocalized()">renderLocalized</A></B>(any&nbsp;blob)</CODE>
+<br>
+<br>Convert a localized blob to a rendered string in the default language</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;string</CODE></FONT></TD><TD><CODE>static </CODE><CODE><B><A HREF="Localization.html#renderLocalizedException()">renderLocalizedException</A></B>(com.apama.exceptions.Exception&nbsp;e)</CODE>
+<br>
+<br>Render a localized message Renders a message into the 'default' language (typically English)</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;string</CODE></FONT></TD><TD><CODE>static </CODE><CODE><B><A HREF="Localization.html#renderLocalizedExceptionWithStackTrace()">renderLocalizedExceptionWithStackTrace</A></B>(com.apama.exceptions.Exception&nbsp;e)</CODE>
+<br>
+<br>Render a localized message including stack trace. Renders a message into the 'default' language (typically English)</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;com.apama.exceptions.Exception</CODE></FONT></TD><TD><CODE>static </CODE><CODE><B><A HREF="Localization.html#setExceptionStackTrace()">setExceptionStackTrace</A></B>(com.apama.exceptions.Exception&nbsp;tgt,&nbsp;com.apama.exceptions.Exception&nbsp;src)</CODE>
+<br>
+<br>Copy stacktrace.</TD>
+</TR>
+</TABLE>&nbsp;<A NAME="constant_detail"></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2"><B>Constant detail</B></FONT></TH>
+</TR>
+</TABLE>
+<A NAME="LOCALIZED_EXCEPTION"></A>
+<H3>LOCALIZED_EXCEPTION</H3>
+<PRE>constant string&nbsp;<B>LOCALIZED_EXCEPTION := "LocalizedException"</B>
+</PRE>The Exception Type for localized exceptions<HR>
+<A NAME="action_detail"></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2"><B>Action detail</B></FONT></TH>
+</TR>
+</TABLE>
+<A NAME="extractLocalizedBlob()"></A>
+<H3>extractLocalizedBlob</H3>
+<PRE>any&nbsp;static <B>extractLocalizedBlob</B>(com.apama.exceptions.Exception&nbsp;e)</PRE>Get the localized blob from an exception (if it is a localized exception)<DL>
+<DT>
+<B>Parameters:</B>
+</DT>
+<DD>
+<tt>e</tt>
+</DD>
+</DL>
+<DL>
+<DT>
+<B>Returns:</B>
+</DT>
+<DD>an object that can be passed to renderLocalized (may be just a string)</DD>
+</DL>
+<HR>
+<A NAME="getLocalizedException()"></A>
+<H3>getLocalizedException</H3>
+<PRE>com.apama.exceptions.Exception&nbsp;static <B>getLocalizedException</B>(string&nbsp;msgId,&nbsp;sequence&lt;any&gt;&nbsp;params)</PRE>Get a localized exception with parameters.<DL>
+<DT>
+<B>Parameters:</B>
+</DT>
+<DD>
+<tt>msgId</tt>&nbsp;-&nbsp;- a Message ID</DD>
+<DD>
+<tt>params</tt>&nbsp;-&nbsp;- a list of parameters - could be simple values (string/ float/ etc) or result from getLocalizedSubMsg</DD>
+</DL>
+<HR>
+<A NAME="getLocalizedException_basic()"></A>
+<H3>getLocalizedException_basic</H3>
+<PRE>com.apama.exceptions.Exception&nbsp;static <B>getLocalizedException_basic</B>(string&nbsp;msgId)</PRE>Get a localized exception with no parameters.<DL>
+<DT>
+<B>Parameters:</B>
+</DT>
+<DD>
+<tt>msgId</tt>&nbsp;-&nbsp;- a Message ID</DD>
+</DL>
+<HR>
+<A NAME="getLocalizedException_extra()"></A>
+<H3>getLocalizedException_extra</H3>
+<PRE>com.apama.exceptions.Exception&nbsp;static <B>getLocalizedException_extra</B>(string&nbsp;msgId,&nbsp;sequence&lt;any&gt;&nbsp;params,&nbsp;dictionary&lt;string,&nbsp;any&gt;&nbsp;extraDetails)</PRE>Get a localized exception with parameters and extra details.<DL>
+<DT>
+<B>Parameters:</B>
+</DT>
+<DD>
+<tt>msgId</tt>&nbsp;-&nbsp;- a Message ID</DD>
+<DD>
+<tt>params</tt>&nbsp;-&nbsp;- a list of parameters - could be simple values (string/ float/ etc) or result from getLocalizedSubMsg</DD>
+<DD>
+<tt>extraDetails</tt>&nbsp;-&nbsp;- a dictionary of extraDetails</DD>
+</DL>
+<HR>
+<A NAME="getLocalizedSubMsg()"></A>
+<H3>getLocalizedSubMsg</H3>
+<PRE>any&nbsp;static <B>getLocalizedSubMsg</B>(string&nbsp;msgId,&nbsp;sequence&lt;any&gt;&nbsp;params)</PRE>Get a localized sub-message.<br>
+<br> Get a sub-message that can be passed as a member of params to getLocalizedException or getLocalizedSubMsg recursively.<DL>
+<DT>
+<B>Parameters:</B>
+</DT>
+<DD>
+<tt>msgId</tt>&nbsp;-&nbsp;-  a Message ID</DD>
+<DD>
+<tt>params</tt>&nbsp;-&nbsp;- a list of parameters - could be simple values (string/ float/ etc) or result from getLocalizedSubMsg.</DD>
+</DL>
+<DL>
+<DT>
+<B>Returns:</B>
+</DT>
+<DD>a value that can be passed to getLocalizedException in params.</DD>
+</DL>
+<HR>
+<A NAME="getLocalizedSubMsg_json()"></A>
+<H3>getLocalizedSubMsg_json</H3>
+<PRE>string&nbsp;static <B>getLocalizedSubMsg_json</B>(string&nbsp;msgId,&nbsp;sequence&lt;any&gt;&nbsp;params)</PRE>Get a localized sub-message in JSON form.<br>
+<br> Get a sub-message that can be passed as a member of params to getLocalizedException or getLocalizedSubMsg recursively.<DL>
+<DT>
+<B>Parameters:</B>
+</DT>
+<DD>
+<tt>msgId</tt>&nbsp;-&nbsp;-  a Message ID</DD>
+<DD>
+<tt>params</tt>&nbsp;-&nbsp;- a list of parameters - could be simple values (string/ float/ etc) or result from getLocalizedSubMsg.</DD>
+</DL>
+<DL>
+<DT>
+<B>Returns:</B>
+</DT>
+<DD>JSON for sending to the UI.</DD>
+</DL>
+<HR>
+<A NAME="isExceptionLocalized()"></A>
+<H3>isExceptionLocalized</H3>
+<PRE>boolean&nbsp;static <B>isExceptionLocalized</B>(com.apama.exceptions.Exception&nbsp;e)</PRE>Return if this exception is a localized exception.<DL>
+<DT>
+<B>Parameters:</B>
+</DT>
+<DD>
+<tt>e</tt>
+</DD>
+</DL>
+<HR>
+<A NAME="renderImpl()"></A>
+<H3>renderImpl</H3>
+<PRE>string&nbsp;static <B>renderImpl</B>(any&nbsp;obj,&nbsp;com.apama.memorystore.Table&nbsp;t)</PRE>Implementation of rendering an error.<DL>
+<DT>
+<B>Parameters:</B>
+</DT>
+<DD>
+<tt>obj</tt>&nbsp;-&nbsp;the blob to localize.</DD>
+<DD>
+<tt>t</tt>&nbsp;-&nbsp;the Table of the messages.</DD>
+</DL>
+<HR>
+<A NAME="renderLocalized()"></A>
+<H3>renderLocalized</H3>
+<PRE>string&nbsp;static <B>renderLocalized</B>(any&nbsp;blob)</PRE>Convert a localized blob to a rendered string in the default language<DL>
+<DT>
+<B>Parameters:</B>
+</DT>
+<DD>
+<tt>blob</tt>
+</DD>
+</DL>
+<HR>
+<A NAME="renderLocalizedException()"></A>
+<H3>renderLocalizedException</H3>
+<PRE>string&nbsp;static <B>renderLocalizedException</B>(com.apama.exceptions.Exception&nbsp;e)</PRE>Render a localized message Renders a message into the 'default' language (typically English)<DL>
+<DT>
+<B>Parameters:</B>
+</DT>
+<DD>
+<tt>e</tt>
+</DD>
+</DL>
+<HR>
+<A NAME="renderLocalizedExceptionWithStackTrace()"></A>
+<H3>renderLocalizedExceptionWithStackTrace</H3>
+<PRE>string&nbsp;static <B>renderLocalizedExceptionWithStackTrace</B>(com.apama.exceptions.Exception&nbsp;e)</PRE>Render a localized message including stack trace. Renders a message into the 'default' language (typically English)<DL>
+<DT>
+<B>Parameters:</B>
+</DT>
+<DD>
+<tt>e</tt>
+</DD>
+</DL>
+<HR>
+<A NAME="setExceptionStackTrace()"></A>
+<H3>setExceptionStackTrace</H3>
+<PRE>com.apama.exceptions.Exception&nbsp;static <B>setExceptionStackTrace</B>(com.apama.exceptions.Exception&nbsp;tgt,&nbsp;com.apama.exceptions.Exception&nbsp;src)</PRE>Copy stacktrace.<br>
+<br> Copy (strictly, append) the stacktrace from src to tgt.<DL>
+<DT>
+<B>Parameters:</B>
+</DT>
+<DD>
+<tt>tgt</tt>&nbsp;-&nbsp;- where to put the stacktrace.</DD>
+<DD>
+<tt>src</tt>&nbsp;-&nbsp;- where to get the stacktrace from.</DD>
+</DL>
+<DL>
+<DT>
+<B>Returns:</B>
+</DT>
+<DD>tgt</DD>
+</DL>
+<HR>
+<HR>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2"><A target="_top" HREF="../../../index.html?apama/analyticskit/framework/Localization.html"><B>FRAMES</B></A>  &nbsp;
+
+            &nbsp;<A target="_top" HREF="Localization.html"><B>NO FRAMES</B></A>  &nbsp;
+            &nbsp;<SCRIPT type="text/javascript"></SCRIPT>
+<NOSCRIPT>
+<A HREF="../../../alltypes-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+</FONT></TD>
+</TR>
+<TR>
+<TD COLSPAN="2" BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+<TR ALIGN="center" VALIGN="top">
+<TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"><A HREF="../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;
+              </TD><TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1"><A HREF="../../..//apama/analyticskit/framework/package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A></TD><TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"><A HREF="../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;
+              </TD><TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"><A HREF="../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT>&nbsp;
+                </A></TD><TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1" WIDTH="100%" ALIGN="RIGHT"><FONT CLASS="NavBarFont1"><B>Apama Analytics Builder 10.5.0</B></FONT></TD>
+</TR>
+</TABLE>
+</TD><TD ALIGN="right" VALIGN="top" ROWSPAN="3"><EM></EM></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">SUMMARY:&nbsp;IMPORT&nbsp;|&nbsp;<A HREF="#constant_summary">CONSTANT</A>&nbsp;|&nbsp;MEMBER&nbsp;|&nbsp;<A HREF="#action_summary">ACTION</A></FONT></TD><TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">DETAIL:&nbsp;IMPORT&nbsp;|&nbsp;<A HREF="#constant_detail">CONSTANT</A>&nbsp;|&nbsp;MEMBER&nbsp;|&nbsp;<A HREF="#action_detail">ACTION</A></FONT></TD>
+</TR>
+</TABLE>
+<HR>
+</BODY>
+</HTML>

@@ -1,0 +1,217 @@
+<HTML><!-- saved from url=(0014)about:internet -->
+
+
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<TITLE>Compiler</TITLE>
+<META NAME="keywords" CONTENT="Compiler&nbsp;event">
+<LINK REL="stylesheet" TYPE="text/css" HREF="stylesheet.css" TITLE="Style">
+<SCRIPT type="text/javascript">function windowTitle()
+          {
+          parent.document.title="Compiler";
+          }
+          </SCRIPT>
+<NOSCRIPT></NOSCRIPT>
+</HEAD>
+<BODY BGCOLOR="white" onload="windowTitle();">
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2"><A target="_top" HREF="../../../../../index.html?apama/analyticskit/framework/internal/parser/Compiler.html"><B>FRAMES</B></A>  &nbsp;
+
+            &nbsp;<A target="_top" HREF="Compiler.html"><B>NO FRAMES</B></A>  &nbsp;
+            &nbsp;<SCRIPT type="text/javascript"></SCRIPT>
+<NOSCRIPT>
+<A HREF="../../../../../alltypes-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+</FONT></TD>
+</TR>
+<TR>
+<TD COLSPAN="2" BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+<TR ALIGN="center" VALIGN="top">
+<TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"><A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;
+              </TD><TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1"><A HREF="../../../../..//apama/analyticskit/framework/internal/parser/package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A></TD><TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"><A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;
+              </TD><TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"><A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT>&nbsp;
+                </A></TD><TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1" WIDTH="100%" ALIGN="RIGHT"><FONT CLASS="NavBarFont1"><B>Apama Analytics Builder 10.5.0</B></FONT></TD>
+</TR>
+</TABLE>
+</TD><TD ALIGN="right" VALIGN="top" ROWSPAN="3"><EM></EM></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">SUMMARY:&nbsp;IMPORT&nbsp;|&nbsp;CONSTANT&nbsp;|&nbsp;<A HREF="#member_summary">MEMBER</A>&nbsp;|&nbsp;<A HREF="#action_summary">ACTION</A></FONT></TD><TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">DETAIL:&nbsp;IMPORT&nbsp;|&nbsp;CONSTANT&nbsp;|&nbsp;<A HREF="#member_detail">MEMBER</A>&nbsp;|&nbsp;<A HREF="#action_detail">ACTION</A></FONT></TD>
+</TR>
+</TABLE>
+<HR>
+<H2>
+<FONT SIZE="-1">apama.analyticskit.framework.internal.parser</FONT>
+<BR>Event Compiler</H2>
+<HR>Compiler.<br>
+<br> Builds a (closure based) action variable from a an AST. Can also predict the type returned by an AST.<HR>
+<A NAME="member_summary"></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2"><B>Member summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;dictionary&lt;string,&nbsp;string&gt;</CODE></FONT></TD><TD><CODE><B><A HREF="Compiler.html#symbols">symbols</A></B></CODE>
+<br>
+<br>Set of available symbols and their type. Unconnected input has empty type.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;dictionary&lt;string,&nbsp;string&gt;</CODE></FONT></TD><TD><CODE><B><A HREF="Compiler.html#usedValues">usedValues</A></B></CODE>
+<br>
+<br>Set of used variable names.</TD>
+</TR>
+</TABLE>&nbsp;<A NAME="action_summary"></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2"><B>Action summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;any</CODE></FONT></TD><TD><CODE></CODE><CODE><B><A HREF="Compiler.html#compile()">compile</A></B>(<A HREF="../../../../../apama/analyticskit/framework/internal/parser/AST.html" title="type in apama.analyticskit.framework.internal.parser">apama.analyticskit.framework.internal.parser.AST</A>&nbsp;ast)</CODE>
+<br>
+<br>Compile an AST to an action.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;com.apama.exceptions.Exception</CODE></FONT></TD><TD><CODE>static </CODE><CODE><B><A HREF="Compiler.html#error()">error</A></B>(string&nbsp;msg)</CODE>
+<br>
+<br>Throw an exception</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;sequence&lt;string&gt;</CODE></FONT></TD><TD><CODE>static </CODE><CODE><B><A HREF="Compiler.html#supportedBinOperators()">supportedBinOperators</A></B>(string&nbsp;type)</CODE>
+<br>
+<br>Returns supported binary operators for specified type.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;dictionary&lt;string,&nbsp;boolean&gt;</CODE></FONT></TD><TD><CODE>static </CODE><CODE><B><A HREF="Compiler.html#supportedTypes()">supportedTypes</A></B>()</CODE>
+<br>
+</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;string</CODE></FONT></TD><TD><CODE></CODE><CODE><B><A HREF="Compiler.html#type()">type</A></B>(<A HREF="../../../../../apama/analyticskit/framework/internal/parser/AST.html" title="type in apama.analyticskit.framework.internal.parser">apama.analyticskit.framework.internal.parser.AST</A>&nbsp;ast)</CODE>
+<br>
+<br>Determine the type yielded by an AST.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;void</CODE></FONT></TD><TD><CODE>static </CODE><CODE><B><A HREF="Compiler.html#updateIfTypeName()">updateIfTypeName</A></B>(<A HREF="../../../../../apama/analyticskit/framework/internal/parser/AST.html" title="type in apama.analyticskit.framework.internal.parser">apama.analyticskit.framework.internal.parser.AST</A>&nbsp;ast)</CODE>
+<br>
+<br>Update the node type if it is the name of one of the supported types.</TD>
+</TR>
+</TABLE>&nbsp;<A NAME="member_detail"></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2"><B>Member detail</B></FONT></TH>
+</TR>
+</TABLE>
+<A NAME="symbols"></A>
+<H3>symbols</H3>
+<PRE>dictionary&lt;string,&nbsp;string&gt;&nbsp;<B>symbols</B>
+</PRE>Set of available symbols and their type. Unconnected input has empty type.<HR>
+<A NAME="usedValues"></A>
+<H3>usedValues</H3>
+<PRE>dictionary&lt;string,&nbsp;string&gt;&nbsp;<B>usedValues</B>
+</PRE>Set of used variable names.<br>
+<br> Filled in by calling compile.<HR>
+<A NAME="action_detail"></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2"><B>Action detail</B></FONT></TH>
+</TR>
+</TABLE>
+<A NAME="compile()"></A>
+<H3>compile</H3>
+<PRE>any&nbsp;<B>compile</B>(<A HREF="../../../../../apama/analyticskit/framework/internal/parser/AST.html" title="type in apama.analyticskit.framework.internal.parser">apama.analyticskit.framework.internal.parser.AST</A>&nbsp;ast)</PRE>Compile an AST to an action.<br>
+<br> Returns an action varialbe (a closure) which can evaluate the AST. Fills in usedValues as well.<DL>
+<DT>
+<B>Parameters:</B>
+</DT>
+<DD>
+<tt>ast</tt>
+</DD>
+</DL>
+<HR>
+<A NAME="error()"></A>
+<H3>error</H3>
+<PRE>com.apama.exceptions.Exception&nbsp;static <B>error</B>(string&nbsp;msg)</PRE>Throw an exception<DL>
+<DT>
+<B>Parameters:</B>
+</DT>
+<DD>
+<tt>msg</tt>
+</DD>
+</DL>
+<HR>
+<A NAME="supportedBinOperators()"></A>
+<H3>supportedBinOperators</H3>
+<PRE>sequence&lt;string&gt;&nbsp;static <B>supportedBinOperators</B>(string&nbsp;type)</PRE>Returns supported binary operators for specified type.<DL>
+<DT>
+<B>Parameters:</B>
+</DT>
+<DD>
+<tt>type</tt>
+</DD>
+</DL>
+<HR>
+<A NAME="supportedTypes()"></A>
+<H3>supportedTypes</H3>
+<PRE>dictionary&lt;string,&nbsp;boolean&gt;&nbsp;static <B>supportedTypes</B>()</PRE>
+<HR>
+<A NAME="type()"></A>
+<H3>type</H3>
+<PRE>string&nbsp;<B>type</B>(<A HREF="../../../../../apama/analyticskit/framework/internal/parser/AST.html" title="type in apama.analyticskit.framework.internal.parser">apama.analyticskit.framework.internal.parser.AST</A>&nbsp;ast)</PRE>Determine the type yielded by an AST.<br>
+<br> Returns the type (and performs type checking) of what calling the result of compile will yield.<DL>
+<DT>
+<B>Parameters:</B>
+</DT>
+<DD>
+<tt>ast</tt>&nbsp;-&nbsp;the AST root node.</DD>
+</DL>
+<DL>
+<DT>
+<B>Returns:</B>
+</DT>
+<DD>the type - probably one of 'float' or 'boolean' throws if there is a type mismatch.</DD>
+</DL>
+<HR>
+<A NAME="updateIfTypeName()"></A>
+<H3>updateIfTypeName</H3>
+<PRE>void&nbsp;static <B>updateIfTypeName</B>(<A HREF="../../../../../apama/analyticskit/framework/internal/parser/AST.html" title="type in apama.analyticskit.framework.internal.parser">apama.analyticskit.framework.internal.parser.AST</A>&nbsp;ast)</PRE>Update the node type if it is the name of one of the supported types.<DL>
+<DT>
+<B>Parameters:</B>
+</DT>
+<DD>
+<tt>ast</tt>
+</DD>
+</DL>
+<HR>
+<HR>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2"><A target="_top" HREF="../../../../../index.html?apama/analyticskit/framework/internal/parser/Compiler.html"><B>FRAMES</B></A>  &nbsp;
+
+            &nbsp;<A target="_top" HREF="Compiler.html"><B>NO FRAMES</B></A>  &nbsp;
+            &nbsp;<SCRIPT type="text/javascript"></SCRIPT>
+<NOSCRIPT>
+<A HREF="../../../../../alltypes-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+</FONT></TD>
+</TR>
+<TR>
+<TD COLSPAN="2" BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+<TR ALIGN="center" VALIGN="top">
+<TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"><A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;
+              </TD><TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1"><A HREF="../../../../..//apama/analyticskit/framework/internal/parser/package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A></TD><TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"><A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;
+              </TD><TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"><A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT>&nbsp;
+                </A></TD><TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1" WIDTH="100%" ALIGN="RIGHT"><FONT CLASS="NavBarFont1"><B>Apama Analytics Builder 10.5.0</B></FONT></TD>
+</TR>
+</TABLE>
+</TD><TD ALIGN="right" VALIGN="top" ROWSPAN="3"><EM></EM></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">SUMMARY:&nbsp;IMPORT&nbsp;|&nbsp;CONSTANT&nbsp;|&nbsp;<A HREF="#member_summary">MEMBER</A>&nbsp;|&nbsp;<A HREF="#action_summary">ACTION</A></FONT></TD><TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">DETAIL:&nbsp;IMPORT&nbsp;|&nbsp;CONSTANT&nbsp;|&nbsp;<A HREF="#member_detail">MEMBER</A>&nbsp;|&nbsp;<A HREF="#action_detail">ACTION</A></FONT></TD>
+</TR>
+</TABLE>
+<HR>
+</BODY>
+</HTML>

@@ -1,0 +1,160 @@
+<HTML><!-- saved from url=(0014)about:internet -->
+
+
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<TITLE>ObjectUtils</TITLE>
+<META NAME="keywords" CONTENT="ObjectUtils&nbsp;event">
+<LINK REL="stylesheet" TYPE="text/css" HREF="stylesheet.css" TITLE="Style">
+<SCRIPT type="text/javascript">function windowTitle()
+          {
+          parent.document.title="ObjectUtils";
+          }
+          </SCRIPT>
+<NOSCRIPT></NOSCRIPT>
+</HEAD>
+<BODY BGCOLOR="white" onload="windowTitle();">
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2"><A target="_top" HREF="../../../index.html?apama/analyticskit/framework/ObjectUtils.html"><B>FRAMES</B></A>  &nbsp;
+
+            &nbsp;<A target="_top" HREF="ObjectUtils.html"><B>NO FRAMES</B></A>  &nbsp;
+            &nbsp;<SCRIPT type="text/javascript"></SCRIPT>
+<NOSCRIPT>
+<A HREF="../../../alltypes-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+</FONT></TD>
+</TR>
+<TR>
+<TD COLSPAN="2" BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+<TR ALIGN="center" VALIGN="top">
+<TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"><A HREF="../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;
+              </TD><TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1"><A HREF="../../..//apama/analyticskit/framework/package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A></TD><TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"><A HREF="../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;
+              </TD><TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"><A HREF="../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT>&nbsp;
+                </A></TD><TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1" WIDTH="100%" ALIGN="RIGHT"><FONT CLASS="NavBarFont1"><B>Apama Analytics Builder 10.5.0</B></FONT></TD>
+</TR>
+</TABLE>
+</TD><TD ALIGN="right" VALIGN="top" ROWSPAN="3"><EM></EM></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">SUMMARY:&nbsp;IMPORT&nbsp;|&nbsp;CONSTANT&nbsp;|&nbsp;MEMBER&nbsp;|&nbsp;<A HREF="#action_summary">ACTION</A></FONT></TD><TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">DETAIL:&nbsp;IMPORT&nbsp;|&nbsp;CONSTANT&nbsp;|&nbsp;MEMBER&nbsp;|&nbsp;<A HREF="#action_detail">ACTION</A></FONT></TD>
+</TR>
+</TABLE>
+<HR>
+<H2>
+<FONT SIZE="-1">apama.analyticskit.framework</FONT>
+<BR>Event ObjectUtils</H2>
+<HR>Contains helper actions to convert JSON to an EPL object:<HR>
+<A NAME="action_summary"></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2"><B>Action summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;any</CODE></FONT></TD><TD><CODE>static </CODE><CODE><B><A HREF="ObjectUtils.html#populate()">populate</A></B>(any&nbsp;obj,&nbsp;any&nbsp;toSet,&nbsp;<A HREF="../../../apama/analyticskit/framework/ObjectUtilsConfig.html" title="type in apama.analyticskit.framework">apama.analyticskit.framework.ObjectUtilsConfig</A>&nbsp;cfg)</CODE>
+<br>
+<br>Populate an object from a generic set of entries.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;any</CODE></FONT></TD><TD><CODE>static </CODE><CODE><B><A HREF="ObjectUtils.html#populateFromJSON()">populateFromJSON</A></B>(any&nbsp;obj,&nbsp;string&nbsp;json)</CODE>
+<br>
+<br>Populate an object from a JSON object.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;any</CODE></FONT></TD><TD><CODE>static </CODE><CODE><B><A HREF="ObjectUtils.html#populateFromJSONConfig()">populateFromJSONConfig</A></B>(any&nbsp;obj,&nbsp;string&nbsp;json,&nbsp;<A HREF="../../../apama/analyticskit/framework/ObjectUtilsConfig.html" title="type in apama.analyticskit.framework">apama.analyticskit.framework.ObjectUtilsConfig</A>&nbsp;cfg)</CODE>
+<br>
+</TD>
+</TR>
+</TABLE>&nbsp;<A NAME="action_detail"></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2"><B>Action detail</B></FONT></TH>
+</TR>
+</TABLE>
+<A NAME="populate()"></A>
+<H3>populate</H3>
+<PRE>any&nbsp;static <B>populate</B>(any&nbsp;obj,&nbsp;any&nbsp;toSet,&nbsp;<A HREF="../../../apama/analyticskit/framework/ObjectUtilsConfig.html" title="type in apama.analyticskit.framework">apama.analyticskit.framework.ObjectUtilsConfig</A>&nbsp;cfg)</PRE>Populate an object from a generic set of entries.<br>
+<br> Populates the object 'obj' from a generic set of entries (a sequence<any> or a dictionary<any, any><br>
+<br> Throws if the toSet contains an entry that is not a field in an event of obj.<DL>
+<DT>
+<B>Parameters:</B>
+</DT>
+<DD>
+<tt>obj</tt>&nbsp;-&nbsp;The reference object to fill in properties of.  Should be a sequence, dictionary or event.</DD>
+<DD>
+<tt>toSet</tt>&nbsp;-&nbsp;the generic set of entries to fill in the entries of obj.</DD>
+<DD>
+<tt>cfg</tt>
+</DD>
+</DL>
+<HR>
+<A NAME="populateFromJSON()"></A>
+<H3>populateFromJSON</H3>
+<PRE>any&nbsp;static <B>populateFromJSON</B>(any&nbsp;obj,&nbsp;string&nbsp;json)</PRE>Populate an object from a JSON object.<br>
+<br> Populates the object 'obj' from the JSON properties recursively.  If obj is an event, sets the fields from the JSON object.<br>
+<br> Throws if the json contains a property that is not a field in an event of obj.<DL>
+<DT>
+<B>Parameters:</B>
+</DT>
+<DD>
+<tt>obj</tt>&nbsp;-&nbsp;The reference object to fill in properties of.  Should be a sequence, dictionary or event.</DD>
+<DD>
+<tt>json</tt>&nbsp;-&nbsp;the JSON object.</DD>
+</DL>
+<DL>
+<DT>
+<B>Returns:</B>
+</DT>
+<DD>the object (typically, the same as obj that was passed in)</DD>
+</DL>
+<HR>
+<A NAME="populateFromJSONConfig()"></A>
+<H3>populateFromJSONConfig</H3>
+<PRE>any&nbsp;static <B>populateFromJSONConfig</B>(any&nbsp;obj,&nbsp;string&nbsp;json,&nbsp;<A HREF="../../../apama/analyticskit/framework/ObjectUtilsConfig.html" title="type in apama.analyticskit.framework">apama.analyticskit.framework.ObjectUtilsConfig</A>&nbsp;cfg)</PRE>
+<DL>
+<DT>
+<B>Parameters:</B>
+</DT>
+<DD>
+<tt>obj</tt>
+</DD>
+<DD>
+<tt>json</tt>
+</DD>
+<DD>
+<tt>cfg</tt>
+</DD>
+</DL>
+<HR>
+<HR>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2"><A target="_top" HREF="../../../index.html?apama/analyticskit/framework/ObjectUtils.html"><B>FRAMES</B></A>  &nbsp;
+
+            &nbsp;<A target="_top" HREF="ObjectUtils.html"><B>NO FRAMES</B></A>  &nbsp;
+            &nbsp;<SCRIPT type="text/javascript"></SCRIPT>
+<NOSCRIPT>
+<A HREF="../../../alltypes-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+</FONT></TD>
+</TR>
+<TR>
+<TD COLSPAN="2" BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+<TR ALIGN="center" VALIGN="top">
+<TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"><A HREF="../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;
+              </TD><TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1"><A HREF="../../..//apama/analyticskit/framework/package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A></TD><TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"><A HREF="../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;
+              </TD><TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"><A HREF="../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT>&nbsp;
+                </A></TD><TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1" WIDTH="100%" ALIGN="RIGHT"><FONT CLASS="NavBarFont1"><B>Apama Analytics Builder 10.5.0</B></FONT></TD>
+</TR>
+</TABLE>
+</TD><TD ALIGN="right" VALIGN="top" ROWSPAN="3"><EM></EM></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">SUMMARY:&nbsp;IMPORT&nbsp;|&nbsp;CONSTANT&nbsp;|&nbsp;MEMBER&nbsp;|&nbsp;<A HREF="#action_summary">ACTION</A></FONT></TD><TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">DETAIL:&nbsp;IMPORT&nbsp;|&nbsp;CONSTANT&nbsp;|&nbsp;MEMBER&nbsp;|&nbsp;<A HREF="#action_detail">ACTION</A></FONT></TD>
+</TR>
+</TABLE>
+<HR>
+</BODY>
+</HTML>

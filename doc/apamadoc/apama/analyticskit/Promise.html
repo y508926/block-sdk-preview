@@ -1,0 +1,271 @@
+<HTML><!-- saved from url=(0014)about:internet -->
+
+
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<TITLE>Promise</TITLE>
+<META NAME="keywords" CONTENT="Promise&nbsp;event">
+<LINK REL="stylesheet" TYPE="text/css" HREF="stylesheet.css" TITLE="Style">
+<SCRIPT type="text/javascript">function windowTitle()
+          {
+          parent.document.title="Promise";
+          }
+          </SCRIPT>
+<NOSCRIPT></NOSCRIPT>
+</HEAD>
+<BODY BGCOLOR="white" onload="windowTitle();">
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2"><A target="_top" HREF="../../index.html?apama/analyticskit/Promise.html"><B>FRAMES</B></A>  &nbsp;
+
+            &nbsp;<A target="_top" HREF="Promise.html"><B>NO FRAMES</B></A>  &nbsp;
+            &nbsp;<SCRIPT type="text/javascript"></SCRIPT>
+<NOSCRIPT>
+<A HREF="../../alltypes-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+</FONT></TD>
+</TR>
+<TR>
+<TD COLSPAN="2" BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+<TR ALIGN="center" VALIGN="top">
+<TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"><A HREF="../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;
+              </TD><TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1"><A HREF="../..//apama/analyticskit/package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A></TD><TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"><A HREF="../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;
+              </TD><TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"><A HREF="../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT>&nbsp;
+                </A></TD><TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1" WIDTH="100%" ALIGN="RIGHT"><FONT CLASS="NavBarFont1"><B>Apama Analytics Builder 10.5.0</B></FONT></TD>
+</TR>
+</TABLE>
+</TD><TD ALIGN="right" VALIGN="top" ROWSPAN="3"><EM></EM></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">SUMMARY:&nbsp;IMPORT&nbsp;|&nbsp;CONSTANT&nbsp;|&nbsp;MEMBER&nbsp;|&nbsp;<A HREF="#action_summary">ACTION</A></FONT></TD><TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">DETAIL:&nbsp;IMPORT&nbsp;|&nbsp;CONSTANT&nbsp;|&nbsp;MEMBER&nbsp;|&nbsp;<A HREF="#action_detail">ACTION</A></FONT></TD>
+</TR>
+</TABLE>
+<HR>
+<H2>
+<FONT SIZE="-1">apama.analyticskit</FONT>
+<BR>Event Promise</H2>
+<HR>An asynchronous promise result.<br>
+<br> A promise represents something that may be fulfilled later. Promises can be chained, to make linear-style async chains of calls. The 'then' methods take an action which returns an any - if that any is a Promise, then it is waited on until any 'then' actions are called.<br>
+<br> Promises are created with the static 'create' action, which takes an 'fn' action to call. This function is passed the fulfill and reject actions. (this pattern ensures that exceptions thrown by the 'fn' action are caught and reject the promise).<HR>
+<A NAME="action_summary"></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2"><B>Action summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;any</CODE></FONT></TD><TD><CODE></CODE><CODE><B><A HREF="Promise.html#_fulfill_return()">_fulfill_return</A></B>(any&nbsp;value)</CODE>
+<br>
+<br>Fulfill the promise.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;any</CODE></FONT></TD><TD><CODE></CODE><CODE><B><A HREF="Promise.html#_reject_return()">_reject_return</A></B>(com.apama.exceptions.Exception&nbsp;value)</CODE>
+<br>
+<br>Reject the promise.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;any</CODE></FONT></TD><TD><CODE></CODE><CODE><B><A HREF="Promise.html#andCatch()">andCatch</A></B>(action&lt;com.apama.exceptions.Exception&gt;&nbsp;returns&nbsp;any&nbsp;cb)</CODE>
+<br>
+<br>Catch an async exception.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;any</CODE></FONT></TD><TD><CODE></CODE><CODE><B><A HREF="Promise.html#andThen()">andThen</A></B>(action&lt;any&gt;&nbsp;returns&nbsp;any&nbsp;cb)</CODE>
+<br>
+<br>Execute a function after this promise is completed.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;<A HREF="../../apama/analyticskit/Promise.html" title="type in apama.analyticskit">apama.analyticskit.Promise</A></CODE></FONT></TD><TD><CODE>static </CODE><CODE><B><A HREF="Promise.html#create()">create</A></B>(action&lt;action&lt;any&gt;,&nbsp;action&lt;com.apama.exceptions.Exception&gt;&gt;&nbsp;func)</CODE>
+<br>
+<br>Create a promise.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;void</CODE></FONT></TD><TD><CODE></CODE><CODE><B><A HREF="Promise.html#done()">done</A></B>(action&lt;any&gt;&nbsp;onFulfilled,&nbsp;action&lt;com.apama.exceptions.Exception&gt;&nbsp;onRejected)</CODE>
+<br>
+<br>Register callback.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;<A HREF="../../apama/analyticskit/Promise.html" title="type in apama.analyticskit">apama.analyticskit.Promise</A></CODE></FONT></TD><TD><CODE>static </CODE><CODE><B><A HREF="Promise.html#reject()">reject</A></B>(com.apama.exceptions.Exception&nbsp;e)</CODE>
+<br>
+<br>Convert an exception into a rejected promise.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;<A HREF="../../apama/analyticskit/Promise.html" title="type in apama.analyticskit">apama.analyticskit.Promise</A></CODE></FONT></TD><TD><CODE>static </CODE><CODE><B><A HREF="Promise.html#resolve()">resolve</A></B>(any&nbsp;value)</CODE>
+<br>
+<br>Convert a promise or non-promise into a promise.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;<A HREF="../../apama/analyticskit/Promise.html" title="type in apama.analyticskit">apama.analyticskit.Promise</A></CODE></FONT></TD><TD><CODE></CODE><CODE><B><A HREF="Promise.html#thenOrCatch()">thenOrCatch</A></B>(action&lt;any&gt;&nbsp;returns&nbsp;any&nbsp;onThen,&nbsp;action&lt;com.apama.exceptions.Exception&gt;&nbsp;returns&nbsp;any&nbsp;onCatch)</CODE>
+<br>
+<br>Execute a function after this promise is completed.</TD>
+</TR>
+</TABLE>&nbsp;<A NAME="action_detail"></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2"><B>Action detail</B></FONT></TH>
+</TR>
+</TABLE>
+<A NAME="_fulfill_return()"></A>
+<H3>_fulfill_return</H3>
+<PRE>any&nbsp;<B>_fulfill_return</B>(any&nbsp;value)</PRE>Fulfill the promise.<br>
+<br> Convenience variant that returns new any.<DL>
+<DT>
+<B>Parameters:</B>
+</DT>
+<DD>
+<tt>value</tt>
+</DD>
+</DL>
+<HR>
+<A NAME="_reject_return()"></A>
+<H3>_reject_return</H3>
+<PRE>any&nbsp;<B>_reject_return</B>(com.apama.exceptions.Exception&nbsp;value)</PRE>Reject the promise.<br>
+<br> Convenience variant that returns new any.<DL>
+<DT>
+<B>Parameters:</B>
+</DT>
+<DD>
+<tt>value</tt>
+</DD>
+</DL>
+<HR>
+<A NAME="andCatch()"></A>
+<H3>andCatch</H3>
+<PRE>any&nbsp;<B>andCatch</B>(action&lt;com.apama.exceptions.Exception&gt;&nbsp;returns&nbsp;any&nbsp;cb)</PRE>Catch an async exception.<br>
+<br> Executes cb if this promise is rejected.<DL>
+<DT>
+<B>Parameters:</B>
+</DT>
+<DD>
+<tt>cb</tt>
+</DD>
+</DL>
+<DL>
+<DT>
+<B>Returns:</B>
+</DT>
+<DD>a Promise of the result of the cb method (or this promise's value if it is not rejected)</DD>
+</DL>
+<HR>
+<A NAME="andThen()"></A>
+<H3>andThen</H3>
+<PRE>any&nbsp;<B>andThen</B>(action&lt;any&gt;&nbsp;returns&nbsp;any&nbsp;cb)</PRE>Execute a function after this promise is completed.<br>
+<br> Executes cb once this promise is fulfilled with a real (non-promise) value.  Returns a Promise of the result of cb (or the result of the result of cb if it is a Promise)<DL>
+<DT>
+<B>Parameters:</B>
+</DT>
+<DD>
+<tt>cb</tt>
+</DD>
+</DL>
+<DL>
+<DT>
+<B>Returns:</B>
+</DT>
+<DD>a Promise of the result of the cb method (or rejected on exception)</DD>
+</DL>
+<HR>
+<A NAME="create()"></A>
+<H3>create</H3>
+<PRE>
+<A HREF="../../apama/analyticskit/Promise.html" title="type in apama.analyticskit">apama.analyticskit.Promise</A>&nbsp;static <B>create</B>(action&lt;action&lt;any&gt;,&nbsp;action&lt;com.apama.exceptions.Exception&gt;&gt;&nbsp;func)</PRE>Create a promise.<br>
+<br> The func is called immediately, but it may call the any or Exception functions at any point in the future. Only the first call is used.  Calling the first function with a promise will wait for that to be fulfilled before fulfilling this promise.<DL>
+<DT>
+<B>Parameters:</B>
+</DT>
+<DD>
+<tt>func</tt>
+</DD>
+</DL>
+<HR>
+<A NAME="done()"></A>
+<H3>done</H3>
+<PRE>void&nbsp;<B>done</B>(action&lt;any&gt;&nbsp;onFulfilled,&nbsp;action&lt;com.apama.exceptions.Exception&gt;&nbsp;onRejected)</PRE>Register callback.<br>
+<br> Callback that is always executed after the caller has completed once the promise is settled.<br>
+<br> One of onFulfilled, onRejected will be called.<DL>
+<DT>
+<B>Parameters:</B>
+</DT>
+<DD>
+<tt>onFulfilled</tt>
+</DD>
+<DD>
+<tt>onRejected</tt>
+</DD>
+</DL>
+<HR>
+<A NAME="reject()"></A>
+<H3>reject</H3>
+<PRE>
+<A HREF="../../apama/analyticskit/Promise.html" title="type in apama.analyticskit">apama.analyticskit.Promise</A>&nbsp;static <B>reject</B>(com.apama.exceptions.Exception&nbsp;e)</PRE>Convert an exception into a rejected promise.<DL>
+<DT>
+<B>Parameters:</B>
+</DT>
+<DD>
+<tt>e</tt>
+</DD>
+</DL>
+<HR>
+<A NAME="resolve()"></A>
+<H3>resolve</H3>
+<PRE>
+<A HREF="../../apama/analyticskit/Promise.html" title="type in apama.analyticskit">apama.analyticskit.Promise</A>&nbsp;static <B>resolve</B>(any&nbsp;value)</PRE>Convert a promise or non-promise into a promise.<br>
+<br> Can be used to convert sync 'bare' values into async promises.<DL>
+<DT>
+<B>Parameters:</B>
+</DT>
+<DD>
+<tt>value</tt>
+</DD>
+</DL>
+<HR>
+<A NAME="thenOrCatch()"></A>
+<H3>thenOrCatch</H3>
+<PRE>
+<A HREF="../../apama/analyticskit/Promise.html" title="type in apama.analyticskit">apama.analyticskit.Promise</A>&nbsp;<B>thenOrCatch</B>(action&lt;any&gt;&nbsp;returns&nbsp;any&nbsp;onThen,&nbsp;action&lt;com.apama.exceptions.Exception&gt;&nbsp;returns&nbsp;any&nbsp;onCatch)</PRE>Execute a function after this promise is completed.<br>
+<br> Executes onThen or onCatch once this promise is fulfilled or rejected Returns a Promise of the result of onThen or onCatch (or a rejected promise if an uncaught exception occurs).<DL>
+<DT>
+<B>Parameters:</B>
+</DT>
+<DD>
+<tt>onThen</tt>&nbsp;-&nbsp;optional action to call when this promise is fulfilled with a concrete value.</DD>
+<DD>
+<tt>onCatch</tt>&nbsp;-&nbsp;optional action to call when this promise is rejected.</DD>
+</DL>
+<DL>
+<DT>
+<B>Returns:</B>
+</DT>
+<DD>a Promise of the result of the cb method (or rejected on exception)</DD>
+</DL>
+<HR>
+<HR>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2"><A target="_top" HREF="../../index.html?apama/analyticskit/Promise.html"><B>FRAMES</B></A>  &nbsp;
+
+            &nbsp;<A target="_top" HREF="Promise.html"><B>NO FRAMES</B></A>  &nbsp;
+            &nbsp;<SCRIPT type="text/javascript"></SCRIPT>
+<NOSCRIPT>
+<A HREF="../../alltypes-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+</FONT></TD>
+</TR>
+<TR>
+<TD COLSPAN="2" BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+<TR ALIGN="center" VALIGN="top">
+<TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"><A HREF="../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;
+              </TD><TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1"><A HREF="../..//apama/analyticskit/package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A></TD><TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"><A HREF="../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;
+              </TD><TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"><A HREF="../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT>&nbsp;
+                </A></TD><TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1" WIDTH="100%" ALIGN="RIGHT"><FONT CLASS="NavBarFont1"><B>Apama Analytics Builder 10.5.0</B></FONT></TD>
+</TR>
+</TABLE>
+</TD><TD ALIGN="right" VALIGN="top" ROWSPAN="3"><EM></EM></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">SUMMARY:&nbsp;IMPORT&nbsp;|&nbsp;CONSTANT&nbsp;|&nbsp;MEMBER&nbsp;|&nbsp;<A HREF="#action_summary">ACTION</A></FONT></TD><TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">DETAIL:&nbsp;IMPORT&nbsp;|&nbsp;CONSTANT&nbsp;|&nbsp;MEMBER&nbsp;|&nbsp;<A HREF="#action_detail">ACTION</A></FONT></TD>
+</TR>
+</TABLE>
+<HR>
+</BODY>
+</HTML>

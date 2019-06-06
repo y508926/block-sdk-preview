@@ -1,0 +1,301 @@
+<HTML><!-- saved from url=(0014)about:internet -->
+
+
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<TITLE>Parser</TITLE>
+<META NAME="keywords" CONTENT="Parser&nbsp;event">
+<LINK REL="stylesheet" TYPE="text/css" HREF="stylesheet.css" TITLE="Style">
+<SCRIPT type="text/javascript">function windowTitle()
+          {
+          parent.document.title="Parser";
+          }
+          </SCRIPT>
+<NOSCRIPT></NOSCRIPT>
+</HEAD>
+<BODY BGCOLOR="white" onload="windowTitle();">
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2"><A target="_top" HREF="../../../../../index.html?apama/analyticskit/framework/internal/parser/Parser.html"><B>FRAMES</B></A>  &nbsp;
+
+            &nbsp;<A target="_top" HREF="Parser.html"><B>NO FRAMES</B></A>  &nbsp;
+            &nbsp;<SCRIPT type="text/javascript"></SCRIPT>
+<NOSCRIPT>
+<A HREF="../../../../../alltypes-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+</FONT></TD>
+</TR>
+<TR>
+<TD COLSPAN="2" BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+<TR ALIGN="center" VALIGN="top">
+<TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"><A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;
+              </TD><TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1"><A HREF="../../../../..//apama/analyticskit/framework/internal/parser/package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A></TD><TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"><A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;
+              </TD><TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"><A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT>&nbsp;
+                </A></TD><TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1" WIDTH="100%" ALIGN="RIGHT"><FONT CLASS="NavBarFont1"><B>Apama Analytics Builder 10.5.0</B></FONT></TD>
+</TR>
+</TABLE>
+</TD><TD ALIGN="right" VALIGN="top" ROWSPAN="3"><EM></EM></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">SUMMARY:&nbsp;IMPORT&nbsp;|&nbsp;CONSTANT&nbsp;|&nbsp;<A HREF="#member_summary">MEMBER</A>&nbsp;|&nbsp;<A HREF="#action_summary">ACTION</A></FONT></TD><TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">DETAIL:&nbsp;IMPORT&nbsp;|&nbsp;CONSTANT&nbsp;|&nbsp;<A HREF="#member_detail">MEMBER</A>&nbsp;|&nbsp;<A HREF="#action_detail">ACTION</A></FONT></TD>
+</TR>
+</TABLE>
+<HR>
+<H2>
+<FONT SIZE="-1">apama.analyticskit.framework.internal.parser</FONT>
+<BR>Event Parser</H2>
+<HR>Parser - parses text into a tree of AST nodes.<HR>
+<A NAME="member_summary"></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2"><B>Member summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;sequence&lt;<A HREF="../../../../../apama/analyticskit/framework/internal/parser/Token.html" title="type in apama.analyticskit.framework.internal.parser">apama.analyticskit.framework.internal.parser.Token</A>&gt;</CODE></FONT></TD><TD><CODE><B><A HREF="Parser.html#tokens">tokens</A></B></CODE>
+<br>
+<br>Input tokens.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;string</CODE></FONT></TD><TD><CODE><B><A HREF="Parser.html#txt">txt</A></B></CODE>
+<br>
+</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;dictionary&lt;string,&nbsp;integer&gt;</CODE></FONT></TD><TD><CODE><B><A HREF="Parser.html#precedence">precedence</A></B></CODE>
+<br>
+<br>Mapping of precedence of operators.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;<A HREF="../../../../../apama/analyticskit/framework/internal/parser/Token.html" title="type in apama.analyticskit.framework.internal.parser">apama.analyticskit.framework.internal.parser.Token</A></CODE></FONT></TD><TD><CODE><B><A HREF="Parser.html#current">current</A></B></CODE>
+<br>
+<br>The current token.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;integer</CODE></FONT></TD><TD><CODE><B><A HREF="Parser.html#i">i</A></B></CODE>
+<br>
+<br>index into tokens.</TD>
+</TR>
+</TABLE>&nbsp;<A NAME="action_summary"></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2"><B>Action summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;com.apama.exceptions.Exception</CODE></FONT></TD><TD><CODE></CODE><CODE><B><A HREF="Parser.html#errorLocalized_basic()">errorLocalized_basic</A></B>(string&nbsp;what)</CODE>
+<br>
+<br>Throw an exception.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;integer</CODE></FONT></TD><TD><CODE></CODE><CODE><B><A HREF="Parser.html#getTokenPrecedence()">getTokenPrecedence</A></B>()</CODE>
+<br>
+<br>Lookup precedence of token.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;void</CODE></FONT></TD><TD><CODE></CODE><CODE><B><A HREF="Parser.html#init()">init</A></B>(string&nbsp;t)</CODE>
+<br>
+</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;<A HREF="../../../../../apama/analyticskit/framework/internal/parser/AST.html" title="type in apama.analyticskit.framework.internal.parser">apama.analyticskit.framework.internal.parser.AST</A></CODE></FONT></TD><TD><CODE></CODE><CODE><B><A HREF="Parser.html#parseBinOpRHS()">parseBinOpRHS</A></B>(integer&nbsp;exprPrecedence,&nbsp;<A HREF="../../../../../apama/analyticskit/framework/internal/parser/AST.html" title="type in apama.analyticskit.framework.internal.parser">apama.analyticskit.framework.internal.parser.AST</A>&nbsp;lhs)</CODE>
+<br>
+<br>Parse binary operator.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;<A HREF="../../../../../apama/analyticskit/framework/internal/parser/AST.html" title="type in apama.analyticskit.framework.internal.parser">apama.analyticskit.framework.internal.parser.AST</A></CODE></FONT></TD><TD><CODE></CODE><CODE><B><A HREF="Parser.html#parseExpression()">parseExpression</A></B>()</CODE>
+<br>
+<br>Parse an expression.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;<A HREF="../../../../../apama/analyticskit/framework/internal/parser/AST.html" title="type in apama.analyticskit.framework.internal.parser">apama.analyticskit.framework.internal.parser.AST</A></CODE></FONT></TD><TD><CODE></CODE><CODE><B><A HREF="Parser.html#parseParen()">parseParen</A></B>()</CODE>
+<br>
+<br>Parse a parenthesised sub-expression.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;<A HREF="../../../../../apama/analyticskit/framework/internal/parser/AST.html" title="type in apama.analyticskit.framework.internal.parser">apama.analyticskit.framework.internal.parser.AST</A></CODE></FONT></TD><TD><CODE></CODE><CODE><B><A HREF="Parser.html#parsePostfix()">parsePostfix</A></B>()</CODE>
+<br>
+<br>Parse a postfix expression.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;<A HREF="../../../../../apama/analyticskit/framework/internal/parser/AST.html" title="type in apama.analyticskit.framework.internal.parser">apama.analyticskit.framework.internal.parser.AST</A></CODE></FONT></TD><TD><CODE></CODE><CODE><B><A HREF="Parser.html#parsePrimaryTerminal()">parsePrimaryTerminal</A></B>()</CODE>
+<br>
+<br>Parse a primary terminal.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;<A HREF="../../../../../apama/analyticskit/framework/internal/parser/AST.html" title="type in apama.analyticskit.framework.internal.parser">apama.analyticskit.framework.internal.parser.AST</A></CODE></FONT></TD><TD><CODE>static </CODE><CODE><B><A HREF="Parser.html#parseText()">parseText</A></B>(string&nbsp;txt)</CODE>
+<br>
+<br>Convert a textual expression into an AST tree.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;<A HREF="../../../../../apama/analyticskit/framework/internal/parser/AST.html" title="type in apama.analyticskit.framework.internal.parser">apama.analyticskit.framework.internal.parser.AST</A></CODE></FONT></TD><TD><CODE></CODE><CODE><B><A HREF="Parser.html#parseUnary()">parseUnary</A></B>()</CODE>
+<br>
+<br>Parse a unary expression.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;void</CODE></FONT></TD><TD><CODE></CODE><CODE><B><A HREF="Parser.html#step()">step</A></B>()</CODE>
+<br>
+<br>Step to next token.</TD>
+</TR>
+</TABLE>&nbsp;<A NAME="member_detail"></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2"><B>Member detail</B></FONT></TH>
+</TR>
+</TABLE>
+<A NAME="current"></A>
+<H3>current</H3>
+<PRE>
+<A HREF="../../../../../apama/analyticskit/framework/internal/parser/Token.html" title="type in apama.analyticskit.framework.internal.parser">apama.analyticskit.framework.internal.parser.Token</A>&nbsp;<B>current</B>
+</PRE>The current token.<HR>
+<A NAME="i"></A>
+<H3>i</H3>
+<PRE>integer&nbsp;<B>i</B>
+</PRE>index into tokens.<HR>
+<A NAME="precedence"></A>
+<H3>precedence</H3>
+<PRE>dictionary&lt;string,&nbsp;integer&gt;&nbsp;<B>precedence</B>
+</PRE>Mapping of precedence of operators.<br>
+<br> Higher value indicates tighter binding and higher precedence.<HR>
+<A NAME="tokens"></A>
+<H3>tokens</H3>
+<PRE>sequence&lt;<A HREF="../../../../../apama/analyticskit/framework/internal/parser/Token.html" title="type in apama.analyticskit.framework.internal.parser">apama.analyticskit.framework.internal.parser.Token</A>&gt;&nbsp;<B>tokens</B>
+</PRE>Input tokens.<HR>
+<A NAME="txt"></A>
+<H3>txt</H3>
+<PRE>string&nbsp;<B>txt</B>
+</PRE>
+<HR>
+<A NAME="action_detail"></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2"><B>Action detail</B></FONT></TH>
+</TR>
+</TABLE>
+<A NAME="errorLocalized_basic()"></A>
+<H3>errorLocalized_basic</H3>
+<PRE>com.apama.exceptions.Exception&nbsp;<B>errorLocalized_basic</B>(string&nbsp;what)</PRE>Throw an exception.<br>
+<br> Uses the location where and the current location in the token list.<DL>
+<DT>
+<B>Parameters:</B>
+</DT>
+<DD>
+<tt>what</tt>
+</DD>
+</DL>
+<HR>
+<A NAME="getTokenPrecedence()"></A>
+<H3>getTokenPrecedence</H3>
+<PRE>integer&nbsp;<B>getTokenPrecedence</B>()</PRE>Lookup precedence of token.<br>
+<br> Looks up in precedence map.<DL>
+<DT>
+<B>Returns:</B>
+</DT>
+<DD>-1 if not found, else precedence value.</DD>
+</DL>
+<HR>
+<A NAME="init()"></A>
+<H3>init</H3>
+<PRE>void&nbsp;<B>init</B>(string&nbsp;t)</PRE>
+<DL>
+<DT>
+<B>Parameters:</B>
+</DT>
+<DD>
+<tt>t</tt>
+</DD>
+</DL>
+<HR>
+<A NAME="parseBinOpRHS()"></A>
+<H3>parseBinOpRHS</H3>
+<PRE>
+<A HREF="../../../../../apama/analyticskit/framework/internal/parser/AST.html" title="type in apama.analyticskit.framework.internal.parser">apama.analyticskit.framework.internal.parser.AST</A>&nbsp;<B>parseBinOpRHS</B>(integer&nbsp;exprPrecedence,&nbsp;<A HREF="../../../../../apama/analyticskit/framework/internal/parser/AST.html" title="type in apama.analyticskit.framework.internal.parser">apama.analyticskit.framework.internal.parser.AST</A>&nbsp;lhs)</PRE>Parse binary operator.<br>
+<br> Parse a right hand side of a binary expression. Only parses tokens of equal or higher precedence that exprPrecedence. (e.g. 1*2 + 3 is all handled in one call, building AST(*, 1,2) and then AST(+,AST(*,1,2),3) .)<br>
+<br> On finding an operator followed by a higher precedence operator, recurses - so 1 + 2 * 3 will recurse to generate AST(*,2,3) and then build AST(+,1,AST(*,2,3))<DL>
+<DT>
+<B>Parameters:</B>
+</DT>
+<DD>
+<tt>exprPrecedence</tt>
+</DD>
+<DD>
+<tt>lhs</tt>
+</DD>
+</DL>
+<HR>
+<A NAME="parseExpression()"></A>
+<H3>parseExpression</H3>
+<PRE>
+<A HREF="../../../../../apama/analyticskit/framework/internal/parser/AST.html" title="type in apama.analyticskit.framework.internal.parser">apama.analyticskit.framework.internal.parser.AST</A>&nbsp;<B>parseExpression</B>()</PRE>Parse an expression.<br>
+<br> Consume an expression from the tokens.  This handles unary expressions combined with binary operators.<HR>
+<A NAME="parseParen()"></A>
+<H3>parseParen</H3>
+<PRE>
+<A HREF="../../../../../apama/analyticskit/framework/internal/parser/AST.html" title="type in apama.analyticskit.framework.internal.parser">apama.analyticskit.framework.internal.parser.AST</A>&nbsp;<B>parseParen</B>()</PRE>Parse a parenthesised sub-expression.<br>
+<br> This will recurse to parseExpression.<HR>
+<A NAME="parsePostfix()"></A>
+<H3>parsePostfix</H3>
+<PRE>
+<A HREF="../../../../../apama/analyticskit/framework/internal/parser/AST.html" title="type in apama.analyticskit.framework.internal.parser">apama.analyticskit.framework.internal.parser.AST</A>&nbsp;<B>parsePostfix</B>()</PRE>Parse a postfix expression.<br>
+<br> The only postfix expressions supported in this language are method calls and constant lookup.<HR>
+<A NAME="parsePrimaryTerminal()"></A>
+<H3>parsePrimaryTerminal</H3>
+<PRE>
+<A HREF="../../../../../apama/analyticskit/framework/internal/parser/AST.html" title="type in apama.analyticskit.framework.internal.parser">apama.analyticskit.framework.internal.parser.AST</A>&nbsp;<B>parsePrimaryTerminal</B>()</PRE>Parse a primary terminal.<br>
+<br> A primary terminal is a numeric literal, an identifier or a parenthesised sub-expression. For parentheses, is non-terminal, and calls parseParen (whcih calls parseExpression)<HR>
+<A NAME="parseText()"></A>
+<H3>parseText</H3>
+<PRE>
+<A HREF="../../../../../apama/analyticskit/framework/internal/parser/AST.html" title="type in apama.analyticskit.framework.internal.parser">apama.analyticskit.framework.internal.parser.AST</A>&nbsp;static <B>parseText</B>(string&nbsp;txt)</PRE>Convert a textual expression into an AST tree.<DL>
+<DT>
+<B>Parameters:</B>
+</DT>
+<DD>
+<tt>txt</tt>&nbsp;-&nbsp;Textual form of expression.</DD>
+</DL>
+<DL>
+<DT>
+<B>Returns:</B>
+</DT>
+<DD>root node of tree of ASTs throws on parser error.</DD>
+</DL>
+<HR>
+<A NAME="parseUnary()"></A>
+<H3>parseUnary</H3>
+<PRE>
+<A HREF="../../../../../apama/analyticskit/framework/internal/parser/AST.html" title="type in apama.analyticskit.framework.internal.parser">apama.analyticskit.framework.internal.parser.AST</A>&nbsp;<B>parseUnary</B>()</PRE>Parse a unary expression.<br>
+<br> A unary expression is a plus, minus or not sign.<HR>
+<A NAME="step()"></A>
+<H3>step</H3>
+<PRE>void&nbsp;<B>step</B>()</PRE>Step to next token.<br>
+<br> Throw if at end.<HR>
+<HR>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2"><A target="_top" HREF="../../../../../index.html?apama/analyticskit/framework/internal/parser/Parser.html"><B>FRAMES</B></A>  &nbsp;
+
+            &nbsp;<A target="_top" HREF="Parser.html"><B>NO FRAMES</B></A>  &nbsp;
+            &nbsp;<SCRIPT type="text/javascript"></SCRIPT>
+<NOSCRIPT>
+<A HREF="../../../../../alltypes-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+</FONT></TD>
+</TR>
+<TR>
+<TD COLSPAN="2" BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+<TR ALIGN="center" VALIGN="top">
+<TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"><A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;
+              </TD><TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1"><A HREF="../../../../..//apama/analyticskit/framework/internal/parser/package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A></TD><TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"><A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;
+              </TD><TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"><A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT>&nbsp;
+                </A></TD><TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1" WIDTH="100%" ALIGN="RIGHT"><FONT CLASS="NavBarFont1"><B>Apama Analytics Builder 10.5.0</B></FONT></TD>
+</TR>
+</TABLE>
+</TD><TD ALIGN="right" VALIGN="top" ROWSPAN="3"><EM></EM></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">SUMMARY:&nbsp;IMPORT&nbsp;|&nbsp;CONSTANT&nbsp;|&nbsp;<A HREF="#member_summary">MEMBER</A>&nbsp;|&nbsp;<A HREF="#action_summary">ACTION</A></FONT></TD><TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">DETAIL:&nbsp;IMPORT&nbsp;|&nbsp;CONSTANT&nbsp;|&nbsp;<A HREF="#member_detail">MEMBER</A>&nbsp;|&nbsp;<A HREF="#action_detail">ACTION</A></FONT></TD>
+</TR>
+</TABLE>
+<HR>
+</BODY>
+</HTML>

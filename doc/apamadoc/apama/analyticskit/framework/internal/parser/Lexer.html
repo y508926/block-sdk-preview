@@ -1,0 +1,360 @@
+<HTML><!-- saved from url=(0014)about:internet -->
+
+
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<TITLE>Lexer</TITLE>
+<META NAME="keywords" CONTENT="Lexer&nbsp;event">
+<LINK REL="stylesheet" TYPE="text/css" HREF="stylesheet.css" TITLE="Style">
+<SCRIPT type="text/javascript">function windowTitle()
+          {
+          parent.document.title="Lexer";
+          }
+          </SCRIPT>
+<NOSCRIPT></NOSCRIPT>
+</HEAD>
+<BODY BGCOLOR="white" onload="windowTitle();">
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2"><A target="_top" HREF="../../../../../index.html?apama/analyticskit/framework/internal/parser/Lexer.html"><B>FRAMES</B></A>  &nbsp;
+
+            &nbsp;<A target="_top" HREF="Lexer.html"><B>NO FRAMES</B></A>  &nbsp;
+            &nbsp;<SCRIPT type="text/javascript"></SCRIPT>
+<NOSCRIPT>
+<A HREF="../../../../../alltypes-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+</FONT></TD>
+</TR>
+<TR>
+<TD COLSPAN="2" BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+<TR ALIGN="center" VALIGN="top">
+<TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"><A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;
+              </TD><TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1"><A HREF="../../../../..//apama/analyticskit/framework/internal/parser/package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A></TD><TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"><A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;
+              </TD><TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"><A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT>&nbsp;
+                </A></TD><TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1" WIDTH="100%" ALIGN="RIGHT"><FONT CLASS="NavBarFont1"><B>Apama Analytics Builder 10.5.0</B></FONT></TD>
+</TR>
+</TABLE>
+</TD><TD ALIGN="right" VALIGN="top" ROWSPAN="3"><EM></EM></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">SUMMARY:&nbsp;IMPORT&nbsp;|&nbsp;<A HREF="#constant_summary">CONSTANT</A>&nbsp;|&nbsp;<A HREF="#member_summary">MEMBER</A>&nbsp;|&nbsp;<A HREF="#action_summary">ACTION</A></FONT></TD><TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">DETAIL:&nbsp;IMPORT&nbsp;|&nbsp;<A HREF="#constant_detail">CONSTANT</A>&nbsp;|&nbsp;<A HREF="#member_detail">MEMBER</A>&nbsp;|&nbsp;<A HREF="#action_detail">ACTION</A></FONT></TD>
+</TR>
+</TABLE>
+<HR>
+<H2>
+<FONT SIZE="-1">apama.analyticskit.framework.internal.parser</FONT>
+<BR>Event Lexer</H2>
+<HR>Lexer. Splits text into tokens.<br>
+<br> Uses a set of heuristics to identify where tokens begin and end.<HR>
+<A NAME="constant_summary"></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2"><B>Constant summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;constant string</CODE></FONT></TD><TD><CODE><B><A HREF="Lexer.html#ID_REST">ID_REST</A> := "_abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ$0123456789"</B></CODE>
+<br>
+</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;constant string</CODE></FONT></TD><TD><CODE><B><A HREF="Lexer.html#ID_START">ID_START</A> := "_abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ$"</B></CODE>
+<br>
+</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;constant string</CODE></FONT></TD><TD><CODE><B><A HREF="Lexer.html#NUMBER">NUMBER</A> := "-0123456789."</B></CODE>
+<br>
+</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;constant string</CODE></FONT></TD><TD><CODE><B><A HREF="Lexer.html#NUMERIC">NUMERIC</A> := "0123456789"</B></CODE>
+<br>
+</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;constant string</CODE></FONT></TD><TD><CODE><B><A HREF="Lexer.html#OPERATORS">OPERATORS</A> := "- + * / . ( , ) &lt; &gt; = != &gt;= &lt;="</B></CODE>
+<br>
+</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;constant string</CODE></FONT></TD><TD><CODE><B><A HREF="Lexer.html#WHITESPACE">WHITESPACE</A> := " \t\n\r"</B></CODE>
+<br>
+</TD>
+</TR>
+</TABLE>&nbsp;<A NAME="member_summary"></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2"><B>Member summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;string</CODE></FONT></TD><TD><CODE><B><A HREF="Lexer.html#txt">txt</A></B></CODE>
+<br>
+<br>Source text.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;integer</CODE></FONT></TD><TD><CODE><B><A HREF="Lexer.html#i">i</A></B></CODE>
+<br>
+<br>Current offset</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;string</CODE></FONT></TD><TD><CODE><B><A HREF="Lexer.html#where">where</A></B></CODE>
+<br>
+<br>Current element we are parsing. Used for erorr reporting.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;sequence&lt;<A HREF="../../../../../apama/analyticskit/framework/internal/parser/Token.html" title="type in apama.analyticskit.framework.internal.parser">apama.analyticskit.framework.internal.parser.Token</A>&gt;</CODE></FONT></TD><TD><CODE><B><A HREF="Lexer.html#ret">ret</A></B></CODE>
+<br>
+<br>Lexer output.</TD>
+</TR>
+</TABLE>&nbsp;<A NAME="action_summary"></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2"><B>Action summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;void</CODE></FONT></TD><TD><CODE></CODE><CODE><B><A HREF="Lexer.html#checkIfSpecialIdentifier()">checkIfSpecialIdentifier</A></B>(<A HREF="../../../../../apama/analyticskit/framework/internal/parser/Token.html" title="type in apama.analyticskit.framework.internal.parser">apama.analyticskit.framework.internal.parser.Token</A>&nbsp;t)</CODE>
+<br>
+<br>Check if identifier is special, for example operator or boolean literal. Set the token type accordingly. Also allow case insensitive literals and operators.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;com.apama.exceptions.Exception</CODE></FONT></TD><TD><CODE></CODE><CODE><B><A HREF="Lexer.html#errorLocalized()">errorLocalized</A></B>(string&nbsp;msgId,&nbsp;sequence&lt;any&gt;&nbsp;params)</CODE>
+<br>
+</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;com.apama.exceptions.Exception</CODE></FONT></TD><TD><CODE></CODE><CODE><B><A HREF="Lexer.html#errorLocalized_basic()">errorLocalized_basic</A></B>(string&nbsp;msgId)</CODE>
+<br>
+<br>Report an error.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;string</CODE></FONT></TD><TD><CODE></CODE><CODE><B><A HREF="Lexer.html#getchar()">getchar</A></B>()</CODE>
+<br>
+<br>Consume a single character</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;sequence&lt;<A HREF="../../../../../apama/analyticskit/framework/internal/parser/Token.html" title="type in apama.analyticskit.framework.internal.parser">apama.analyticskit.framework.internal.parser.Token</A>&gt;</CODE></FONT></TD><TD><CODE></CODE><CODE><B><A HREF="Lexer.html#getToken()">getToken</A></B>()</CODE>
+<br>
+<br>Identify and return next token.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;boolean</CODE></FONT></TD><TD><CODE></CODE><CODE><B><A HREF="Lexer.html#hasMore()">hasMore</A></B>()</CODE>
+<br>
+<br>Check not at end of stream</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;sequence&lt;<A HREF="../../../../../apama/analyticskit/framework/internal/parser/Token.html" title="type in apama.analyticskit.framework.internal.parser">apama.analyticskit.framework.internal.parser.Token</A>&gt;</CODE></FONT></TD><TD><CODE>static </CODE><CODE><B><A HREF="Lexer.html#lex()">lex</A></B>(string&nbsp;txt)</CODE>
+<br>
+<br>Lexer interface. Entry point for lexer.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;string</CODE></FONT></TD><TD><CODE></CODE><CODE><B><A HREF="Lexer.html#matchInt()">matchInt</A></B>()</CODE>
+<br>
+<br>Consume an integer</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;string</CODE></FONT></TD><TD><CODE></CODE><CODE><B><A HREF="Lexer.html#nextchar()">nextchar</A></B>()</CODE>
+<br>
+<br>Peek at next character</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;boolean</CODE></FONT></TD><TD><CODE></CODE><CODE><B><A HREF="Lexer.html#nextMatches()">nextMatches</A></B>(string&nbsp;range)</CODE>
+<br>
+<br>Does the next character match any in supplied range.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;string</CODE></FONT></TD><TD><CODE></CODE><CODE><B><A HREF="Lexer.html#tryMatchExp()">tryMatchExp</A></B>()</CODE>
+<br>
+<br>Attempt to match an exponent ('e' followed integer)</TD>
+</TR>
+</TABLE>&nbsp;<A NAME="constant_detail"></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2"><B>Constant detail</B></FONT></TH>
+</TR>
+</TABLE>
+<A NAME="ID_REST"></A>
+<H3>ID_REST</H3>
+<PRE>constant string&nbsp;<B>ID_REST := "_abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ$0123456789"</B>
+</PRE>
+<HR>
+<A NAME="ID_START"></A>
+<H3>ID_START</H3>
+<PRE>constant string&nbsp;<B>ID_START := "_abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ$"</B>
+</PRE>
+<HR>
+<A NAME="NUMBER"></A>
+<H3>NUMBER</H3>
+<PRE>constant string&nbsp;<B>NUMBER := "-0123456789."</B>
+</PRE>
+<HR>
+<A NAME="NUMERIC"></A>
+<H3>NUMERIC</H3>
+<PRE>constant string&nbsp;<B>NUMERIC := "0123456789"</B>
+</PRE>
+<HR>
+<A NAME="OPERATORS"></A>
+<H3>OPERATORS</H3>
+<PRE>constant string&nbsp;<B>OPERATORS := "- + * / . ( , ) &lt; &gt; = != &gt;= &lt;="</B>
+</PRE>
+<HR>
+<A NAME="WHITESPACE"></A>
+<H3>WHITESPACE</H3>
+<PRE>constant string&nbsp;<B>WHITESPACE := " \t\n\r"</B>
+</PRE>
+<HR>
+<A NAME="member_detail"></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2"><B>Member detail</B></FONT></TH>
+</TR>
+</TABLE>
+<A NAME="i"></A>
+<H3>i</H3>
+<PRE>integer&nbsp;<B>i</B>
+</PRE>Current offset<HR>
+<A NAME="ret"></A>
+<H3>ret</H3>
+<PRE>sequence&lt;<A HREF="../../../../../apama/analyticskit/framework/internal/parser/Token.html" title="type in apama.analyticskit.framework.internal.parser">apama.analyticskit.framework.internal.parser.Token</A>&gt;&nbsp;<B>ret</B>
+</PRE>Lexer output.<br>
+<br> Output tokens of the lexer.<HR>
+<A NAME="txt"></A>
+<H3>txt</H3>
+<PRE>string&nbsp;<B>txt</B>
+</PRE>Source text.<HR>
+<A NAME="where"></A>
+<H3>where</H3>
+<PRE>string&nbsp;<B>where</B>
+</PRE>Current element we are parsing. Used for erorr reporting.<HR>
+<A NAME="action_detail"></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2"><B>Action detail</B></FONT></TH>
+</TR>
+</TABLE>
+<A NAME="checkIfSpecialIdentifier()"></A>
+<H3>checkIfSpecialIdentifier</H3>
+<PRE>void&nbsp;<B>checkIfSpecialIdentifier</B>(<A HREF="../../../../../apama/analyticskit/framework/internal/parser/Token.html" title="type in apama.analyticskit.framework.internal.parser">apama.analyticskit.framework.internal.parser.Token</A>&nbsp;t)</PRE>Check if identifier is special, for example operator or boolean literal. Set the token type accordingly. Also allow case insensitive literals and operators.<DL>
+<DT>
+<B>Parameters:</B>
+</DT>
+<DD>
+<tt>t</tt>
+</DD>
+</DL>
+<HR>
+<A NAME="errorLocalized()"></A>
+<H3>errorLocalized</H3>
+<PRE>com.apama.exceptions.Exception&nbsp;<B>errorLocalized</B>(string&nbsp;msgId,&nbsp;sequence&lt;any&gt;&nbsp;params)</PRE>
+<DL>
+<DT>
+<B>Parameters:</B>
+</DT>
+<DD>
+<tt>msgId</tt>
+</DD>
+<DD>
+<tt>params</tt>
+</DD>
+</DL>
+<HR>
+<A NAME="errorLocalized_basic()"></A>
+<H3>errorLocalized_basic</H3>
+<PRE>com.apama.exceptions.Exception&nbsp;<B>errorLocalized_basic</B>(string&nbsp;msgId)</PRE>Report an error.<br>
+<br> Based on desc description parameter and where member<DL>
+<DT>
+<B>Parameters:</B>
+</DT>
+<DD>
+<tt>msgId</tt>
+</DD>
+</DL>
+<HR>
+<A NAME="getchar()"></A>
+<H3>getchar</H3>
+<PRE>string&nbsp;<B>getchar</B>()</PRE>Consume a single character<HR>
+<A NAME="getToken()"></A>
+<H3>getToken</H3>
+<PRE>sequence&lt;<A HREF="../../../../../apama/analyticskit/framework/internal/parser/Token.html" title="type in apama.analyticskit.framework.internal.parser">apama.analyticskit.framework.internal.parser.Token</A>&gt;&nbsp;<B>getToken</B>()</PRE>Identify and return next token.<DL>
+<DT>
+<B>Returns:</B>
+</DT>
+<DD>sequence of 0 or 1 Tokens.</DD>
+</DL>
+<HR>
+<A NAME="hasMore()"></A>
+<H3>hasMore</H3>
+<PRE>boolean&nbsp;<B>hasMore</B>()</PRE>Check not at end of stream<HR>
+<A NAME="lex()"></A>
+<H3>lex</H3>
+<PRE>sequence&lt;<A HREF="../../../../../apama/analyticskit/framework/internal/parser/Token.html" title="type in apama.analyticskit.framework.internal.parser">apama.analyticskit.framework.internal.parser.Token</A>&gt;&nbsp;static <B>lex</B>(string&nbsp;txt)</PRE>Lexer interface. Entry point for lexer.<DL>
+<DT>
+<B>Parameters:</B>
+</DT>
+<DD>
+<tt>txt</tt>&nbsp;-&nbsp;the input text to parse.</DD>
+</DL>
+<DL>
+<DT>
+<B>Returns:</B>
+</DT>
+<DD>a sequence of Tokens.</DD>
+</DL>
+<HR>
+<A NAME="matchInt()"></A>
+<H3>matchInt</H3>
+<PRE>string&nbsp;<B>matchInt</B>()</PRE>Consume an integer<HR>
+<A NAME="nextchar()"></A>
+<H3>nextchar</H3>
+<PRE>string&nbsp;<B>nextchar</B>()</PRE>Peek at next character<DL>
+<DT>
+<B>Returns:</B>
+</DT>
+<DD>single character or "" if at end of input text.</DD>
+</DL>
+<HR>
+<A NAME="nextMatches()"></A>
+<H3>nextMatches</H3>
+<PRE>boolean&nbsp;<B>nextMatches</B>(string&nbsp;range)</PRE>Does the next character match any in supplied range.<DL>
+<DT>
+<B>Parameters:</B>
+</DT>
+<DD>
+<tt>range</tt>
+</DD>
+</DL>
+<HR>
+<A NAME="tryMatchExp()"></A>
+<H3>tryMatchExp</H3>
+<PRE>string&nbsp;<B>tryMatchExp</B>()</PRE>Attempt to match an exponent ('e' followed integer)<HR>
+<HR>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2"><A target="_top" HREF="../../../../../index.html?apama/analyticskit/framework/internal/parser/Lexer.html"><B>FRAMES</B></A>  &nbsp;
+
+            &nbsp;<A target="_top" HREF="Lexer.html"><B>NO FRAMES</B></A>  &nbsp;
+            &nbsp;<SCRIPT type="text/javascript"></SCRIPT>
+<NOSCRIPT>
+<A HREF="../../../../../alltypes-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+</FONT></TD>
+</TR>
+<TR>
+<TD COLSPAN="2" BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+<TR ALIGN="center" VALIGN="top">
+<TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"><A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;
+              </TD><TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1"><A HREF="../../../../..//apama/analyticskit/framework/internal/parser/package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A></TD><TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"><A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;
+              </TD><TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"><A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT>&nbsp;
+                </A></TD><TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1" WIDTH="100%" ALIGN="RIGHT"><FONT CLASS="NavBarFont1"><B>Apama Analytics Builder 10.5.0</B></FONT></TD>
+</TR>
+</TABLE>
+</TD><TD ALIGN="right" VALIGN="top" ROWSPAN="3"><EM></EM></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">SUMMARY:&nbsp;IMPORT&nbsp;|&nbsp;<A HREF="#constant_summary">CONSTANT</A>&nbsp;|&nbsp;<A HREF="#member_summary">MEMBER</A>&nbsp;|&nbsp;<A HREF="#action_summary">ACTION</A></FONT></TD><TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">DETAIL:&nbsp;IMPORT&nbsp;|&nbsp;<A HREF="#constant_detail">CONSTANT</A>&nbsp;|&nbsp;<A HREF="#member_detail">MEMBER</A>&nbsp;|&nbsp;<A HREF="#action_detail">ACTION</A></FONT></TD>
+</TR>
+</TABLE>
+<HR>
+</BODY>
+</HTML>

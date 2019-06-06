@@ -1,0 +1,31 @@
+<?xml version="1.0" standalone="yes"?>
+<pysystest type="auto" state="runnable">
+    
+  <description> 
+    <title>Monitorscript injection and execution, sending events from input file</title>    
+    <purpose><![CDATA[
+Demonstrates starting an Event Correlator, attaching a receiver to the Correlator, injecting 
+a monitorscript application, and sending in a series of input events via event file. 
+Verification of the test is performed by an ordered grep through the Correlator log file for 
+log messages written by the application, and by performing a file comparison with a reference 
+file for the events received and written to file by the attached receiver. 
+]]>
+    </purpose>
+  </description>
+
+  <classification>
+    <groups>
+      <group></group>
+    </groups>
+  </classification>
+
+  <data>
+    <class name="PySysTest" module="run"/>
+  </data>
+  
+  <traceability>
+    <requirements>
+      <requirement id=""/>     
+    </requirements>
+  </traceability>
+</pysystest>

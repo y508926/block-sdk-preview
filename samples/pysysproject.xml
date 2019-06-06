@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pysysproject>
+	<requires-pysys>1.4.0</requires-pysys>
+	<requires-python>3</requires-python>
+	
+	<property root="testRootDir"/>
+	<property environment="env"/>
+	<property osfamily="osfamily"/>
+
+	<!-- Define Apama install locations using environment variables. -->
+	<property name="APAMA_HOME"              value="${env.APAMA_HOME}"/>
+	<property name="APAMA_WORK"              value="${env.APAMA_WORK}"/>
+	<property name="APAMA_COMMON_JRE"        value="${env.APAMA_JRE}"/> 
+
+	<!-- Specify a property for the location of the application being tested. 
+	Binaries and configuration files can be specified relative to this directory 
+	to avoid having to hardcode locations inside each individual testcase. 
+	-->
+	<property name="TEST_SUBJECT_DIR" value="${env.PYSYS_TEST_SUBJECT_DIR}" default="${testRootDir}/.."/>
+
+	<!-- User-defined properties -->
+
+	<!-- Standard default settings. -->
+	<property name="defaultAbortOnError" value="true"/>	
+	<property name="defaultIgnoreExitStatus" value="false"/>
+	<property name="defaultEnvironsTempDir" value="self.output"/>
+	<property name="redirectPrintToLogger" value="false"/>
+	<property name="verboseWaitForSignal" value="true"/>
+	
+	<property name="shutdownApamaComponentsAfterTest" value="true"/>
+
+	<runner classname="ApamaRunner" module="apama.runner"/>
+	
+	<!-- Custom test framework extensions, if needed -->
+	<!--
+	<path value="../framework" relative="true" />
+	<runner classname="MyRunner" module="my.organization"/>
+	<maker classname="MyTestMaker" module="my.organization"/>
+	-->
+
+	<writers>
+		<writer classname="TravisCIWriter" module="pysys.writer.ci"></writer>
+
+		<writer classname="JUnitXMLResultsWriter" module="pysys.writer">
+			<property name="outputDir" value="${testRootDir}/pysys-junit-report"/>
+		</writer>
+		
+		<writer classname="ConsoleSummaryResultsWriter" module="pysys.writer">
+			<property name="showOutputDir" value="false"/>
+			<property name="showOutcomeReason" value="true"/>
+		</writer>
+	</writers>
+
+	<default-file-encodings>
+		<default-file-encoding pattern="run.log" encoding="utf-8"/>
+		
+		<default-file-encoding pattern="*.xml"  encoding="utf-8"/>
+		<default-file-encoding pattern="*.json" encoding="utf-8"/>
+		<default-file-encoding pattern="*.yaml" encoding="utf-8"/>
+		
+		<default-file-encoding pattern="*.log" encoding="utf-8"/>
+	</default-file-encodings>	
+	
+	<formatters>
+		<formatter classname="ColorLogFormatter" module="pysys.utils.logutils" 
+			name="stdout" messagefmt="%(asctime)s %(levelname)-5s %(message)s" datefmt="%H:%M:%S">
+		</formatter>
+
+		<formatter classname="BaseLogFormatter" module="pysys.utils.logutils" 
+			name="runlog" messagefmt="%(asctime)s %(levelname)-5s %(message)s" datefmt=""/>
+	</formatters>
+	
+</pysysproject>

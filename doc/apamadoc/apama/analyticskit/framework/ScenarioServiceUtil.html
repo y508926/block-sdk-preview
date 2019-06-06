@@ -1,0 +1,634 @@
+<HTML><!-- saved from url=(0014)about:internet -->
+
+
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<TITLE>ScenarioServiceUtil</TITLE>
+<META NAME="keywords" CONTENT="ScenarioServiceUtil&nbsp;event">
+<LINK REL="stylesheet" TYPE="text/css" HREF="stylesheet.css" TITLE="Style">
+<SCRIPT type="text/javascript">function windowTitle()
+          {
+          parent.document.title="ScenarioServiceUtil";
+          }
+          </SCRIPT>
+<NOSCRIPT></NOSCRIPT>
+</HEAD>
+<BODY BGCOLOR="white" onload="windowTitle();">
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2"><A target="_top" HREF="../../../index.html?apama/analyticskit/framework/ScenarioServiceUtil.html"><B>FRAMES</B></A>  &nbsp;
+
+            &nbsp;<A target="_top" HREF="ScenarioServiceUtil.html"><B>NO FRAMES</B></A>  &nbsp;
+            &nbsp;<SCRIPT type="text/javascript"></SCRIPT>
+<NOSCRIPT>
+<A HREF="../../../alltypes-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+</FONT></TD>
+</TR>
+<TR>
+<TD COLSPAN="2" BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+<TR ALIGN="center" VALIGN="top">
+<TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"><A HREF="../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;
+              </TD><TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1"><A HREF="../../..//apama/analyticskit/framework/package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A></TD><TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"><A HREF="../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;
+              </TD><TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"><A HREF="../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT>&nbsp;
+                </A></TD><TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1" WIDTH="100%" ALIGN="RIGHT"><FONT CLASS="NavBarFont1"><B>Apama Analytics Builder 10.5.0</B></FONT></TD>
+</TR>
+</TABLE>
+</TD><TD ALIGN="right" VALIGN="top" ROWSPAN="3"><EM></EM></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">SUMMARY:&nbsp;IMPORT&nbsp;|&nbsp;<A HREF="#constant_summary">CONSTANT</A>&nbsp;|&nbsp;<A HREF="#member_summary">MEMBER</A>&nbsp;|&nbsp;<A HREF="#action_summary">ACTION</A></FONT></TD><TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">DETAIL:&nbsp;IMPORT&nbsp;|&nbsp;<A HREF="#constant_detail">CONSTANT</A>&nbsp;|&nbsp;<A HREF="#member_detail">MEMBER</A>&nbsp;|&nbsp;<A HREF="#action_detail">ACTION</A></FONT></TD>
+</TR>
+</TABLE>
+<HR>
+<H2>
+<FONT SIZE="-1">apama.analyticskit.framework</FONT>
+<BR>Event ScenarioServiceUtil</H2>
+<HR>Scenario service controller object.<br>
+<br> This acts as a factory for ScenarioService requests and handles Edit and Delete requests as well. The monitor should call init, passing in action pointers for onSpawn and onEdit, and new instances of the monitor will be created as controlled by ScenarioService. This object keeps track of the scenario parameters, which can be obtained with the get methods.<DL>
+<DT>
+<B>Routes:</B>
+</DT>
+<DD>
+<A HREF="../../../apama/analyticskit/framework/WorkerTerminated.html" title="type in apama.analyticskit.framework">apama.analyticskit.framework.WorkerTerminated</A>&nbsp;-&nbsp;</DD>
+</DL>
+<DL>
+<DT>
+<B>Sends:</B>
+</DT>
+<DD>
+<A HREF="../../../apama/analyticskit/framework/Flusher.html" title="type in apama.analyticskit.framework">apama.analyticskit.framework.Flusher</A>&nbsp;-&nbsp;</DD>
+<DD>
+<A HREF="../../../apama/analyticskit/framework/TerminateWorker.html" title="type in apama.analyticskit.framework">apama.analyticskit.framework.TerminateWorker</A>&nbsp;-&nbsp;</DD>
+<DD>
+<A HREF="../../../apama/analyticskit/framework/WorkerTerminated.html" title="type in apama.analyticskit.framework">apama.analyticskit.framework.WorkerTerminated</A>&nbsp;-&nbsp;</DD>
+</DL>
+<DL>
+<DT>
+<B>Listens:</B>
+</DT>
+<DD>
+<A HREF="../../../apama/analyticskit/framework/Flusher.html" title="type in apama.analyticskit.framework">apama.analyticskit.framework.Flusher</A>&nbsp;-&nbsp;</DD>
+<DD>
+<A HREF="../../../apama/analyticskit/framework/TerminateWorker.html" title="type in apama.analyticskit.framework">apama.analyticskit.framework.TerminateWorker</A>&nbsp;-&nbsp;</DD>
+<DD>
+<A HREF="../../../apama/analyticskit/framework/WorkerTerminated.html" title="type in apama.analyticskit.framework">apama.analyticskit.framework.WorkerTerminated</A>&nbsp;-&nbsp;</DD>
+</DL>
+<HR>
+<A NAME="constant_summary"></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2"><B>Constant summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;constant string</CODE></FONT></TD><TD><CODE><B><A HREF="ScenarioServiceUtil.html#PROXY_CHANNEL">PROXY_CHANNEL</A> := "analyticsKit.proxy"</B></CODE>
+<br>
+</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;constant string</CODE></FONT></TD><TD><CODE><B><A HREF="ScenarioServiceUtil.html#RUNTIME_ERROR">RUNTIME_ERROR</A> := "runtimeError"</B></CODE>
+<br>
+</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;constant string</CODE></FONT></TD><TD><CODE><B><A HREF="ScenarioServiceUtil.html#RUNTIME_ERROR_LOCALIZED">RUNTIME_ERROR_LOCALIZED</A> := "runtimeErrorLocalized"</B></CODE>
+<br>
+</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;constant string</CODE></FONT></TD><TD><CODE><B><A HREF="ScenarioServiceUtil.html#STRING">STRING</A> := "string"</B></CODE>
+<br>
+</TD>
+</TR>
+</TABLE>&nbsp;<A NAME="member_summary"></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2"><B>Member summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;sequence&lt;string&gt;</CODE></FONT></TD><TD><CODE><B><A HREF="ScenarioServiceUtil.html#outputs">outputs</A></B></CODE>
+<br>
+<br>The scenario output values</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;sequence&lt;string&gt;</CODE></FONT></TD><TD><CODE><B><A HREF="ScenarioServiceUtil.html#inputs">inputs</A></B></CODE>
+<br>
+<br>A copy of the scenario input values. Don't modify</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;com.apama.scenario.Scenario</CODE></FONT></TD><TD><CODE><B><A HREF="ScenarioServiceUtil.html#scenario">scenario</A></B></CODE>
+<br>
+<br>Scenario definition event</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;integer</CODE></FONT></TD><TD><CODE><B><A HREF="ScenarioServiceUtil.html#scenarioInstanceId">scenarioInstanceId</A></B></CODE>
+<br>
+<br>Scenario instance ID</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;string</CODE></FONT></TD><TD><CODE><B><A HREF="ScenarioServiceUtil.html#runningState">runningState</A></B></CODE>
+<br>
+<br>Scenario's running state</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;boolean</CODE></FONT></TD><TD><CODE><B><A HREF="ScenarioServiceUtil.html#terminating">terminating</A></B></CODE>
+<br>
+<br>Is the monitor supposed to terminate (as a result of delete).</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;boolean</CODE></FONT></TD><TD><CODE><B><A HREF="ScenarioServiceUtil.html#factoryMonitor">factoryMonitor</A></B></CODE>
+<br>
+<br>Is this the factory monitor instance.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;action&lt;sequence&lt;string&gt;,&nbsp;any&gt;&nbsp;returns&nbsp;<A HREF="../../../apama/analyticskit/Promise.html" title="type in apama.analyticskit">apama.analyticskit.Promise</A></CODE></FONT></TD><TD><CODE><B><A HREF="ScenarioServiceUtil.html#spawner">spawner</A></B></CODE>
+<br>
+<br>Callback provided by the monitor for creating a new instance.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;action&lt;sequence&lt;string&gt;&gt;</CODE></FONT></TD><TD><CODE><B><A HREF="ScenarioServiceUtil.html#onEdit">onEdit</A></B></CODE>
+<br>
+<br>Callback provided by the monitor for editing an instance.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;dictionary&lt;string,&nbsp;integer&gt;</CODE></FONT></TD><TD><CODE><B><A HREF="ScenarioServiceUtil.html#inputNamesIndex">inputNamesIndex</A></B></CODE>
+<br>
+<br>Mapping from input name to index in inputs.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;boolean</CODE></FONT></TD><TD><CODE><B><A HREF="ScenarioServiceUtil.html#forceRouteUpdates">forceRouteUpdates</A></B></CODE>
+<br>
+<br>Should we always force routeUpdates?</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;integer</CODE></FONT></TD><TD><CODE><B><A HREF="ScenarioServiceUtil.html#workerId">workerId</A></B></CODE>
+<br>
+<br>Worker id; set for worker instances</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;string</CODE></FONT></TD><TD><CODE><B><A HREF="ScenarioServiceUtil.html#modelId">modelId</A></B></CODE>
+<br>
+<br>Model Id</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;boolean</CODE></FONT></TD><TD><CODE><B><A HREF="ScenarioServiceUtil.html#isProxy">isProxy</A></B></CODE>
+<br>
+<br>True iff this monitor instance is a scenario service proxy in the main context.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;boolean</CODE></FONT></TD><TD><CODE><B><A HREF="ScenarioServiceUtil.html#sentWorkerTerminated">sentWorkerTerminated</A></B></CODE>
+<br>
+<br>True iff have sent a WorkerTerminated for this worker instance.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;dictionary&lt;string,&nbsp;any&gt;</CODE></FONT></TD><TD><CODE><B><A HREF="ScenarioServiceUtil.html#modelProperties">modelProperties</A></B></CODE>
+<br>
+<br>Model properties.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;action&lt;com.apama.exceptions.Exception&gt;</CODE></FONT></TD><TD><CODE><B><A HREF="ScenarioServiceUtil.html#notifyFailure">notifyFailure</A></B></CODE>
+<br>
+<br>Optional callback action to notify of a scenario instance failure.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;optional&lt;string&gt;</CODE></FONT></TD><TD><CODE><B><A HREF="ScenarioServiceUtil.html#allWorkersChannel">allWorkersChannel</A></B></CODE>
+<br>
+<br>Channel to send to to all sub-workers, if appropriate:</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;com.apama.scenario.Create</CODE></FONT></TD><TD><CODE><B><A HREF="ScenarioServiceUtil.html#create">create</A></B></CODE>
+<br>
+<br>Event that spawned this sub-monitor</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;dictionary&lt;integer,&nbsp;boolean&gt;</CODE></FONT></TD><TD><CODE><B><A HREF="ScenarioServiceUtil.html#workersRunning">workersRunning</A></B></CODE>
+<br>
+</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;sequence&lt;com.apama.scenario.Delete&gt;</CODE></FONT></TD><TD><CODE><B><A HREF="ScenarioServiceUtil.html#pendingDeletes">pendingDeletes</A></B></CODE>
+<br>
+</TD>
+</TR>
+</TABLE>&nbsp;<A NAME="action_summary"></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2"><B>Action summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;sequence&lt;string&gt;</CODE></FONT></TD><TD><CODE></CODE><CODE><B><A HREF="ScenarioServiceUtil.html#_getOutputs()">_getOutputs</A></B>()</CODE>
+<br>
+<br>Getter for the outputs.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;any</CODE></FONT></TD><TD><CODE></CODE><CODE><B><A HREF="ScenarioServiceUtil.html#createFailed()">createFailed</A></B>(com.apama.exceptions.Exception&nbsp;e)</CODE>
+<br>
+</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;boolean</CODE></FONT></TD><TD><CODE></CODE><CODE><B><A HREF="ScenarioServiceUtil.html#getBoolean()">getBoolean</A></B>(string&nbsp;name)</CODE>
+<br>
+<br>Get a parameter as a boolean.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;decimal</CODE></FONT></TD><TD><CODE></CODE><CODE><B><A HREF="ScenarioServiceUtil.html#getDecimal()">getDecimal</A></B>(string&nbsp;name)</CODE>
+<br>
+<br>Get a parameter as a decimal.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;float</CODE></FONT></TD><TD><CODE></CODE><CODE><B><A HREF="ScenarioServiceUtil.html#getFloat()">getFloat</A></B>(string&nbsp;name)</CODE>
+<br>
+<br>Get a parameter as a float.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;integer</CODE></FONT></TD><TD><CODE></CODE><CODE><B><A HREF="ScenarioServiceUtil.html#getInteger()">getInteger</A></B>(string&nbsp;name)</CODE>
+<br>
+<br>Get a parameter as an integer.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;sequence&lt;string&gt;</CODE></FONT></TD><TD><CODE></CODE><CODE><B><A HREF="ScenarioServiceUtil.html#getSeqString()">getSeqString</A></B>(string&nbsp;name)</CODE>
+<br>
+<br>Get a parameter as a sequence of strings. The string parameter is assumed to be a comma- separated list.  Each string element is trimmed of whitespace.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;string</CODE></FONT></TD><TD><CODE></CODE><CODE><B><A HREF="ScenarioServiceUtil.html#getString()">getString</A></B>(string&nbsp;name)</CODE>
+<br>
+<br>Get a parameter as a string.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;void</CODE></FONT></TD><TD><CODE></CODE><CODE><B><A HREF="ScenarioServiceUtil.html#handleControlEvents()">handleControlEvents</A></B>(boolean&nbsp;proxy)</CODE>
+<br>
+<br>Listen for scenario service control events.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;void</CODE></FONT></TD><TD><CODE></CODE><CODE><B><A HREF="ScenarioServiceUtil.html#handleException()">handleException</A></B>(com.apama.exceptions.Exception&nbsp;e)</CODE>
+<br>
+<br>Report an exception.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;<A HREF="../../../apama/analyticskit/Promise.html" title="type in apama.analyticskit">apama.analyticskit.Promise</A></CODE></FONT></TD><TD><CODE></CODE><CODE><B><A HREF="ScenarioServiceUtil.html#init()">init</A></B>(string&nbsp;scenarioName,&nbsp;sequence&lt;string&gt;&nbsp;configNames,&nbsp;sequence&lt;string&gt;&nbsp;configTypes,&nbsp;action&lt;sequence&lt;string&gt;,&nbsp;any&gt;&nbsp;returns&nbsp;<A HREF="../../../apama/analyticskit/Promise.html" title="type in apama.analyticskit">apama.analyticskit.Promise</A>&nbsp;spawner,&nbsp;action&lt;sequence&lt;string&gt;&gt;&nbsp;onEdit)</CODE>
+<br>
+<br>Register a new Scenario definition.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;void</CODE></FONT></TD><TD><CODE></CODE><CODE><B><A HREF="ScenarioServiceUtil.html#ondie()">ondie</A></B>()</CODE>
+<br>
+<br>Notify of monitor instance termination.  Monitor should call this in its ondie action.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;any</CODE></FONT></TD><TD><CODE></CODE><CODE><B><A HREF="ScenarioServiceUtil.html#startedRunning()">startedRunning</A></B>(any&nbsp;aworkersRunning)</CODE>
+<br>
+</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;void</CODE></FONT></TD><TD><CODE></CODE><CODE><B><A HREF="ScenarioServiceUtil.html#workerStarted()">workerStarted</A></B>()</CODE>
+<br>
+</TD>
+</TR>
+</TABLE>&nbsp;<A NAME="constant_detail"></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2"><B>Constant detail</B></FONT></TH>
+</TR>
+</TABLE>
+<A NAME="PROXY_CHANNEL"></A>
+<H3>PROXY_CHANNEL</H3>
+<PRE>constant string&nbsp;<B>PROXY_CHANNEL := "analyticsKit.proxy"</B>
+</PRE>
+<HR>
+<A NAME="RUNTIME_ERROR"></A>
+<H3>RUNTIME_ERROR</H3>
+<PRE>constant string&nbsp;<B>RUNTIME_ERROR := "runtimeError"</B>
+</PRE>
+<HR>
+<A NAME="RUNTIME_ERROR_LOCALIZED"></A>
+<H3>RUNTIME_ERROR_LOCALIZED</H3>
+<PRE>constant string&nbsp;<B>RUNTIME_ERROR_LOCALIZED := "runtimeErrorLocalized"</B>
+</PRE>
+<HR>
+<A NAME="STRING"></A>
+<H3>STRING</H3>
+<PRE>constant string&nbsp;<B>STRING := "string"</B>
+</PRE>
+<HR>
+<A NAME="member_detail"></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2"><B>Member detail</B></FONT></TH>
+</TR>
+</TABLE>
+<A NAME="allWorkersChannel"></A>
+<H3>allWorkersChannel</H3>
+<PRE>optional&lt;string&gt;&nbsp;<B>allWorkersChannel</B>
+</PRE>Channel to send to to all sub-workers, if appropriate:<HR>
+<A NAME="create"></A>
+<H3>create</H3>
+<PRE>com.apama.scenario.Create&nbsp;<B>create</B>
+</PRE>Event that spawned this sub-monitor<HR>
+<A NAME="factoryMonitor"></A>
+<H3>factoryMonitor</H3>
+<PRE>boolean&nbsp;<B>factoryMonitor</B>
+</PRE>Is this the factory monitor instance.<HR>
+<A NAME="forceRouteUpdates"></A>
+<H3>forceRouteUpdates</H3>
+<PRE>boolean&nbsp;<B>forceRouteUpdates</B>
+</PRE>Should we always force routeUpdates?<HR>
+<A NAME="inputNamesIndex"></A>
+<H3>inputNamesIndex</H3>
+<PRE>dictionary&lt;string,&nbsp;integer&gt;&nbsp;<B>inputNamesIndex</B>
+</PRE>Mapping from input name to index in inputs.<HR>
+<A NAME="inputs"></A>
+<H3>inputs</H3>
+<PRE>sequence&lt;string&gt;&nbsp;<B>inputs</B>
+</PRE>A copy of the scenario input values. Don't modify<HR>
+<A NAME="isProxy"></A>
+<H3>isProxy</H3>
+<PRE>boolean&nbsp;<B>isProxy</B>
+</PRE>True iff this monitor instance is a scenario service proxy in the main context.<HR>
+<A NAME="modelId"></A>
+<H3>modelId</H3>
+<PRE>string&nbsp;<B>modelId</B>
+</PRE>Model Id<HR>
+<A NAME="modelProperties"></A>
+<H3>modelProperties</H3>
+<PRE>dictionary&lt;string,&nbsp;any&gt;&nbsp;<B>modelProperties</B>
+</PRE>Model properties.<HR>
+<A NAME="notifyFailure"></A>
+<H3>notifyFailure</H3>
+<PRE>action&lt;com.apama.exceptions.Exception&gt;&nbsp;<B>notifyFailure</B>
+</PRE>Optional callback action to notify of a scenario instance failure.<HR>
+<A NAME="onEdit"></A>
+<H3>onEdit</H3>
+<PRE>action&lt;sequence&lt;string&gt;&gt;&nbsp;<B>onEdit</B>
+</PRE>Callback provided by the monitor for editing an instance.<HR>
+<A NAME="outputs"></A>
+<H3>outputs</H3>
+<PRE>sequence&lt;string&gt;&nbsp;<B>outputs</B>
+</PRE>The scenario output values<HR>
+<A NAME="pendingDeletes"></A>
+<H3>pendingDeletes</H3>
+<PRE>sequence&lt;com.apama.scenario.Delete&gt;&nbsp;<B>pendingDeletes</B>
+</PRE>
+<HR>
+<A NAME="runningState"></A>
+<H3>runningState</H3>
+<PRE>string&nbsp;<B>runningState</B>
+</PRE>Scenario's running state<HR>
+<A NAME="scenario"></A>
+<H3>scenario</H3>
+<PRE>com.apama.scenario.Scenario&nbsp;<B>scenario</B>
+</PRE>Scenario definition event<HR>
+<A NAME="scenarioInstanceId"></A>
+<H3>scenarioInstanceId</H3>
+<PRE>integer&nbsp;<B>scenarioInstanceId</B>
+</PRE>Scenario instance ID<HR>
+<A NAME="sentWorkerTerminated"></A>
+<H3>sentWorkerTerminated</H3>
+<PRE>boolean&nbsp;<B>sentWorkerTerminated</B>
+</PRE>True iff have sent a WorkerTerminated for this worker instance.<HR>
+<A NAME="spawner"></A>
+<H3>spawner</H3>
+<PRE>action&lt;sequence&lt;string&gt;,&nbsp;any&gt;&nbsp;returns&nbsp;<A HREF="../../../apama/analyticskit/Promise.html" title="type in apama.analyticskit">apama.analyticskit.Promise</A>&nbsp;<B>spawner</B>
+</PRE>Callback provided by the monitor for creating a new instance.<HR>
+<A NAME="terminating"></A>
+<H3>terminating</H3>
+<PRE>boolean&nbsp;<B>terminating</B>
+</PRE>Is the monitor supposed to terminate (as a result of delete).<HR>
+<A NAME="workerId"></A>
+<H3>workerId</H3>
+<PRE>integer&nbsp;<B>workerId</B>
+</PRE>Worker id; set for worker instances<HR>
+<A NAME="workersRunning"></A>
+<H3>workersRunning</H3>
+<PRE>dictionary&lt;integer,&nbsp;boolean&gt;&nbsp;<B>workersRunning</B>
+</PRE>
+<HR>
+<A NAME="action_detail"></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2"><B>Action detail</B></FONT></TH>
+</TR>
+</TABLE>
+<A NAME="_getOutputs()"></A>
+<H3>_getOutputs</H3>
+<PRE>sequence&lt;string&gt;&nbsp;<B>_getOutputs</B>()</PRE>Getter for the outputs.<HR>
+<A NAME="createFailed()"></A>
+<H3>createFailed</H3>
+<PRE>any&nbsp;<B>createFailed</B>(com.apama.exceptions.Exception&nbsp;e)</PRE>
+<DL>
+<DT>
+<B>Parameters:</B>
+</DT>
+<DD>
+<tt>e</tt>
+</DD>
+</DL>
+<HR>
+<A NAME="getBoolean()"></A>
+<H3>getBoolean</H3>
+<PRE>boolean&nbsp;<B>getBoolean</B>(string&nbsp;name)</PRE>Get a parameter as a boolean.<DL>
+<DT>
+<B>Parameters:</B>
+</DT>
+<DD>
+<tt>name</tt>
+</DD>
+</DL>
+<HR>
+<A NAME="getDecimal()"></A>
+<H3>getDecimal</H3>
+<PRE>decimal&nbsp;<B>getDecimal</B>(string&nbsp;name)</PRE>Get a parameter as a decimal.<DL>
+<DT>
+<B>Parameters:</B>
+</DT>
+<DD>
+<tt>name</tt>
+</DD>
+</DL>
+<HR>
+<A NAME="getFloat()"></A>
+<H3>getFloat</H3>
+<PRE>float&nbsp;<B>getFloat</B>(string&nbsp;name)</PRE>Get a parameter as a float.<DL>
+<DT>
+<B>Parameters:</B>
+</DT>
+<DD>
+<tt>name</tt>
+</DD>
+</DL>
+<HR>
+<A NAME="getInteger()"></A>
+<H3>getInteger</H3>
+<PRE>integer&nbsp;<B>getInteger</B>(string&nbsp;name)</PRE>Get a parameter as an integer.<DL>
+<DT>
+<B>Parameters:</B>
+</DT>
+<DD>
+<tt>name</tt>
+</DD>
+</DL>
+<HR>
+<A NAME="getSeqString()"></A>
+<H3>getSeqString</H3>
+<PRE>sequence&lt;string&gt;&nbsp;<B>getSeqString</B>(string&nbsp;name)</PRE>Get a parameter as a sequence of strings. The string parameter is assumed to be a comma- separated list.  Each string element is trimmed of whitespace.<DL>
+<DT>
+<B>Parameters:</B>
+</DT>
+<DD>
+<tt>name</tt>
+</DD>
+</DL>
+<HR>
+<A NAME="getString()"></A>
+<H3>getString</H3>
+<PRE>string&nbsp;<B>getString</B>(string&nbsp;name)</PRE>Get a parameter as a string.<DL>
+<DT>
+<B>Parameters:</B>
+</DT>
+<DD>
+<tt>name</tt>
+</DD>
+</DL>
+<HR>
+<A NAME="handleControlEvents()"></A>
+<H3>handleControlEvents</H3>
+<PRE>void&nbsp;<B>handleControlEvents</B>(boolean&nbsp;proxy)</PRE>Listen for scenario service control events.<DL>
+<DT>
+<B>Parameters:</B>
+</DT>
+<DD>
+<tt>proxy</tt>
+</DD>
+</DL>
+<HR>
+<A NAME="handleException()"></A>
+<H3>handleException</H3>
+<PRE>void&nbsp;<B>handleException</B>(com.apama.exceptions.Exception&nbsp;e)</PRE>Report an exception.<br>
+<br> Puts the scenario into a failed state.<DL>
+<DT>
+<B>Parameters:</B>
+</DT>
+<DD>
+<tt>e</tt>
+</DD>
+</DL>
+<HR>
+<A NAME="init()"></A>
+<H3>init</H3>
+<PRE>
+<A HREF="../../../apama/analyticskit/Promise.html" title="type in apama.analyticskit">apama.analyticskit.Promise</A>&nbsp;<B>init</B>(string&nbsp;scenarioName,&nbsp;sequence&lt;string&gt;&nbsp;configNames,&nbsp;sequence&lt;string&gt;&nbsp;configTypes,&nbsp;action&lt;sequence&lt;string&gt;,&nbsp;any&gt;&nbsp;returns&nbsp;<A HREF="../../../apama/analyticskit/Promise.html" title="type in apama.analyticskit">apama.analyticskit.Promise</A>&nbsp;spawner,&nbsp;action&lt;sequence&lt;string&gt;&gt;&nbsp;onEdit)</PRE>Register a new Scenario definition.<DL>
+<DT>
+<B>Parameters:</B>
+</DT>
+<DD>
+<tt>scenarioName</tt>&nbsp;-&nbsp;the name as exposed to the Scenario service.</DD>
+<DD>
+<tt>configNames</tt>&nbsp;-&nbsp;the names of the input parameters.</DD>
+<DD>
+<tt>configTypes</tt>&nbsp;-&nbsp;the types of the input parameters.  One of string, integer, float, boolean, decimal.</DD>
+<DD>
+<tt>spawner</tt>&nbsp;-&nbsp;the action to call on a new instance created.</DD>
+<DD>
+<tt>onEdit</tt>&nbsp;-&nbsp;the action to call on the parameters being changed. (Not called on create)</DD>
+</DL>
+<DL>
+<DT>
+<B>Sends:</B>
+</DT>
+<DD>
+<A HREF="../../../apama/analyticskit/framework/Flusher.html" title="type in apama.analyticskit.framework">apama.analyticskit.framework.Flusher</A>&nbsp;-&nbsp;</DD>
+</DL>
+<DL>
+<DT>
+<B>Listens:</B>
+</DT>
+<DD>
+<A HREF="../../../apama/analyticskit/framework/Flusher.html" title="type in apama.analyticskit.framework">apama.analyticskit.framework.Flusher</A>&nbsp;-&nbsp;</DD>
+</DL>
+<HR>
+<A NAME="ondie()"></A>
+<H3>ondie</H3>
+<PRE>void&nbsp;<B>ondie</B>()</PRE>Notify of monitor instance termination.  Monitor should call this in its ondie action.<DL>
+<DT>
+<B>Routes:</B>
+</DT>
+<DD>
+<A HREF="../../../apama/analyticskit/framework/WorkerTerminated.html" title="type in apama.analyticskit.framework">apama.analyticskit.framework.WorkerTerminated</A>&nbsp;-&nbsp;</DD>
+</DL>
+<DL>
+<DT>
+<B>Sends:</B>
+</DT>
+<DD>
+<A HREF="../../../apama/analyticskit/framework/WorkerTerminated.html" title="type in apama.analyticskit.framework">apama.analyticskit.framework.WorkerTerminated</A>&nbsp;-&nbsp;</DD>
+</DL>
+<HR>
+<A NAME="startedRunning()"></A>
+<H3>startedRunning</H3>
+<PRE>any&nbsp;<B>startedRunning</B>(any&nbsp;aworkersRunning)</PRE>
+<DL>
+<DT>
+<B>Parameters:</B>
+</DT>
+<DD>
+<tt>aworkersRunning</tt>
+</DD>
+</DL>
+<DL>
+<DT>
+<B>Sends:</B>
+</DT>
+<DD>
+<A HREF="../../../apama/analyticskit/framework/TerminateWorker.html" title="type in apama.analyticskit.framework">apama.analyticskit.framework.TerminateWorker</A>&nbsp;-&nbsp;</DD>
+</DL>
+<DL>
+<DT>
+<B>Listens:</B>
+</DT>
+<DD>
+<A HREF="../../../apama/analyticskit/framework/WorkerTerminated.html" title="type in apama.analyticskit.framework">apama.analyticskit.framework.WorkerTerminated</A>&nbsp;-&nbsp;</DD>
+</DL>
+<HR>
+<A NAME="workerStarted()"></A>
+<H3>workerStarted</H3>
+<PRE>void&nbsp;<B>workerStarted</B>()</PRE>
+<DL>
+<DT>
+<B>Listens:</B>
+</DT>
+<DD>
+<A HREF="../../../apama/analyticskit/framework/TerminateWorker.html" title="type in apama.analyticskit.framework">apama.analyticskit.framework.TerminateWorker</A>&nbsp;-&nbsp;</DD>
+</DL>
+<HR>
+<HR>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2"><A target="_top" HREF="../../../index.html?apama/analyticskit/framework/ScenarioServiceUtil.html"><B>FRAMES</B></A>  &nbsp;
+
+            &nbsp;<A target="_top" HREF="ScenarioServiceUtil.html"><B>NO FRAMES</B></A>  &nbsp;
+            &nbsp;<SCRIPT type="text/javascript"></SCRIPT>
+<NOSCRIPT>
+<A HREF="../../../alltypes-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+</FONT></TD>
+</TR>
+<TR>
+<TD COLSPAN="2" BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+<TR ALIGN="center" VALIGN="top">
+<TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"><A HREF="../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;
+              </TD><TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1"><A HREF="../../..//apama/analyticskit/framework/package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A></TD><TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"><A HREF="../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;
+              </TD><TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"><A HREF="../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT>&nbsp;
+                </A></TD><TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1" WIDTH="100%" ALIGN="RIGHT"><FONT CLASS="NavBarFont1"><B>Apama Analytics Builder 10.5.0</B></FONT></TD>
+</TR>
+</TABLE>
+</TD><TD ALIGN="right" VALIGN="top" ROWSPAN="3"><EM></EM></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">SUMMARY:&nbsp;IMPORT&nbsp;|&nbsp;<A HREF="#constant_summary">CONSTANT</A>&nbsp;|&nbsp;<A HREF="#member_summary">MEMBER</A>&nbsp;|&nbsp;<A HREF="#action_summary">ACTION</A></FONT></TD><TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">DETAIL:&nbsp;IMPORT&nbsp;|&nbsp;<A HREF="#constant_detail">CONSTANT</A>&nbsp;|&nbsp;<A HREF="#member_detail">MEMBER</A>&nbsp;|&nbsp;<A HREF="#action_detail">ACTION</A></FONT></TD>
+</TR>
+</TABLE>
+<HR>
+</BODY>
+</HTML>
