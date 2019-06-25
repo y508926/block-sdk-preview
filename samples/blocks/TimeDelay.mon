@@ -1,0 +1,75 @@
+﻿/*
+ * $Copyright (c) 2018-2019 Software AG, Darmstadt, Germany and/or Software AG USA Inc., Reston, VA, USA, and/or its subsidiaries and/or its affiliates and/or their licensors.$
+ * Use, reproduction, transfer, publication or disclosure is prohibited except as specifically provided for in your License Agreement with Software AG
+ */
+
+package apamax.analyticsbuilder.samples;
+
+using apama.analyticsbuilder.Activation;
+using apama.analyticsbuilder.BlockBase;
+using com.apama.exceptions.Exception;
+using apama.analyticsbuilder.L10N;
+
+/**The parameters for the Time Delay Block.*/
+event TimeDelay_$Parameters{
+	
+	/**Delay (secs).
+	 *
+	 * The amount of time (in seconds) by which the input will be delayed.
+	 *
+	 * This must be a finite and positive number.
+	 */
+	float delaySecs;
+	
+	/** Check the value of delay is a finite and a valid number.*/
+	action $validate() {
+		if (delaySecs < 0.0  or not delaySecs.isFinite()) {
+			throw L10N.getLocalizedException("fwk_param_finite_non-negative_value", [BlockBase.getL10N_param("delaySecs",self),delaySecs]);
+		}		
+	}
+}
+
+/**
+ * Time Delay.
+ *
+ * Delays the input by the specified amount of time.
+ *
+ * @$blockCategory Flow Manipulation
+ * @$derivedName Delay $delaySecs secs
+ */
+event TimeDelay {
+	BlockBase $base;
+	TimeDelay_$Parameters $parameters;
+	
+	/**
+	 * Delays the input.
+	 * @param $activation The current activation.
+	 * @param $input_value The input value to be delayed.
+	 * 
+	 * @$inputName value Value
+	 */
+	action $process(Activation $activation, any $input_value) {
+		if ($parameters.delaySecs = 0.0) {
+			$setOutput_delayedValue($activation,$input_value);
+		}
+		else {
+			$base.createTimer($parameters.delaySecs,$input_value);
+		}
+	}
+	
+	/**
+	 * Sets the output after timer has been triggered.
+	 */
+	action $timerTriggered(Activation $activation, any $payload) {
+		$setOutput_delayedValue($activation, $payload);
+	}
+	
+	/**
+	 * Delayed Value.
+	 *
+	 * The delayed output value.
+	 */
+	action<Activation,any> $setOutput_delayedValue;
+	
+	constant string $OUTPUT_TYPE_delayedValue := "input(value)";
+}

@@ -1,0 +1,55 @@
+/*
+ * $Copyright (c) 2018-2019 Software AG, Darmstadt, Germany and/or Software AG USA Inc., Reston, VA, USA, and/or its subsidiaries and/or its affiliates and/or their licensors.$
+ * Use, reproduction, transfer, publication or disclosure is prohibited except as specifically provided for in your License Agreement with Software AG
+ */
+
+package apamax.analyticsbuilder.samples;
+
+using apama.analyticsbuilder.BlockBase;
+using apama.analyticsbuilder.Activation;
+
+/**
+ * Difference
+ *
+ * Calculates the absolute and signed differences between the connected inputs.
+ *
+ * Only generates an output if both inputs receive a value.
+ *
+ * @$blockCategory Calculations
+ */
+event Difference {
+	
+	BlockBase $base;
+	
+	/**
+	 * Calculate the absolute and signed differences between the inputs.
+	 *  
+	 * @param $activation The current activation.
+	 * @param $input_value1 First input to the block.
+	 * @param $input_value2 Second input to the block.
+	 *
+	 * @$inputName value1 Value 1
+	 * @$inputName value2 Value 2
+	 */
+	action $process(Activation $activation, optional<float> $input_value1, optional<float> $input_value2) {
+		ifpresent $input_value1, $input_value2{
+			float result :=  $input_value1-$input_value2;
+			$setOutput_absoluteDifference($activation, result.abs());
+			$setOutput_signedDifference($activation, result);
+		}
+	}
+	
+	/**
+	 * Absolute Difference
+	 *
+	 * The absolute difference of the inputs.
+	 */
+	action<Activation,float> $setOutput_absoluteDifference;
+	
+	/**
+	 * Signed Difference
+	 *
+	 * The signed difference of the inputs. Positive if the Value 1 input is larger than the Value 2 input.
+	 */
+	action<Activation,float> $setOutput_signedDifference;
+}
