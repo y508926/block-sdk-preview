@@ -45,9 +45,9 @@
 <H2>
 <FONT SIZE="-1">apama.analyticsbuilder</FONT>
 <BR>Event Partition_Alias</H2>
-<HR>Denotes an 'alias' device.<br>
-<br> This is used in simulation mode and test mode to declare the real and virtual devices. In terms of checking for cycles and what model to model interactions are used, the <tt>realDevice</tt> member is used, but the block actually listens to events identified by the <tt>virtualDevice</tt> field.<br>
-<br> Can be passed to BlockBase.sendsOutput or BlockBase.listensForInput to denote sending to a virtual device.<HR>
+<HR>Denotes an alias device.<br>
+<br> This is used in simulation mode and test mode to declare the real and virtual devices. In terms of checking for cycles and what model-to-model interactions are used, the <tt>realDevice</tt> member is used, but the block actually listens to events identified by the <tt>virtualDevice</tt> field.<br>
+<br> Can be passed to <tt>BlockBase.sendsSyncOutput</tt>, <tt>BlockBase.sendsAsyncOutput</tt> or <tt>BlockBase.listensForInput</tt> to denote sending to a virtual device.<HR>
 <A NAME="member_summary"></A>
 <TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
 <TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
@@ -56,12 +56,12 @@
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;any</CODE></FONT></TD><TD><CODE><B><A HREF="Partition_Alias.html#realDevice">realDevice</A></B></CODE>
 <br>
-<br>Partition value of the 'real' device. This is the partition that the model should be treated as consuming/ sending for purposes of model to model interactions.</TD>
+<br>Partition value of the real device. This is the partition that the model should be treated as consuming/sending for purposes of model-to-model interactions.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1"><CODE>&nbsp;any</CODE></FONT></TD><TD><CODE><B><A HREF="Partition_Alias.html#virtualDevice">virtualDevice</A></B></CODE>
 <br>
-<br>Partition value of the 'virtual' device, which is or the value that will be present in events.</TD>
+<br>Partition value of the virtual device, which is present or that will be present in events.</TD>
 </TR>
 </TABLE>&nbsp;<A NAME="member_detail"></A>
 <TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
@@ -72,11 +72,11 @@
 <A NAME="realDevice"></A>
 <H3>realDevice</H3>
 <PRE>any&nbsp;<B>realDevice</B>
-</PRE>Partition value of the 'real' device. This is the partition that the model should be treated as consuming/ sending for purposes of model to model interactions.<HR>
+</PRE>Partition value of the real device. This is the partition that the model should be treated as consuming/sending for purposes of model-to-model interactions.<HR>
 <A NAME="virtualDevice"></A>
 <H3>virtualDevice</H3>
 <PRE>any&nbsp;<B>virtualDevice</B>
-</PRE>Partition value of the 'virtual' device, which is or the value that will be present in events.<HR>
+</PRE>Partition value of the virtual device, which is present or that will be present in events.<HR>
 <HR>
 <TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
 <TR>

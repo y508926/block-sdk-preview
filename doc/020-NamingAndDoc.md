@@ -39,6 +39,7 @@ The block's name and description are also provided in ApamaDoc comments, before 
 
 * `@$blockCategory <Category>` - identifies the category in the model editor's palette in which the block should appear.
 * `@$derivedName` - provides a name which can include a parameter value by using `$<parameter name>`.
+* `@$titleIsDerived` - if set and true, use the derived name in the block parameters dialog as well; typically only set for input/output blocks.
 
 The above example block with documentation is thus:
 

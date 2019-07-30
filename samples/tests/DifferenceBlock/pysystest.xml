@@ -2,9 +2,9 @@
 <pysystest type="auto" state="runnable">
 
   <description>
-    <title>Difference block: touch test</title>
+    <title>Difference block: To check the basic working of the block</title>
     <purpose><![CDATA[
-Simple touch test of the difference block - two inputs, check the output.
+    To check that the blocks is able calculate the difference between the two inputs correctly.
 ]]>
     </purpose>
   </description>

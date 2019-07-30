@@ -7,8 +7,10 @@ setlocal
 
 if not defined APAMA_HOME (goto UNDEFINED)
 
+set THIS_SCRIPT=%~$PATH:0
+call :getpath %THIS_SCRIPT
 set "PATH=%APAMA_HOME%\third_party\python;%PATH%"
-python.exe "%~dp0/analytics_builder" %* || EXIT /B 1
+python.exe "%THIS_DIR%/analytics_builder" %* || EXIT /B 1
 goto END
 
 :UNDEFINED
@@ -17,3 +19,8 @@ goto END
 
 :END
 endlocal
+exit /b
+
+:getpath
+set THIS_DIR=%~dp0
+exit /b

@@ -77,7 +77,7 @@
 <A NAME="byKey()"></A>
 <H3>byKey</H3>
 <PRE>void&nbsp;static <B>byKey</B>(any&nbsp;evt,&nbsp;string&nbsp;field)</PRE>Request forwarding of an event type partitioned by the specified key field to workers.<br>
-<br> Must be called in the main context (i.e. from a $validate call).<DL>
+<br> Must be called in the main context (that is, from a <tt>$validate</tt> call).<DL>
 <DT>
 <B>Parameters:</B>
 </DT>
@@ -97,7 +97,7 @@
 <A NAME="unpartitioned()"></A>
 <H3>unpartitioned</H3>
 <PRE>void&nbsp;static <B>unpartitioned</B>(any&nbsp;evt)</PRE>Request forwarding of an event type to workers, without any partitioning.<br>
-<br> Must be called in the main context (i.e. from a $validate call).<DL>
+<br> Must be called in the main context (that is, from a <tt>$validate</tt> call).<DL>
 <DT>
 <B>Parameters:</B>
 </DT>

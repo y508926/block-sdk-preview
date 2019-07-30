@@ -109,6 +109,11 @@ class InputOutputHolder:
 			self.data['description'] = description
 		return self
 
+	def setExtendDocumentation(self, extendedDocumentation):
+		if extendedDocumentation is not None:
+			self.data['extendedDescription'] = extendedDocumentation
+		return self
+
 	def getUnderlyingDataMap(self):
 		return self.data
 
@@ -252,24 +257,14 @@ validFieldTags = vanillaFieldTags + [x[0] for x in headerFieldTags]
 
 class BlockGenerator:
 	## Parse the Description field from XML into name, description and extended documentation
-	def _parseDescription(self, descriptionElement):
-		descriptionArray = descriptionElement.text.splitlines()
-		count = 0
+	def _parseDescription(self, descriptionElement, containsName=True):
+		descriptionArray = [s.strip('\t" ') for s in descriptionElement.text.splitlines() if s.strip('\t ')]
 		name = None
-		description = None
-		extendDescription = None
-		for data in descriptionArray:
-			data = data.strip('\t ')
-			if data != '':
-				if count == 0:
-					name = data.strip('\t." ')
-				if count == 1:
-					description = data.strip('\t" ')
-				if count >= 2:
-					data = data.strip('\t" ')
-					extendDescription = data if extendDescription is None else '\n'.join(
-						[extendDescription, '<p></p>', data])
-				count = count + 1
+		if containsName and len(descriptionArray) > 0:
+			name = descriptionArray[0].strip('.')
+			descriptionArray = descriptionArray[1:]
+		description = descriptionArray[0] if len(descriptionArray) > 0 else None
+		extendDescription = '\n<p></p>\n'.join(descriptionArray[1:]) if len(descriptionArray) > 1 else None
 		return name, description, extendDescription
 
 	# Get default value from member type if any
@@ -343,15 +338,18 @@ class BlockGenerator:
 							typePassed = t.attrib['type']
 						else:
 							self.raiseError("Parameter type for optional type is missing.")
-					description = None
-					if parameter.find('Description') is not None and parameter.find('Description').text is not None:
-						description = parameter.find('Description').text.strip()
+
 
 					inputName = inputId
 					if inputId in inputNameMap and inputNameMap.get(inputId) != '':
 						inputName = inputNameMap.get(inputId)
-					inputObject = InputOutputHolder().setInputId(inputId).setType(typePassed).setDescription(
-						description).setName(inputName)
+					inputObject = InputOutputHolder().setInputId(inputId).setType(typePassed).setName(inputName)
+					if parameter.find('Description') is not None:
+						description = parameter.find('Description')
+						(_, descriptionField, extendDocsField) = self._parseDescription(description, containsName=False)
+						inputObject.setDescription(descriptionField)
+						inputObject.setExtendDocumentation(extendDocsField)
+
 					inputList.append(inputObject.getUnderlyingDataMap())
 					count = count + 1
 				except (KeyError, RuntimeError) as err:
@@ -387,6 +385,7 @@ class BlockGenerator:
 					if descriptionAll is not None:
 						(nameField, descriptionField, extendDocsField) = self._parseDescription(descriptionAll)
 						outputEvent.setDescription(descriptionField)
+						outputEvent.setExtendDocumentation(extendDocsField)
 						if nameField is not None and nameField != '':
 							outputEvent.setName(nameField)
 					outputList.append(outputEvent.getUnderlyingDataMap())
@@ -834,8 +833,8 @@ class ScriptRunner:
 				try:
 					subprocess.check_call(cmd, stderr=errFile, stdout=outFile)
 				except CalledProcessError as err:
-					print('Error while generating Apama Doc from %s. Please check %s file for more details',
-						self.inputDir, os.path.abspath(apamaDocErrLog))
+					print('Error while generating Apama Doc from %s. Please check %s file for more details' %
+						(self.inputDir, os.path.abspath(apamaDocErrLog)))
 					raise err
 		return os.path.join(apamaDocOutput, 'structure.xml')
 
@@ -855,8 +854,8 @@ class STDOUTFilter(logging.Filter):
 		return record.levelno == logging.INFO
 
 def add_arguments(parser):
-	parser.add_argument('--input', metavar='DIR', type=str, required=True, help='Input directory containing blocks.')
-	parser.add_argument('--output', metavar='JSON_FILE', type=str, required=True, help='The output JSON file for generated block metadata.')
+	parser.add_argument('--input', metavar='DIR', type=str, required=True, help='the input directory containing blocks')
+	parser.add_argument('--output', metavar='JSON_FILE', type=str, required=True, help='the output JSON file containing the metadata for blocks')
 
 def run_metadata_generator(input, output, tmpDir, printMsg=False):
 	apama_home = os.getenv('APAMA_HOME', None)

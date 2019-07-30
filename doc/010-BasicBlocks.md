@@ -40,7 +40,7 @@ Inputs and outputs can be one of the following types:
 
 * `float`
 * `string`
-* `boolean` \(used for both `boolean` and `pulse` wire types - see [later](080-DynamicTypes.md) and the Analytics Builder documentation topic 'The pulse type' for the difference between `boolean` and `pulse` types\)
+* `boolean` \(used for both `boolean` and `pulse` wire types - see [later](080-DynamicTypes.md) and the Analytics Builder documentation topic "The pulse type" for the difference between `boolean` and `pulse` types\)
 * `any`
 * `Value`
 
@@ -66,4 +66,4 @@ Blocks can also call methods on the `$base` field, which can provide contextual 
 * `getInputCount(input)` - to get the count of connections to a specified input identifier. This will currently return 0 or 1.
 * `getInputTypeName(input)` - to get the type of the wire attached to the input (useful for the `any` and `Value` types on inputs).
 
-[< Prev: Introduction](005-Intro.md) | [Contents](000-contents.md) | [Next: Naming and documenting blocks >](020-NamingAndDoc.md) 
+[< Prev: Using Software AG Designer](007-UsingDesigner.md) | [Contents](000-contents.md) | [Next: Naming and documenting blocks >](020-NamingAndDoc.md) 

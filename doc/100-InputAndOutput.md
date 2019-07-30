@@ -26,7 +26,7 @@ For the Cumulocity event types `Alarm`, `Event`, `Measurement` and `Operation`, 
 
 For other event types, the `RequestForwarding.byKey` or `RequestForwarding.unpartitioned` actions can be called from the `$preSpawnInit` action to request forwarding of a given type. (Multiple requests for the same type are permitted, but should be consistent on which field the type is partitioned by, or if it is unpartitioned.)
 
-For examples, see the **ManagedObjectInput.mon** sample.
+For an example, see the **DeviceLocationInput.mon** sample.
 
 ## Output blocks
 
@@ -36,7 +36,7 @@ Output blocks should construct the event to send, typically using block inputs a
 
 When sending events, these may be sent to an external system that will or will not echo the same event back to the correlator. For example, sending an HTTP request to a remote web service would result in a response, but the request would not be sent to the correlator. However, invoking a web service hosted by the correlator itself or sending to a system such as Cumulocity IoT or a message bus which echoes events back to the correlator would result in the correlator receiving the event again. In these cases, output blocks should make a distinction between the event routed and the one sent (which will be echoed back to the correlator). For Cumulocity `Measurement` objects, this is achieved by adding a property identifying the model name to the event sent to Cumulocity, but not the event routed internally. The input block ignores events with this property set; it should have already processed them (and they are likely to be treated as "late").
 
-An output block also needs to declare what event types and fields it is sending. This is done by calling `BlockBase.sendsOutput` with the same parameters as an input block would use.
+An output block also needs to declare what event types and fields it is sending and whether the generated output is time synchronous or asynchronous. If the output is time synchronous, then this is done by calling `BlockBase.sendsSyncOutput` with the same parameters as an input block would use, else call `BlockBase.sendsAsyncOutput`.
 
 ## Profiling
 
@@ -66,4 +66,4 @@ any deviceId;
 
 For `c8y_deviceOrCurrentDevice`, the parameter (`deviceId` in the above) should be of the `any` type and will be either a `string` for a device or a dictionary with a `currentDevice` entry for the "current device" case.
 
-[< Prev: The Value type](090-ValueType.md) | [Contents](000-contents.md) | [Next: Asynchronous validations >](110-AsynchronousValidations.md) 
+[< Prev: The Value type](090-ValueType.md) | [Contents](000-contents.md) | [Next: Cumulocity-specific helpers >](105-CumulocityHelper.md) 

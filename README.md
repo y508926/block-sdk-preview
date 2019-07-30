@@ -20,15 +20,23 @@ This version of the SDK supports Analytics Builder 10.5.0 (October 2019).  To ma
 
 ## Documentation
 
-The guide to writing blocks is available in the doc directory (todo: link) and there is [ApamaDoc reference](doc/apamadoc/index.html) available.
+The guide to writing blocks is available in the [doc directory](doc/000-contents.md) and there is [ApamaDoc reference](doc/apamadoc/index.html) available.
 
 ## Getting started
 
 From an Apama command prompt:
 
-* Run sample tests:
+* Run sample tests (Windows):
+```bat
+set ANALYTICS_BUILDER_SDK=%cd%
+cd samples/tests
+pysys run
+```
+
+* Run sample tests (Unix):
 
 ```bash
+export ANALYTICS_BUILDER_SDK=`pwd`
 cd samples/tests
 pysys run
 ```
@@ -36,5 +44,5 @@ pysys run
 * Package samples as an extension and upload:
 
 ```bash
-bin/analyticsbuilder build extension --input samples/blocks --cumulocity-url <URL> --username <username> --password <password> --name sample-blocks
+analytics_builder build extension --input samples/blocks --cumulocity_url <URL> --username <tenantID>/<username> --password <password> --name sample-blocks
 ```

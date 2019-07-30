@@ -1,10 +1,12 @@
 # Building a block into an extension
 
-Once a block is written in EPL, it can be packaged into an "extension". Extensions are **.zip** files that can be used to add blocks to the Analytics Builder runtime. Analytics Builder is deployed within Cumulocity IoT, and extensions are stored in the inventory. This SDK provides a command line utility called `analytics_builder` which is available in the **bin** directory. This can be used to build an extension or upload an extension to a Cumulocity IoT installation.
+Once a block is written in EPL, it can be packaged into an "extension". Extensions are **.zip** files that can be used to add blocks to the Analytics Builder runtime. Analytics Builder is deployed within Cumulocity IoT, and extensions are stored in the inventory. This SDK provides a command line utility called `analytics_builder` which is available in the root directory of the SDK. This can be used to build an extension or upload an extension to a Cumulocity IoT installation.
 
-Most of the `analytics_builder` commands use a `--input` argument which specifies the path to a directory. All **.mon** files found under that directory will be included, and a **messages-EN.json** file will be used for the runtime messages. (TODO: review once we have an implementation.)
+Most of the `analytics_builder` commands use a `--input` argument which specifies the path to a directory. All **.mon** files found under that directory will be included, and message files matching **\*-messages.json** or named **messages.json** will be used for the runtime messages. 
 
-The `analytics_builder` script is run from the command line. A two-word command is provided, followed by any arguments required by the command. Commands available are:
+The `analytics_builder` script is run from an Apama command prompt (on Windows, run **Apama Command Prompt** from the Start Menu group of your Apama installation; on Linux, source the `apama_env` script). **Note:** You must place the script in a directory that does not have any spaces in its full path. 
+
+The `analytics_builder` script takes a two-word command, followed by any arguments required by the command. Available commands are:
 
 * `build extension --output <path to zip file>`
 
@@ -14,12 +16,12 @@ The `analytics_builder` script is run from the command line. A two-word command 
   analytics_builder build extension --input samples/blocks --output sample-blocks.zip
   ```
 
-* `build extension --cumulocity_url <url> --username <user> --password <password>`
+* `build extension --cumulocity_url <url> --username <user> --password <password> --name sample-blocks`
 
-  Upload an extension to a Cumulocity IoT instance. If using an IP address in the URL, you should also specify `--tenantId <tenant id>`. For example: (TODO: review once we have an implementation.) 
+  Upload an extension to a Cumulocity IoT instance. The `--username` argument also needs the tenant identifier along with user name in the format `tenantID/username`.
 
   ```bash
-  analytics_builder build extension --input samples/blocks --cumulocity_url https://demo.cumulocity.com/ --username user --password pass
+  analytics_builder build extension --input samples/blocks --cumulocity_url https://demo.cumulocity.com/ --username tenantID/user --password pass
   ```
 
 * `build metadata --output <json file>`
@@ -29,6 +31,14 @@ The `analytics_builder` script is run from the command line. A two-word command 
   ```bash
   analytics_builder build metadata --input samples/blocks  --output samples.json
   ```
+
+* `configure designer`
+
+  Configure Software AG Designer with the location of the block SDK.  See [Using Software AG Designer](007-UsingDesigner.md).
+
+* `json extract --output <path to directory>` or `json pack --output <path to directory>`
+
+  Extract or pack message or metadata JSON files from/to event files. This allows the metadata or the messages to be edited as JSON.
 
 See the `analytics_builder --help` output for full details of the options.
 

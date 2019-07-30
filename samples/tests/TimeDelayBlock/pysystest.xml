@@ -2,9 +2,9 @@
 <pysystest type="auto" state="runnable">
 
   <description>
-    <title>Tiem delay block: touch test</title>
+    <title>Time delay block: To check the basic working of the block.</title>
     <purpose><![CDATA[
-Simple touch test of the time delay block - two inputs, check the output.
+To check if the block delays the input and generates the delayed output correctly.
 ]]>
     </purpose>
   </description>

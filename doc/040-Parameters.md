@@ -91,7 +91,7 @@ action $validate() {
 }
 ```
 
-And provide a message in a JSON file as follows: (TODO: What filename/ location for the JSON - see PAB-520)
+And provide a message in a JSON file named **messages.json** as follows:
 
 ```JSON
 {
