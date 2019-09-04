@@ -15,21 +15,25 @@ Note that the correlator started by `startAnalyticsBuilderCorrelator` is externa
 For example, a simple test is:
 
 ```python
+from pysys.constants import *
+from apamax.analyticsbuilder.basetest import AnalyticsBuilderBaseTest
+
 class PySysTest(AnalyticsBuilderBaseTest):
     def execute(self):
-        correlator = self.startAnalyticsBuilderCorrelator(
+        self.correlator = self.startAnalyticsBuilderCorrelator(
                      blockSourceDir=f'{self.project.SOURCE}/blocks/')
-        modelId = self.createTestModel('apamax.analyticsbuilder.samples.Difference')
-        self.sendEventStrings(correlator,
+        self.modelId = self.createTestModel('apamax.analyticsbuilder.samples.Offset')
+        self.sendEventStrings(self.correlator,
                               self.timestamp(1),
-                              self.inputEvent('value1', 12.25, id = modelId),
+                              self.inputEvent('value', 100.75, id=self.modelId),
                               self.timestamp(2),
-                              self.inputEvent('value2', 7.75, id = modelId),
-                              self.timestamp(2.1))
+                              self.inputEvent('value', 10.50, id=self.modelId),
+                              self.timestamp(5),
+                              )
 
     def validate(self):
-        self.assertGrep('output.evt', expr=self.outputExpr('absoluteDifference', 4.5))
-
+        self.assertGrep('output.evt', expr=self.outputExpr('output', 200.75))
+        self.assertGrep('output.evt', expr=self.outputExpr('output', 110.50))
 ```
 
 Points to be aware of:
@@ -38,5 +42,3 @@ Points to be aware of:
 * If using `assertGrep` on floating point numbers, beware of rounding errors (for example, a result of `4.6` may be rendered as `4.599999999997` in an event file due to rounding errors).
 
 For examples, see the tests in the **samples/tests** directory.
-
-[< Prev: Building a block into an extension](030-BuildingExtensions.md) | [Contents](000-contents.md) | [Next: Parameters, block startup and error handling >](040-Parameters.md) 
