@@ -1,0 +1,470 @@
+2019-09-04 13:37:20.759 ##### [23840] - Correlator, version 10.5.0.0.357983 (build rel/10.5.0.x@357983 on amd64-win using Software AG suite version 10.5), started.
+2019-09-04 13:37:20.761 ##### [23840] - Running on host 'SAG-GNQ4NV2.eur.ad.sag' as user 'y508926'.
+2019-09-04 13:37:20.761 ##### [23840] - Running on platform 'Windows 10 Enterprise'.
+2019-09-04 13:37:20.761 ##### [23840] - Running on CPU 'GenuineIntel family 6 model 14 stepping 10 Intel(R) Core(TM) i7-8850H CPU @ 2.60GHz'.
+2019-09-04 13:37:20.761 ##### [23840] - Running with process Id 20700.
+2019-09-04 13:37:20.761 ##### [23840] - Running with 32560.68MB of available memory.
+2019-09-04 13:37:20.761 ##### [23840] - There are 12 CPU(s)
+2019-09-04 13:37:20.761 ##### [23840] - Correlator command line: C:\SoftwareAG105\Apama\bin\correlator --name correlator -p 10760 -l C:\Users\Public\SoftwareAG\ApamaWork_10.5\license\ApamaServerLicense.xml -f correlator.log -Xclock -DanalyticsBuilder.numWorkerThreads=4
+2019-09-04 13:37:20.761 ##### [23840] - Current Working Directory: C:\dev\PAB-750\block-sdk\samples\tests\Offset\Output\win32
+2019-09-04 13:37:20.761 ##### [23840] - PATH: C:\SoftwareAG105\Apama\third_party\python;C:\Users\Public\SoftwareAG\ApamaWork_10.5\lib;C:\SoftwareAG105\Apama\bin;C:\SoftwareAG105\Apama\adapters\bin;C:\SoftwareAG105\Apama\..\common\security\openssl\bin;C:\SoftwareAG105\jvm\jvm\jre\bin\server;C:\SoftwareAG105\jvm\jvm\jre\bin;C:\SoftwareAG105\Apama\..\common\lib\ant\bin;C:\SoftwareAG105\Apama\third_party\python;C:\SoftwareAG105\jvm\jvm\jre\..\bin;C:\SoftwareAG105\Apama\..\UniversalMessaging\cplus\lib\x86_64;C:\Softwares\terminal\ConEmu\ConEmu\Scripts;C:\Softwares\terminal\ConEmu;C:\Softwares\terminal\ConEmu\ConEmu;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\TortoiseSVN\bin;C:\Program Files\SlikSvn\bin;C:\Softwares\terminal\term..exe;C:\SoftwareAG105\Apama\third_party\python\;C:\SoftwareAG105\Apama\third_party\python\Scripts;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Users\y508926\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Users\y508926\AppData\Local\Microsoft\WindowsApps;C:\Users\y508926\AppData\Local\Programs\Microsoft VS Code\bin;C:\Softwares\terminal\bin;;C:\Softwares\terminal/bin;C:\Softwares\terminal/Gow/bin;C:\Softwares\terminal/../PortableGit/cmd;C:\Softwares\terminal/scripts/svn;C:\Softwares\terminal/z.lua;C:\SoftwareAG105\Apama\third_party\python\lib\site-packages\pywin32_system32
+2019-09-04 13:37:20.761 ##### [23840] - Current UTC time: 2019-09-04 08:07:20, local timezone: India Standard Time (DST Disabled)
+2019-09-04 13:37:20.761 ##### [23840] - Input value - port                     = 10760
+2019-09-04 13:37:20.761 ##### [23840] - Input value - output queue size        = 10000
+2019-09-04 13:37:20.761 ##### [23840] - Input value - output queue batch size  = 100
+2019-09-04 13:37:20.761 ##### [23840] - Input value - output queue mode        = blocking
+2019-09-04 13:37:20.761 ##### [23840] - Input value - environment variable     = APAMA_COMMON_JRE=C:\SoftwareAG105\jvm\jvm\jre
+2019-09-04 13:37:20.761 ##### [23840] - Input value - environment variable     = APAMA_CORRELATOR_HOME=C:\SoftwareAG105\Apama
+2019-09-04 13:37:20.761 ##### [23840] - Input value - environment variable     = APAMA_DASHBOARD_HOME=C:\SoftwareAG105\Apama
+2019-09-04 13:37:20.761 ##### [23840] - Input value - environment variable     = APAMA_DEV_HOME=C:\SoftwareAG105\Apama
+2019-09-04 13:37:20.761 ##### [23840] - Input value - environment variable     = APAMA_ENVSET=10.5:C:\SoftwareAG105\Apama:amd64-win
+2019-09-04 13:37:20.761 ##### [23840] - Input value - environment variable     = APAMA_HOME=C:\SoftwareAG105\Apama
+2019-09-04 13:37:20.761 ##### [23840] - Input value - environment variable     = APAMA_JRE=C:\SoftwareAG105\jvm\jvm\jre
+2019-09-04 13:37:20.761 ##### [23840] - Input value - environment variable     = APAMA_LIBRARY_VERSION=10.5
+2019-09-04 13:37:20.761 ##### [23840] - Input value - environment variable     = APAMA_MANAGEMENT_HOME=C:\SoftwareAG105\Apama
+2019-09-04 13:37:20.761 ##### [23840] - Input value - environment variable     = APAMA_PLATFORM=amd64-win
+2019-09-04 13:37:20.761 ##### [23840] - Input value - environment variable     = APAMA_WORK=C:\Users\Public\SoftwareAG\ApamaWork_10.5
+2019-09-04 13:37:20.761 ##### [23840] - Input value - environment variable     = SSL_CERT_FILE=C:\SoftwareAG105\Apama\..\common\security\openssl\cert.pem
+2019-09-04 13:37:20.761 ##### [23840] - Using memory allocator                 = TBB scalable allocator
+2019-09-04 13:37:20.762 ##### [23840] - License File: C:\Users\Public\SoftwareAG\ApamaWork_10.5\license\ApamaServerLicense.xml
+2019-09-04 13:37:20.769 ##### [23840] - ================= Software AG License Data =================
+2019-09-04 13:37:20.769 ##### [23840] - Sales Information
+2019-09-04 13:37:20.769 ##### [23840] -      Serial Number      : 0000028449
+2019-09-04 13:37:20.769 ##### [23840] -      Customer ID        : 1
+2019-09-04 13:37:20.769 ##### [23840] -      Customer Name      : Software AG internal
+2019-09-04 13:37:20.769 ##### [23840] - Product Information
+2019-09-04 13:37:20.769 ##### [23840] -      Product Name       : Apama Server
+2019-09-04 13:37:20.769 ##### [23840] -      Product Code       : PAMCO
+2019-09-04 13:37:20.769 ##### [23840] -      Operating System   : Linux
+2019-09-04 13:37:20.769 ##### [23840] -      Product Version    : 10.0
+2019-09-04 13:37:20.769 ##### [23840] -      Product Usage      : 
+2019-09-04 13:37:20.769 ##### [23840] -      Expiration Date    : 2020/01/31
+2019-09-04 13:37:20.769 ##### [23840] - License Information
+2019-09-04 13:37:20.769 ##### [23840] -      License Type       : 
+2019-09-04 13:37:20.769 ##### [23840] -      Price Unit         : ST
+2019-09-04 13:37:20.769 ##### [23840] -      Price Quantity     : 1
+2019-09-04 13:37:20.769 ##### [23840] -      Extended Rights    : 
+2019-09-04 13:37:20.769 ##### [23840] -      License Version    : 1.2
+2019-09-04 13:37:20.769 ##### [23840] - Physical Hardware
+2019-09-04 13:37:20.769 ##### [23840] -      Model              : Intel(R) Core(TM) i7-8850H CPU @ 2.60GHz
+2019-09-04 13:37:20.769 ##### [23840] -      Sockets            : 1
+2019-09-04 13:37:20.769 ##### [23840] -      Physical cores     : 6
+2019-09-04 13:37:20.769 ##### [23840] -      Logical cores      : 12
+2019-09-04 13:37:20.769 ##### [23840] -      Performance Bucket : CoreD
+2019-09-04 13:37:20.769 ##### [23840] -      Virtualization     : yes
+2019-09-04 13:37:20.769 ##### [23840] - ==================== End License Data ======================
+2019-09-04 13:37:20.769 ##### [23840] - 
+2019-09-04 13:37:20.771 ##### [23840] - Input value - pidfile                  = 
+2019-09-04 13:37:20.771 ##### [23840] - Input value - per receiver queue size  = 10 s
+2019-09-04 13:37:20.771 ##### [23840] - Input value - per receiver queue size  = 10240 kb
+2019-09-04 13:37:20.771 ##### [23840] - Input value - input queue size         = 20000
+2019-09-04 13:37:20.771 ##### [23840] - External clocking                      = enabled
+2019-09-04 13:37:20.771 ##### [23840] - Input value - logfile                  = correlator.log
+2019-09-04 13:37:20.771 ##### [23840] - Input value - loglevel                 = INFO
+2019-09-04 13:37:20.771 ##### [23840] - Input value - inputLog                 = ** Warning input log not enabled **
+2019-09-04 13:37:20.771 ##### [23840] - Compiler optimizations                 = enabled - the debugger cannot be used; specify command line option "-g" to use it.
+2019-09-04 13:37:20.771 ##### [23840] - Using EPL runtime                      = interpreted
+2019-09-04 13:37:20.772 ##### [23840] - Python support                         = automatic
+2019-09-04 13:37:20.776 ##### [23840] - Java support                           = disabled
+2019-09-04 13:37:20.776 ##### [23840] - Input value - persistence              = disabled
+2019-09-04 13:37:20.780 INFO  [23840] - Will log queue size every 5.000000 seconds
+2019-09-04 13:37:20.780 INFO  [23840] - Starting scheduler with 12 threads (determined from hardware)
+2019-09-04 13:37:20.782 INFO  [23840] - Server socket opened listening on 0.0.0.0:10760
+2019-09-04 13:37:20.782 ##### [23840] - Component ID: correlator (correlator/6732723904875073815/6732723904875073815)
+2019-09-04 13:37:20.782 ##### [23840] - Correlator, version 10.5.0.0.357983, running
+2019-09-04 13:37:21.386 INFO  [18568] - Sender engine_inject (y508926) (000001CC2BE3B140) (component ID 6732723908485058839/6732442433508348183) connected from 127.0.0.1:56886
+2019-09-04 13:37:21.437 INFO  [15872] - Added monitor com.apama.scenario.ScenarioService
+2019-09-04 13:37:21.437 INFO  [15872] - Added monitor com.apama.scenario.RequestInstancesHandler
+2019-09-04 13:37:21.437 INFO  [15872] - Added type com.apama.scenario.ScenarioServiceUpdaterMultipleInstances
+2019-09-04 13:37:21.437 INFO  [15872] - Added type com.apama.scenario.ScenarioServiceUpdaterSingleInstance
+2019-09-04 13:37:21.437 INFO  [15872] - Added type com.apama.scenario.ScenarioServiceUpdaterBase
+2019-09-04 13:37:21.437 INFO  [15872] - Added type com.apama.scenario.CallbackHelper
+2019-09-04 13:37:21.437 INFO  [15872] - Added type com.apama.scenario.ScenarioServiceLibrary
+2019-09-04 13:37:21.437 INFO  [15872] - Added type com.apama.scenario.AllConfiguration
+2019-09-04 13:37:21.437 INFO  [15872] - Added type com.apama.scenario.GetAllConfiguration
+2019-09-04 13:37:21.437 INFO  [15872] - Added type com.apama.scenario.ScenarioProcessedUpdates
+2019-09-04 13:37:21.437 INFO  [15872] - Added type com.apama.scenario.OperationCompleted
+2019-09-04 13:37:21.437 INFO  [15872] - Added type com.apama.scenario.Configuration
+2019-09-04 13:37:21.437 INFO  [15872] - Added type com.apama.scenario.GetConfiguration
+2019-09-04 13:37:21.437 INFO  [15872] - Added type com.apama.scenario.ParallelStarting
+2019-09-04 13:37:21.437 INFO  [15872] - Added type com.apama.scenario.RequestInstancesParallelDone
+2019-09-04 13:37:21.437 INFO  [15872] - Added type com.apama.scenario.RequestInstancesParallel
+2019-09-04 13:37:21.437 INFO  [15872] - Added type com.apama.scenario.FinishedScenarioRecovery
+2019-09-04 13:37:21.437 INFO  [15872] - Added type com.apama.scenario.StartScenarioRecovery
+2019-09-04 13:37:21.437 INFO  [15872] - Added type com.apama.scenario.ScenarioFinished
+2019-09-04 13:37:21.437 INFO  [15872] - Added type com.apama.scenario.RequestInstancesInternal
+2019-09-04 13:37:21.437 INFO  [15872] - Added type com.apama.scenario.SendQueuedUpdatesNow
+2019-09-04 13:37:21.437 INFO  [15872] - Added type com.apama.scenario.ConfigureUpdates
+2019-09-04 13:37:21.437 INFO  [15872] - Added type com.apama.scenario.SetThrottlingPeriod
+2019-09-04 13:37:21.437 INFO  [15872] - Added type com.apama.scenario.ScenarioServiceUnloaded
+2019-09-04 13:37:21.437 INFO  [15872] - Added type com.apama.scenario.ScenarioServiceLoaded
+2019-09-04 13:37:21.437 INFO  [15872] - Added type com.apama.scenario.Instance
+2019-09-04 13:37:21.437 INFO  [15872] - Added type com.apama.scenario.ScenarioUnloaded
+2019-09-04 13:37:21.437 INFO  [15872] - Added type com.apama.scenario.Scenario
+2019-09-04 13:37:21.437 INFO  [15872] - Added type com.apama.scenario.RequestInstancesDone
+2019-09-04 13:37:21.437 INFO  [15872] - Added type com.apama.scenario.RequestInstancesOnChannelByUser
+2019-09-04 13:37:21.437 INFO  [15872] - Added type com.apama.scenario.RequestInstancesOnChannel
+2019-09-04 13:37:21.437 INFO  [15872] - Added type com.apama.scenario.RequestScenariosAck
+2019-09-04 13:37:21.437 INFO  [15872] - Added type com.apama.scenario.RequestScenariosDone
+2019-09-04 13:37:21.437 INFO  [15872] - Added type com.apama.scenario.RequestScenarios
+2019-09-04 13:37:21.437 INFO  [15872] - Added type com.apama.scenario.StateChange
+2019-09-04 13:37:21.437 INFO  [15872] - Added type com.apama.scenario.Acknowledge
+2019-09-04 13:37:21.437 INFO  [15872] - Added type com.apama.scenario.Update
+2019-09-04 13:37:21.437 INFO  [15872] - Added type com.apama.scenario.InstanceDied
+2019-09-04 13:37:21.437 INFO  [15872] - Added type com.apama.scenario.Deleted
+2019-09-04 13:37:21.437 INFO  [15872] - Added type com.apama.scenario.Delete
+2019-09-04 13:37:21.437 INFO  [15872] - Added type com.apama.scenario.Edited
+2019-09-04 13:37:21.437 INFO  [15872] - Added type com.apama.scenario.Edit
+2019-09-04 13:37:21.437 INFO  [15872] - Added type com.apama.scenario.ParentChildRelationship
+2019-09-04 13:37:21.437 INFO  [15872] - Added type com.apama.scenario.Created
+2019-09-04 13:37:21.437 INFO  [15872] - Added type com.apama.scenario.Create
+2019-09-04 13:37:21.437 INFO  [15872] - Injected MonitorScript from file C:\SoftwareAG105\Apama/monitors/ScenarioService.mon (8b7462e831b959c08dfd0df95fef8b7d), size 74870 bytes, compile time 0.05 seconds
+2019-09-04 13:37:21.440 INFO  [24136] - com.apama.scenario.ScenarioService [1] ScenarioService interface loaded. MetaData: {"interface.fileName":"ScenarioService.mon","interface.fullVersion":"rel/10.5.0.x@357983","interface.language":"MonitorScript","interface.name":"ScenarioService","interface.package":"com.apama.scenario","interface.vendor":"Apama","interface.version":"10.5.0.0.357983"}
+2019-09-04 13:37:21.445 INFO  [5316] - Loading EPL plugin MemoryStorePlugin from library MemoryStorePlugin.dll
+2019-09-04 13:37:21.447 INFO  [5316] - MemoryStorePlugin version 10.5.0.0.357983 (build rel/10.5.0.x@357983 on amd64-win), loaded.
+2019-09-04 13:37:21.459 INFO  [5316] - Plugin library MemoryStorePlugin (C++ API v9.0) loaded OK
+2019-09-04 13:37:21.470 INFO  [15872] - Added type com.apama.memorystore.Storage
+2019-09-04 13:37:21.470 INFO  [15872] - Added type com.apama.memorystore.Store
+2019-09-04 13:37:21.470 INFO  [15872] - Added type com.apama.memorystore.Table
+2019-09-04 13:37:21.470 INFO  [15872] - Added type com.apama.memorystore.Iterator
+2019-09-04 13:37:21.470 INFO  [15872] - Added type com.apama.memorystore.MissedRowChanges
+2019-09-04 13:37:21.470 INFO  [15872] - Added type com.apama.memorystore.RowChanged
+2019-09-04 13:37:21.470 INFO  [15872] - Added type com.apama.memorystore.Row
+2019-09-04 13:37:21.470 INFO  [15872] - Added type com.apama.memorystore.Schema
+2019-09-04 13:37:21.470 INFO  [15872] - Added type com.apama.memorystore.Finished
+2019-09-04 13:37:21.470 INFO  [15872] - Injected MonitorScript from file C:\SoftwareAG105\Apama/monitors/data_storage/MemoryStore.mon (b001760ce77982fd43cb79fccf03d31b), size 53927 bytes, compile time 0.03 seconds
+2019-09-04 13:37:21.478 INFO  [5316] - Loading EPL plugin JSONPlugin from library JSONPlugin.dll
+2019-09-04 13:37:21.481 INFO  [5316] - <.plugins.JSONPlugin> Plugin library JSONPlugin (C++ API 0x4) loaded OK
+2019-09-04 13:37:21.481 INFO  [15872] - Added type com.apama.json.JSONPlugin
+2019-09-04 13:37:21.481 INFO  [15872] - Injected MonitorScript from file C:\SoftwareAG105\Apama/monitors/JSONPlugin.mon (61b2631b1a5cba88759ca1901a30037c), size 1420 bytes, compile time 0.00 seconds
+2019-09-04 13:37:21.485 INFO  [15872] - Added type com.apama.util.AnyExtractor
+2019-09-04 13:37:21.485 INFO  [15872] - Injected MonitorScript from file C:\SoftwareAG105\Apama/monitors/AnyExtractor.mon (cb079bf9937c1b12c2e2f6d4856ce1c2), size 9346 bytes, compile time 0.00 seconds
+2019-09-04 13:37:21.486 INFO  [15872] - Added type com.apama.correlator.ManagementAck
+2019-09-04 13:37:21.486 INFO  [15872] - Injected MonitorScript from file C:\SoftwareAG105\Apama/monitors/ManagementImpl.mon (077c95750bc52e70137d3a7b4cc34b40), size 556 bytes, compile time 0.00 seconds
+2019-09-04 13:37:21.490 INFO  [5316] - Loading EPL plugin ManagementPlugin from library ManagementPlugin.dll
+2019-09-04 13:37:21.492 INFO  [5316] - <.plugins.ManagementPlugin> Plugin library ManagementPlugin (C++ API 0x4) loaded OK
+2019-09-04 13:37:21.497 INFO  [15872] - Added type com.apama.correlator.UserStatusChanged
+2019-09-04 13:37:21.497 INFO  [15872] - Added type com.apama.correlator.Logging
+2019-09-04 13:37:21.497 INFO  [15872] - Added type com.apama.correlator.Component
+2019-09-04 13:37:21.497 INFO  [15872] - Added type com.apama.correlator.Persistence
+2019-09-04 13:37:21.497 INFO  [15872] - Added type com.apama.correlator.EngineStatus
+2019-09-04 13:37:21.497 INFO  [15872] - Injected MonitorScript from file C:\SoftwareAG105\Apama/monitors/Management.mon (aebcc95e6dde9785227b84c88b9c8ecf), size 20419 bytes, compile time 0.01 seconds
+2019-09-04 13:37:21.499 INFO  [15872] - Added type com.softwareag.connectivity.control.FlushAck
+2019-09-04 13:37:21.499 INFO  [15872] - Added type com.softwareag.connectivity.control.Flush
+2019-09-04 13:37:21.499 INFO  [15872] - Added type com.softwareag.connectivity.control.AckRequired
+2019-09-04 13:37:21.499 INFO  [15872] - Added type com.softwareag.connectivity.control.AckUpTo
+2019-09-04 13:37:21.499 INFO  [15872] - Injected MonitorScript from file C:\SoftwareAG105\Apama/monitors/ConnectivityPluginsControl.mon (2b09020c61ee5f875b6fb54c326e6e8f), size 2881 bytes, compile time 0.00 seconds
+2019-09-04 13:37:21.501 INFO  [5316] - Loading EPL plugin ConnectivityPlugin from library ConnectivityPlugin.dll
+2019-09-04 13:37:21.520 INFO  [5316] - <.plugins.ConnectivityPlugin> Plugin library ConnectivityPlugin (C++ API 0x4) loaded OK
+2019-09-04 13:37:21.521 INFO  [15872] - Added type com.softwareag.connectivity.ConnectivityPlugins
+2019-09-04 13:37:21.521 INFO  [15872] - Added type com.softwareag.connectivity.Direction
+2019-09-04 13:37:21.521 INFO  [15872] - Added type com.softwareag.connectivity.Chain
+2019-09-04 13:37:21.521 INFO  [15872] - Injected MonitorScript from file C:\SoftwareAG105\Apama/monitors/ConnectivityPlugins.mon (c4a2dee03cfffb6571156f0d82af4fcd), size 8683 bytes, compile time 0.02 seconds
+2019-09-04 13:37:21.524 INFO  [5316] - Loading EPL plugin TimeFormatPlugin from library TimeFormatPlugin.dll
+2019-09-04 13:37:21.526 INFO  [5316] - <plugins.TimeFormatPlugin> TimeFormatPlugin version 10.5.0.0.357983 (build rel/10.5.0.x@357983 on amd64-win) loaded.
+2019-09-04 13:37:21.526 INFO  [5316] - <.plugins.TimeFormatPlugin> Plugin library TimeFormatPlugin (C++ API 0x4) loaded OK
+2019-09-04 13:37:21.530 INFO  [15872] - Added type com.softwareag.connectivity.httpclient.HttpTransport
+2019-09-04 13:37:21.530 INFO  [15872] - Added type com.softwareag.connectivity.httpclient.Request
+2019-09-04 13:37:21.530 INFO  [15872] - Added type com.softwareag.connectivity.httpclient.Response
+2019-09-04 13:37:21.530 INFO  [15872] - Added type com.softwareag.connectivity.httpclient.HttpOptions
+2019-09-04 13:37:21.530 INFO  [15872] - Added type com.softwareag.connectivity.httpclient.RequestType
+2019-09-04 13:37:21.530 INFO  [15872] - Injected MonitorScript from file C:\SoftwareAG105\Apama/monitors/HTTPClientEvents.mon (15ae034138a367441de90bc9e8b26562), size 19203 bytes, compile time 0.01 seconds
+2019-09-04 13:37:21.532 INFO  [15872] - Added monitor com.apama.connectivity.ApplicationInitializedTransports
+2019-09-04 13:37:21.532 INFO  [15872] - Added type com.apama.connectivity.ApplicationInitialized
+2019-09-04 13:37:21.532 INFO  [15872] - Injected MonitorScript from file C:\SoftwareAG105\Apama/monitors/AutomaticOnApplicationInitialized.mon (da96fea5540e48a6fd8f1918fca9b818), size 1428 bytes, compile time 0.00 seconds
+2019-09-04 13:37:21.532 INFO  [14492] - Sender engine_inject (y508926) (000001CC2BE3B140) (component ID 6732723908485058839/6732442433508348183) disconnected cleanly: Other party requested disconnection
+2019-09-04 13:37:21.596 INFO  [18568] - Sender engine_inject (y508926) (000001CC30A79190) (component ID 6732723908923363607/6732442433946652951) connected from 127.0.0.1:56890
+2019-09-04 13:37:21.601 INFO  [7800] - Decoded CDP-packaged file C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/analyticsbuilder-framework.cdp/c:\dev\PAB-750\src\output-amd64-win\BUILD_WORK\framework-cdp-src\ConfigurablePropertiesLookup.mon (cb73f04dad78e4e1d5a4d8395ac018e5), size 7404 bytes
+2019-09-04 13:37:21.604 INFO  [7800] - Added type apama.analyticsbuilder.ConfigHelper
+2019-09-04 13:37:21.604 INFO  [7800] - Added type apama.analyticsbuilder.ConfigPropertyData
+2019-09-04 13:37:21.604 INFO  [7800] - Injected MonitorScript from file C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/analyticsbuilder-framework.cdp/c:\dev\PAB-750\src\output-amd64-win\BUILD_WORK\framework-cdp-src\ConfigurablePropertiesLookup.mon[CDP:C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/analyticsbuilder-framework.cdp] (cb73f04dad78e4e1d5a4d8395ac018e5), size 7404 bytes, compile time 0.00 seconds
+2019-09-04 13:37:21.604 INFO  [7800] - Decoded CDP-packaged file C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/analyticsbuilder-framework.cdp/c:\dev\PAB-750\src\output-amd64-win\BUILD_WORK\framework-cdp-src\BlockCatalogRegistry.mon (7f42f278a086e03a3f554b28ca94ca12), size 11209 bytes
+2019-09-04 13:37:21.615 INFO  [7800] - Added monitor apama.analyticsbuilder.BlockCatalogRegistry
+2019-09-04 13:37:21.615 INFO  [7800] - Added type apama.analyticsbuilder.MetadataHTTPResponse
+2019-09-04 13:37:21.615 INFO  [7800] - Added type apama.analyticsbuilder.MetadataHTTPRequest
+2019-09-04 13:37:21.615 INFO  [7800] - Added type apama.analyticsbuilder.BlockInfoResponse
+2019-09-04 13:37:21.615 INFO  [7800] - Added type apama.analyticsbuilder.BlockInfoRequest
+2019-09-04 13:37:21.615 INFO  [7800] - Added type apama.analyticsbuilder.BlockMessages
+2019-09-04 13:37:21.615 INFO  [7800] - Added type apama.analyticsbuilder.BlockMetadata
+2019-09-04 13:37:21.615 INFO  [7800] - Injected MonitorScript from file C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/analyticsbuilder-framework.cdp/c:\dev\PAB-750\src\output-amd64-win\BUILD_WORK\framework-cdp-src\BlockCatalogRegistry.mon[CDP:C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/analyticsbuilder-framework.cdp] (7f42f278a086e03a3f554b28ca94ca12), size 11209 bytes, compile time 0.01 seconds
+2019-09-04 13:37:21.615 INFO  [7800] - Decoded CDP-packaged file C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/analyticsbuilder-framework.cdp/c:\dev\PAB-750\src\output-amd64-win\BUILD_WORK\framework-cdp-src\Promise.mon (8d5a7503d62201e94fa02e00ddabc074), size 11434 bytes
+2019-09-04 13:37:21.620 INFO  [7800] - Added type apama.analyticsbuilder.Promise
+2019-09-04 13:37:21.620 INFO  [7800] - Added type apama.analyticsbuilder.PromiseThen
+2019-09-04 13:37:21.620 INFO  [7800] - Added type apama.analyticsbuilder.PromiseHandler
+2019-09-04 13:37:21.620 INFO  [7800] - Added type apama.analyticsbuilder.PromiseHelper
+2019-09-04 13:37:21.620 INFO  [7800] - Injected MonitorScript from file C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/analyticsbuilder-framework.cdp/c:\dev\PAB-750\src\output-amd64-win\BUILD_WORK\framework-cdp-src\Promise.mon[CDP:C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/analyticsbuilder-framework.cdp] (8d5a7503d62201e94fa02e00ddabc074), size 11434 bytes, compile time 0.00 seconds
+2019-09-04 13:37:21.620 INFO  [7800] - Decoded CDP-packaged file C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/analyticsbuilder-framework.cdp/c:\dev\PAB-750\src\output-amd64-win\BUILD_WORK\framework-cdp-src\LocalizationImpl.mon (e207d6f680732e1f4fb07c2b70d4ef20), size 12224 bytes
+2019-09-04 13:37:21.629 INFO  [7800] - Added monitor apama.analyticsbuilder.framework.LoadLocalizedMessages_Monitor
+2019-09-04 13:37:21.629 INFO  [7800] - Added type apama.analyticsbuilder.framework.Localization
+2019-09-04 13:37:21.629 INFO  [7800] - Injected MonitorScript from file C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/analyticsbuilder-framework.cdp/c:\dev\PAB-750\src\output-amd64-win\BUILD_WORK\framework-cdp-src\LocalizationImpl.mon[CDP:C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/analyticsbuilder-framework.cdp] (e207d6f680732e1f4fb07c2b70d4ef20), size 12224 bytes, compile time 0.01 seconds
+2019-09-04 13:37:21.629 INFO  [7800] - Decoded CDP-packaged file C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/analyticsbuilder-framework.cdp/c:\dev\PAB-750\src\output-amd64-win\BUILD_WORK\framework-cdp-src\Localization.mon (40d4c587f502f61e8fd56b55bacf7f8f), size 3329 bytes
+2019-09-04 13:37:21.630 INFO  [7800] - Added type apama.analyticsbuilder.L10N
+2019-09-04 13:37:21.630 INFO  [7800] - Injected MonitorScript from file C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/analyticsbuilder-framework.cdp/c:\dev\PAB-750\src\output-amd64-win\BUILD_WORK\framework-cdp-src\Localization.mon[CDP:C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/analyticsbuilder-framework.cdp] (40d4c587f502f61e8fd56b55bacf7f8f), size 3329 bytes, compile time 0.00 seconds
+2019-09-04 13:37:21.630 INFO  [7800] - Decoded CDP-packaged file C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/analyticsbuilder-framework.cdp/c:\dev\PAB-750\src\output-amd64-win\BUILD_WORK\framework-cdp-src\ReflectionUtilities.mon (d724a779a8321c33aaaf2701a87e8740), size 2843 bytes
+2019-09-04 13:37:21.632 INFO  [7800] - Added type apama.analyticsbuilder.framework.ReflectionUtil
+2019-09-04 13:37:21.632 INFO  [7800] - Injected MonitorScript from file C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/analyticsbuilder-framework.cdp/c:\dev\PAB-750\src\output-amd64-win\BUILD_WORK\framework-cdp-src\ReflectionUtilities.mon[CDP:C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/analyticsbuilder-framework.cdp] (d724a779a8321c33aaaf2701a87e8740), size 2843 bytes, compile time 0.00 seconds
+2019-09-04 13:37:21.632 INFO  [7800] - Decoded CDP-packaged file C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/analyticsbuilder-framework.cdp/c:\dev\PAB-750\src\output-amd64-win\BUILD_WORK\framework-cdp-src\ObjectUtils.mon (b2fe323db1e60e94b4ba85e7bd53632c), size 5367 bytes
+2019-09-04 13:37:21.636 INFO  [7800] - Added type apama.analyticsbuilder.framework.ObjectUtils
+2019-09-04 13:37:21.636 INFO  [7800] - Added type apama.analyticsbuilder.framework.ObjectUtilsConfig
+2019-09-04 13:37:21.636 INFO  [7800] - Injected MonitorScript from file C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/analyticsbuilder-framework.cdp/c:\dev\PAB-750\src\output-amd64-win\BUILD_WORK\framework-cdp-src\ObjectUtils.mon[CDP:C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/analyticsbuilder-framework.cdp] (b2fe323db1e60e94b4ba85e7bd53632c), size 5367 bytes, compile time 0.00 seconds
+2019-09-04 13:37:21.636 INFO  [7800] - Decoded CDP-packaged file C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/analyticsbuilder-framework.cdp/c:\dev\PAB-750\src\output-amd64-win\BUILD_WORK\framework-cdp-src\ModelDefinitionEvents.mon (a2545484bf83ff3dd7e423788e059676), size 2158 bytes
+2019-09-04 13:37:21.637 INFO  [7800] - Added type apama.analyticsbuilder.CreateModel
+2019-09-04 13:37:21.637 INFO  [7800] - Added type apama.analyticsbuilder.ModelState
+2019-09-04 13:37:21.637 INFO  [7800] - Added type apama.analyticsbuilder.BlockConfiguration
+2019-09-04 13:37:21.637 INFO  [7800] - Added type apama.analyticsbuilder.NameValue
+2019-09-04 13:37:21.637 INFO  [7800] - Added type apama.analyticsbuilder.Wire
+2019-09-04 13:37:21.637 INFO  [7800] - Injected MonitorScript from file C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/analyticsbuilder-framework.cdp/c:\dev\PAB-750\src\output-amd64-win\BUILD_WORK\framework-cdp-src\ModelDefinitionEvents.mon[CDP:C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/analyticsbuilder-framework.cdp] (a2545484bf83ff3dd7e423788e059676), size 2158 bytes, compile time 0.00 seconds
+2019-09-04 13:37:21.637 INFO  [7800] - Decoded CDP-packaged file C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/analyticsbuilder-framework.cdp/c:\dev\PAB-750\src\output-amd64-win\BUILD_WORK\framework-cdp-src\FrameworkInterface.mon (490fbe6f37f8b76cb76c999f81e16e76), size 7469 bytes
+2019-09-04 13:37:21.640 INFO  [7800] - Added type apama.analyticsbuilder.ConfigurationProperty
+2019-09-04 13:37:21.640 INFO  [7800] - Added type apama.analyticsbuilder.ABConstants
+2019-09-04 13:37:21.640 INFO  [7800] - Added type apama.analyticsbuilder.DroppedEvent
+2019-09-04 13:37:21.640 INFO  [7800] - Added type apama.analyticsbuilder.Activation
+2019-09-04 13:37:21.640 INFO  [7800] - Added type apama.analyticsbuilder.Value
+2019-09-04 13:37:21.640 INFO  [7800] - Added type apama.analyticsbuilder.Partitioner
+2019-09-04 13:37:21.640 INFO  [7800] - Added type apama.analyticsbuilder.Partition_Alias
+2019-09-04 13:37:21.640 INFO  [7800] - Added type apama.analyticsbuilder.Partition_Broadcast
+2019-09-04 13:37:21.640 INFO  [7800] - Added type apama.analyticsbuilder.Partition_Wildcard
+2019-09-04 13:37:21.640 INFO  [7800] - Added type apama.analyticsbuilder.Partition_Grouped
+2019-09-04 13:37:21.640 INFO  [7800] - Added type apama.analyticsbuilder.Partition_Default
+2019-09-04 13:37:21.640 INFO  [7800] - Injected MonitorScript from file C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/analyticsbuilder-framework.cdp/c:\dev\PAB-750\src\output-amd64-win\BUILD_WORK\framework-cdp-src\FrameworkInterface.mon[CDP:C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/analyticsbuilder-framework.cdp] (490fbe6f37f8b76cb76c999f81e16e76), size 7469 bytes, compile time 0.00 seconds
+2019-09-04 13:37:21.641 INFO  [7800] - Decoded CDP-packaged file C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/analyticsbuilder-framework.cdp/c:\dev\PAB-750\src\output-amd64-win\BUILD_WORK\framework-cdp-src\GenericForwarder.mon (bbe398e6f61ad95cfb3143173a12d3bf), size 2078 bytes
+2019-09-04 13:37:21.642 INFO  [7800] - Added monitor apama.analyticsbuilder.GenericForwarder
+2019-09-04 13:37:21.642 INFO  [7800] - Added type apama.analyticsbuilder.RequestForwarding
+2019-09-04 13:37:21.642 INFO  [7800] - Injected MonitorScript from file C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/analyticsbuilder-framework.cdp/c:\dev\PAB-750\src\output-amd64-win\BUILD_WORK\framework-cdp-src\GenericForwarder.mon[CDP:C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/analyticsbuilder-framework.cdp] (bbe398e6f61ad95cfb3143173a12d3bf), size 2078 bytes, compile time 0.00 seconds
+2019-09-04 13:37:21.642 INFO  [7800] - Decoded CDP-packaged file C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/analyticsbuilder-framework.cdp/c:\dev\PAB-750\src\output-amd64-win\BUILD_WORK\framework-cdp-src\Timers.mon (dcf048f37100ad9db7701b3548987606), size 4111 bytes
+2019-09-04 13:37:21.645 INFO  [7800] - Added type apama.analyticsbuilder.TimerParams
+2019-09-04 13:37:21.646 INFO  [7800] - Added type apama.analyticsbuilder.TimerHandle
+2019-09-04 13:37:21.646 INFO  [7800] - Injected MonitorScript from file C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/analyticsbuilder-framework.cdp/c:\dev\PAB-750\src\output-amd64-win\BUILD_WORK\framework-cdp-src\Timers.mon[CDP:C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/analyticsbuilder-framework.cdp] (dcf048f37100ad9db7701b3548987606), size 4111 bytes, compile time 0.00 seconds
+2019-09-04 13:37:21.646 INFO  [7800] - Decoded CDP-packaged file C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/analyticsbuilder-framework.cdp/c:\dev\PAB-750\src\output-amd64-win\BUILD_WORK\framework-cdp-src\FrameworkState.mon (312c787bea1fc3810e64396e91b291d0), size 29110 bytes
+2019-09-04 13:37:21.663 INFO  [7800] - Added type apama.analyticsbuilder.framework.TerminateWorker
+2019-09-04 13:37:21.663 INFO  [7800] - Added type apama.analyticsbuilder.framework.WorkerTerminated
+2019-09-04 13:37:21.663 INFO  [7800] - Added type apama.analyticsbuilder.framework.RequestWorkers
+2019-09-04 13:37:21.663 INFO  [7800] - Added type apama.analyticsbuilder.framework.Workers
+2019-09-04 13:37:21.663 INFO  [7800] - Added type apama.analyticsbuilder.framework.ModelProfileData
+2019-09-04 13:37:21.663 INFO  [7800] - Added type apama.analyticsbuilder.framework.ModelProfileRequestCompleted
+2019-09-04 13:37:21.663 INFO  [7800] - Added type apama.analyticsbuilder.framework.ModelProfileRequest
+2019-09-04 13:37:21.663 INFO  [7800] - Added type apama.analyticsbuilder.framework.EvaluateTime
+2019-09-04 13:37:21.663 INFO  [7800] - Added type apama.analyticsbuilder.framework.CancelTimer
+2019-09-04 13:37:21.663 INFO  [7800] - Added type apama.analyticsbuilder.framework.ScheduleTimer
+2019-09-04 13:37:21.663 INFO  [7800] - Added type apama.analyticsbuilder.framework.EvalManager_ModelResponse
+2019-09-04 13:37:21.663 INFO  [7800] - Added type apama.analyticsbuilder.framework.GlobalEvalOrder
+2019-09-04 13:37:21.663 INFO  [7800] - Added type apama.analyticsbuilder.framework.StreamIOMap
+2019-09-04 13:37:21.663 INFO  [7800] - Added type apama.analyticsbuilder.framework.StreamIO_MapValue
+2019-09-04 13:37:21.664 INFO  [7800] - Added type apama.analyticsbuilder.framework.StreamIO_NonPart
+2019-09-04 13:37:21.664 INFO  [7800] - Added type apama.analyticsbuilder.framework.ModelIO
+2019-09-04 13:37:21.664 INFO  [7800] - Added type apama.analyticsbuilder.framework.StreamIO
+2019-09-04 13:37:21.664 INFO  [7800] - Added type apama.analyticsbuilder.framework.BlockIO
+2019-09-04 13:37:21.664 INFO  [7800] - Added type apama.analyticsbuilder.framework.JSONModel
+2019-09-04 13:37:21.664 INFO  [7800] - Added type apama.analyticsbuilder.framework.JSONLink
+2019-09-04 13:37:21.664 INFO  [7800] - Added type apama.analyticsbuilder.framework.JSONNode
+2019-09-04 13:37:21.664 INFO  [7800] - Added type apama.analyticsbuilder.framework.JSONParam
+2019-09-04 13:37:21.664 INFO  [7800] - Added type apama.analyticsbuilder.framework.Action
+2019-09-04 13:37:21.664 INFO  [7800] - Added type apama.analyticsbuilder.framework.ActionParamInfo
+2019-09-04 13:37:21.664 INFO  [7800] - Added type apama.analyticsbuilder.framework.CallContext
+2019-09-04 13:37:21.664 INFO  [7800] - Added type apama.analyticsbuilder.framework.ActionParamKind
+2019-09-04 13:37:21.664 INFO  [7800] - Added type apama.analyticsbuilder.framework.ModelRuntimeState
+2019-09-04 13:37:21.664 INFO  [7800] - Added type apama.analyticsbuilder.framework.PerPartition
+2019-09-04 13:37:21.664 INFO  [7800] - Added type apama.analyticsbuilder.framework.TimerListenerInfo
+2019-09-04 13:37:21.664 INFO  [7800] - Added type apama.analyticsbuilder.framework.TimerInfo
+2019-09-04 13:37:21.664 INFO  [7800] - Added type apama.analyticsbuilder.framework.ModelSchema
+2019-09-04 13:37:21.664 INFO  [7800] - Injected MonitorScript from file C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/analyticsbuilder-framework.cdp/c:\dev\PAB-750\src\output-amd64-win\BUILD_WORK\framework-cdp-src\FrameworkState.mon[CDP:C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/analyticsbuilder-framework.cdp] (312c787bea1fc3810e64396e91b291d0), size 29110 bytes, compile time 0.02 seconds
+2019-09-04 13:37:21.664 INFO  [7800] - Decoded CDP-packaged file C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/analyticsbuilder-framework.cdp/c:\dev\PAB-750\src\output-amd64-win\BUILD_WORK\framework-cdp-src\BlockBase.mon (dbd4615655746b1c63e013dde822b72b), size 12629 bytes
+2019-09-04 13:37:21.668 INFO  [7800] - Added type apama.analyticsbuilder.BlockBase
+2019-09-04 13:37:21.668 INFO  [7800] - Injected MonitorScript from file C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/analyticsbuilder-framework.cdp/c:\dev\PAB-750\src\output-amd64-win\BUILD_WORK\framework-cdp-src\BlockBase.mon[CDP:C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/analyticsbuilder-framework.cdp] (dbd4615655746b1c63e013dde822b72b), size 12629 bytes, compile time 0.00 seconds
+2019-09-04 13:37:21.669 INFO  [7800] - Decoded CDP-packaged file C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/analyticsbuilder-framework.cdp/c:\dev\PAB-750\src\output-amd64-win\BUILD_WORK\framework-cdp-src\EvalManager.mon (80bb88bfae0a0fe286adf3913c5c91d8), size 17824 bytes
+2019-09-04 13:37:21.683 INFO  [7800] - Added monitor apama.analyticsbuilder.framework.EvalManager
+2019-09-04 13:37:21.683 INFO  [7800] - Added type apama.analyticsbuilder.framework.__EvalManager
+2019-09-04 13:37:21.683 INFO  [7800] - Injected MonitorScript from file C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/analyticsbuilder-framework.cdp/c:\dev\PAB-750\src\output-amd64-win\BUILD_WORK\framework-cdp-src\EvalManager.mon[CDP:C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/analyticsbuilder-framework.cdp] (80bb88bfae0a0fe286adf3913c5c91d8), size 17824 bytes, compile time 0.01 seconds
+2019-09-04 13:37:21.683 INFO  [7800] - Decoded CDP-packaged file C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/analyticsbuilder-framework.cdp/c:\dev\PAB-750\src\output-amd64-win\BUILD_WORK\framework-cdp-src\Configuration.mon (82f9c29b091f14c6bd18fbad62cbe14d), size 4556 bytes
+2019-09-04 13:37:21.685 INFO  [7800] - Added type apama.analyticsbuilder.Configuration
+2019-09-04 13:37:21.685 INFO  [7800] - Injected MonitorScript from file C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/analyticsbuilder-framework.cdp/c:\dev\PAB-750\src\output-amd64-win\BUILD_WORK\framework-cdp-src\Configuration.mon[CDP:C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/analyticsbuilder-framework.cdp] (82f9c29b091f14c6bd18fbad62cbe14d), size 4556 bytes, compile time 0.00 seconds
+2019-09-04 13:37:21.685 INFO  [7800] - Decoded CDP-packaged file C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/analyticsbuilder-framework.cdp/c:\dev\PAB-750\src\output-amd64-win\BUILD_WORK\framework-cdp-src\ScenarioServiceUtils.mon (495068216eec1acc1070cc2a6a8f85be), size 15274 bytes
+2019-09-04 13:37:21.695 INFO  [7800] - Added type apama.analyticsbuilder.framework.ScenarioServiceUtil
+2019-09-04 13:37:21.695 INFO  [7800] - Added type apama.analyticsbuilder.framework.Flusher
+2019-09-04 13:37:21.695 INFO  [7800] - Injected MonitorScript from file C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/analyticsbuilder-framework.cdp/c:\dev\PAB-750\src\output-amd64-win\BUILD_WORK\framework-cdp-src\ScenarioServiceUtils.mon[CDP:C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/analyticsbuilder-framework.cdp] (495068216eec1acc1070cc2a6a8f85be), size 15274 bytes, compile time 0.01 seconds
+2019-09-04 13:37:21.696 INFO  [7800] - Decoded CDP-packaged file C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/analyticsbuilder-framework.cdp/c:\dev\PAB-750\src\output-amd64-win\BUILD_WORK\framework-cdp-src\Framework.mon (6fc7298a51a66e2633e53577030572d1), size 107118 bytes
+2019-09-04 13:37:21.784 INFO  [7800] - Added monitor apama.analyticsbuilder.framework.ModelManager
+2019-09-04 13:37:21.784 INFO  [7800] - Added type apama.analyticsbuilder.framework.__Framework
+2019-09-04 13:37:21.784 INFO  [7800] - Added type apama.analyticsbuilder.framework.Constants
+2019-09-04 13:37:21.784 INFO  [7800] - Injected MonitorScript from file C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/analyticsbuilder-framework.cdp/c:\dev\PAB-750\src\output-amd64-win\BUILD_WORK\framework-cdp-src\Framework.mon[CDP:C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/analyticsbuilder-framework.cdp] (6fc7298a51a66e2633e53577030572d1), size 107118 bytes, compile time 0.09 seconds
+2019-09-04 13:37:21.787 INFO  [21464] - apama.analyticsbuilder.framework.ModelManager [9] Property Name:analyticsBuilder.timedelay_secs is using value: 1 from apama.analyticsbuilder.Configuration.
+2019-09-04 13:37:21.787 INFO  [21464] - apama.analyticsbuilder.framework.ModelManager [9]   
+2019-09-04 13:37:21.787 INFO  [21464] - apama.analyticsbuilder.framework.ModelManager [9] Analytics Builder runtime build r@SVN_VERSION@ running.
+2019-09-04 13:37:21.787 INFO  [21464] - apama.analyticsbuilder.framework.ModelManager [9] Property Name:analyticsBuilder.timedelay_secs is using value: 1 from apama.analyticsbuilder.Configuration.
+2019-09-04 13:37:21.787 INFO  [21464] - apama.analyticsbuilder.framework.ModelManager [9] Property Name:analyticsBuilder.numWorkerThreads is using value: 4 from a configurable property.
+2019-09-04 13:37:21.787 INFO  [21464] - apama.analyticsbuilder.framework.ModelManager [9] running with 4 workers
+2019-09-04 13:37:21.787 INFO  [21464] - apama.analyticsbuilder.framework.ModelManager [9]   
+2019-09-04 13:37:21.788 INFO  [7800] - Decoded CDP-packaged file C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/analyticsbuilder-framework.cdp/c:\dev\PAB-750\src\output-amd64-win\BUILD_WORK\framework-cdp-src\Parser.mon (2f7e2cdd9aeefdf74946ecb6f7352718), size 32138 bytes
+2019-09-04 13:37:21.823 INFO  [7800] - Added type apama.analyticsbuilder.framework.internal.parser.Compiler
+2019-09-04 13:37:21.823 INFO  [7800] - Added type apama.analyticsbuilder.framework.internal.parser.BinOp
+2019-09-04 13:37:21.823 INFO  [7800] - Added type apama.analyticsbuilder.framework.internal.parser.ConstantLookup
+2019-09-04 13:37:21.823 INFO  [7800] - Added type apama.analyticsbuilder.framework.internal.parser.Call
+2019-09-04 13:37:21.823 INFO  [7800] - Added type apama.analyticsbuilder.framework.internal.parser.TypeName
+2019-09-04 13:37:21.823 INFO  [7800] - Added type apama.analyticsbuilder.framework.internal.parser.Variable
+2019-09-04 13:37:21.823 INFO  [7800] - Added type apama.analyticsbuilder.framework.internal.parser.UnaryOp
+2019-09-04 13:37:21.823 INFO  [7800] - Added type apama.analyticsbuilder.framework.internal.parser.Boolean
+2019-09-04 13:37:21.823 INFO  [7800] - Added type apama.analyticsbuilder.framework.internal.parser.String
+2019-09-04 13:37:21.823 INFO  [7800] - Added type apama.analyticsbuilder.framework.internal.parser.Number
+2019-09-04 13:37:21.823 INFO  [7800] - Added type apama.analyticsbuilder.framework.internal.parser.EvalContext
+2019-09-04 13:37:21.823 INFO  [7800] - Added type apama.analyticsbuilder.framework.internal.parser.Parser
+2019-09-04 13:37:21.823 INFO  [7800] - Added type apama.analyticsbuilder.framework.internal.parser.AST
+2019-09-04 13:37:21.823 INFO  [7800] - Added type apama.analyticsbuilder.framework.internal.parser.Lexer
+2019-09-04 13:37:21.823 INFO  [7800] - Added type apama.analyticsbuilder.framework.internal.parser.Token
+2019-09-04 13:37:21.823 INFO  [7800] - Injected MonitorScript from file C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/analyticsbuilder-framework.cdp/c:\dev\PAB-750\src\output-amd64-win\BUILD_WORK\framework-cdp-src\Parser.mon[CDP:C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/analyticsbuilder-framework.cdp] (2f7e2cdd9aeefdf74946ecb6f7352718), size 32138 bytes, compile time 0.03 seconds
+2019-09-04 13:37:21.825 INFO  [7800] - Decoded CDP-packaged file C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/analyticsbuilder-framework.cdp/c:\dev\PAB-750\src\output-amd64-win\BUILD_WORK\framework-cdp-src\BucketInterface.mon (8621d27446082016844cc4eddad526f0), size 7383 bytes
+2019-09-04 13:37:21.829 INFO  [7800] - Added type apama.analyticsbuilder.buckets.BucketWindow
+2019-09-04 13:37:21.829 INFO  [7800] - Added type apama.analyticsbuilder.buckets.BucketWindowConfig
+2019-09-04 13:37:21.829 INFO  [7800] - Injected MonitorScript from file C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/analyticsbuilder-framework.cdp/c:\dev\PAB-750\src\output-amd64-win\BUILD_WORK\framework-cdp-src\BucketInterface.mon[CDP:C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/analyticsbuilder-framework.cdp] (8621d27446082016844cc4eddad526f0), size 7383 bytes, compile time 0.00 seconds
+2019-09-04 13:37:21.829 INFO  [7800] - Decoded CDP-packaged file C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/analyticsbuilder-framework.cdp/c:\dev\PAB-750\src\output-amd64-win\BUILD_WORK/framework-cdp-src-evt/runtime-messages.mon (8936313752eb38ffa3b71a6fe71d0ce7), size 15442 bytes
+2019-09-04 13:37:21.831 INFO  [7800] - Added monitor LoadMessages
+2019-09-04 13:37:21.831 INFO  [7800] - Injected MonitorScript from file C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/analyticsbuilder-framework.cdp/c:\dev\PAB-750\src\output-amd64-win\BUILD_WORK/framework-cdp-src-evt/runtime-messages.mon[CDP:C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/analyticsbuilder-framework.cdp] (8936313752eb38ffa3b71a6fe71d0ce7), size 15442 bytes, compile time 0.00 seconds
+2019-09-04 13:37:21.831 INFO  [7800] - Injected CDP from file C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/analyticsbuilder-framework.cdp (6c36b09b3e81c934fbcffc818a3a65ee), size 84764 bytes, decoding and compile time 0.23 seconds
+2019-09-04 13:37:21.831 INFO  [14492] - Sender engine_inject (y508926) (000001CC30A79190) (component ID 6732723908923363607/6732442433946652951) disconnected cleanly: Other party requested disconnection
+2019-09-04 13:37:21.926 INFO  [18568] - Sender engine_inject (y508926) (000001CC315791E0) (component ID 6732723909226926359/6732442434250215703) connected from 127.0.0.1:56893
+2019-09-04 13:37:21.935 INFO  [15872] - Added type com.apama.cumulocity.Unsubscribe
+2019-09-04 13:37:21.935 INFO  [15872] - Added type com.apama.cumulocity.Subscribe
+2019-09-04 13:37:21.935 INFO  [15872] - Added type com.apama.cumulocity.SendSpeech
+2019-09-04 13:37:21.935 INFO  [15872] - Added type com.apama.cumulocity.SMSResponse
+2019-09-04 13:37:21.935 INFO  [15872] - Added type com.apama.cumulocity.SMSResourceReference
+2019-09-04 13:37:21.935 INFO  [15872] - Added type com.apama.cumulocity.SendSMS
+2019-09-04 13:37:21.935 INFO  [15872] - Added type com.apama.cumulocity.SendEmail
+2019-09-04 13:37:21.935 INFO  [15872] - Added type com.apama.cumulocity.GenericResponseComplete
+2019-09-04 13:37:21.935 INFO  [15872] - Added type com.apama.cumulocity.GenericResponse
+2019-09-04 13:37:21.935 INFO  [15872] - Added type com.apama.cumulocity.GenericRequest
+2019-09-04 13:37:21.935 INFO  [15872] - Added type com.apama.cumulocity.FindMeasurementResponseAck
+2019-09-04 13:37:21.935 INFO  [15872] - Added type com.apama.cumulocity.FindMeasurementResponse
+2019-09-04 13:37:21.935 INFO  [15872] - Added type com.apama.cumulocity.FindMeasurement
+2019-09-04 13:37:21.935 INFO  [15872] - Added type com.apama.cumulocity.FindOperationResponseAck
+2019-09-04 13:37:21.935 INFO  [15872] - Added type com.apama.cumulocity.FindOperationResponse
+2019-09-04 13:37:21.935 INFO  [15872] - Added type com.apama.cumulocity.FindOperation
+2019-09-04 13:37:21.935 INFO  [15872] - Added type com.apama.cumulocity.FindManagedObjectResponseAck
+2019-09-04 13:37:21.935 INFO  [15872] - Added type com.apama.cumulocity.FindManagedObjectResponse
+2019-09-04 13:37:21.935 INFO  [15872] - Added type com.apama.cumulocity.FindManagedObject
+2019-09-04 13:37:21.935 INFO  [15872] - Added type com.apama.cumulocity.FindEventResponseAck
+2019-09-04 13:37:21.935 INFO  [15872] - Added type com.apama.cumulocity.FindEventResponse
+2019-09-04 13:37:21.935 INFO  [15872] - Added type com.apama.cumulocity.FindEvent
+2019-09-04 13:37:21.935 INFO  [15872] - Added type com.apama.cumulocity.FindAlarmResponseAck
+2019-09-04 13:37:21.935 INFO  [15872] - Added type com.apama.cumulocity.FindAlarmResponse
+2019-09-04 13:37:21.935 INFO  [15872] - Added type com.apama.cumulocity.FindAlarm
+2019-09-04 13:37:21.935 INFO  [15872] - Added type com.apama.cumulocity.EventDeleted
+2019-09-04 13:37:21.935 INFO  [15872] - Added type com.apama.cumulocity.MeasurementDeleted
+2019-09-04 13:37:21.935 INFO  [15872] - Added type com.apama.cumulocity.ManagedObjectDeleted
+2019-09-04 13:37:21.935 INFO  [15872] - Added type com.apama.cumulocity.ManagedObject
+2019-09-04 13:37:21.935 INFO  [15872] - Added type com.apama.cumulocity.Alarm
+2019-09-04 13:37:21.935 INFO  [15872] - Added type com.apama.cumulocity.Event
+2019-09-04 13:37:21.935 INFO  [15872] - Added type com.apama.cumulocity.Measurement
+2019-09-04 13:37:21.935 INFO  [15872] - Added type com.apama.cumulocity.MeasurementValue
+2019-09-04 13:37:21.935 INFO  [15872] - Added type com.apama.cumulocity.UnsubscribeMeasurements
+2019-09-04 13:37:21.935 INFO  [15872] - Added type com.apama.cumulocity.SubscribeMeasurements
+2019-09-04 13:37:21.935 INFO  [15872] - Added type com.apama.cumulocity.RequestAllDevicesComplete
+2019-09-04 13:37:21.935 INFO  [15872] - Added type com.apama.cumulocity.RequestAllDevices
+2019-09-04 13:37:21.935 INFO  [15872] - Added type com.apama.cumulocity.Operation
+2019-09-04 13:37:21.935 INFO  [15872] - Added type com.apama.cumulocity.Error
+2019-09-04 13:37:21.935 INFO  [15872] - Injected MonitorScript from file C:\SoftwareAG105\Apama/monitors/cumulocity/10.5\Cumulocity_EventDefinitions.mon (7918cf22e34bc4e8b883ddd7fd9a771a), size 28060 bytes, compile time 0.01 seconds
+2019-09-04 13:37:21.936 INFO  [14492] - Sender engine_inject (y508926) (000001CC315791E0) (component ID 6732723909226926359/6732442434250215703) disconnected cleanly: Other party requested disconnection
+2019-09-04 13:37:22.003 INFO  [18568] - Sender engine_inject (y508926) (000001CC37864ED0) (component ID 6732723909213557015/6732442434236846359) connected from 127.0.0.1:56896
+2019-09-04 13:37:22.004 INFO  [7800] - Decoded CDP-packaged file C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/cumulocity-forward-events.cdp/c:\dev\PAB-750\src\output-amd64-win\BUILD_WORK\c8y-forward-cdp-src\ForwardCumulocityEvents.mon (5c8681522928f9e00c9e34808b8532b1), size 3625 bytes
+2019-09-04 13:37:22.006 INFO  [7800] - Added monitor apama.analyticsbuilder.cumulocity.Forwarder
+2019-09-04 13:37:22.006 INFO  [7800] - Added type apama.analyticsbuilder.cumulocity.BroadcastDevice
+2019-09-04 13:37:22.006 INFO  [7800] - Added type apama.analyticsbuilder.cumulocity.ManagedObjectProperties
+2019-09-04 13:37:22.006 INFO  [7800] - Injected MonitorScript from file C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/cumulocity-forward-events.cdp/c:\dev\PAB-750\src\output-amd64-win\BUILD_WORK\c8y-forward-cdp-src\ForwardCumulocityEvents.mon[CDP:C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/cumulocity-forward-events.cdp] (5c8681522928f9e00c9e34808b8532b1), size 3625 bytes, compile time 0.00 seconds
+2019-09-04 13:37:22.007 INFO  [7800] - Injected CDP from file C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/cumulocity-forward-events.cdp (ec2fe4b31a50a4f94ce64eb5375374c7), size 1462 bytes, decoding and compile time 0.00 seconds
+2019-09-04 13:37:22.007 INFO  [14492] - Sender engine_inject (y508926) (000001CC37864ED0) (component ID 6732723909213557015/6732442434236846359) disconnected cleanly: Other party requested disconnection
+2019-09-04 13:37:22.070 INFO  [18568] - Sender engine_inject (y508926) (000001CC37861F60) (component ID 6732723912330187031/6732442437353476375) connected from 127.0.0.1:56899
+2019-09-04 13:37:22.072 INFO  [15872] - Decoded CDP-packaged file C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/cumulocity-inventoryLookup-events.cdp/c:\dev\PAB-750\src\output-amd64-win\BUILD_WORK\c8y-inventoryLookup-cdp-src\InventoryUtilities.mon (38dfb291e80f97f02a2ac2d28bf27ce3), size 19754 bytes
+2019-09-04 13:37:22.087 INFO  [15872] - Added monitor apama.analyticsbuilder.cumulocity.inventory.InventoryLookupManager
+2019-09-04 13:37:22.087 INFO  [15872] - Added type apama.analyticsbuilder.cumulocity.inventory.OutputHelper
+2019-09-04 13:37:22.087 INFO  [15872] - Added type apama.analyticsbuilder.cumulocity.inventory.InputHelper
+2019-09-04 13:37:22.087 INFO  [15872] - Added type apama.analyticsbuilder.cumulocity.inventory.Update_MO
+2019-09-04 13:37:22.087 INFO  [15872] - Added type apama.analyticsbuilder.cumulocity.inventory.LookupState
+2019-09-04 13:37:22.087 INFO  [15872] - Added type apama.analyticsbuilder.cumulocity.inventory.InventoryLookup
+2019-09-04 13:37:22.087 INFO  [15872] - Added type apama.analyticsbuilder.cumulocity.inventory.InventoryLookupResponse
+2019-09-04 13:37:22.087 INFO  [15872] - Added type apama.analyticsbuilder.cumulocity.inventory.InventoryLookupResult
+2019-09-04 13:37:22.087 INFO  [15872] - Added type apama.analyticsbuilder.cumulocity.inventory.InventoryLookupRequest
+2019-09-04 13:37:22.087 INFO  [15872] - Injected MonitorScript from file C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/cumulocity-inventoryLookup-events.cdp/c:\dev\PAB-750\src\output-amd64-win\BUILD_WORK\c8y-inventoryLookup-cdp-src\InventoryUtilities.mon[CDP:C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/cumulocity-inventoryLookup-events.cdp] (38dfb291e80f97f02a2ac2d28bf27ce3), size 19754 bytes, compile time 0.01 seconds
+2019-09-04 13:37:22.088 INFO  [15872] - Injected CDP from file C:\dev\PAB-750\src\output-amd64-win\block-sdk/block-api/framework/cumulocity-inventoryLookup-events.cdp (b93a0576fd9d93479aa22b6315662004), size 5085 bytes, decoding and compile time 0.02 seconds
+2019-09-04 13:37:22.088 INFO  [14492] - Sender engine_inject (y508926) (000001CC37861F60) (component ID 6732723912330187031/6732442437353476375) disconnected cleanly: Other party requested disconnection
+2019-09-04 13:37:22.202 INFO  [18568] - Sender engine_inject (y508926) (000001CC37867810) (component ID 6732723912205406487/6732442437228695831) connected from 127.0.0.1:56902
+2019-09-04 13:37:22.212 INFO  [7800] - Added monitor apamax.analyticsbuilder.test.TestHelper
+2019-09-04 13:37:22.212 INFO  [7800] - Added type apamax.analyticsbuilder.test.ModelCreator
+2019-09-04 13:37:22.212 INFO  [7800] - Added type apamax.analyticsbuilder.test.TestOutput
+2019-09-04 13:37:22.212 INFO  [7800] - Added type apamax.analyticsbuilder.test.TestOutput_$Parameters
+2019-09-04 13:37:22.212 INFO  [7800] - Added type apamax.analyticsbuilder.test.TestInput
+2019-09-04 13:37:22.212 INFO  [7800] - Added type apamax.analyticsbuilder.test.TestInput_$Parameters
+2019-09-04 13:37:22.212 INFO  [7800] - Added type apamax.analyticsbuilder.test.Output
+2019-09-04 13:37:22.212 INFO  [7800] - Added type apamax.analyticsbuilder.test.Input
+2019-09-04 13:37:22.212 INFO  [7800] - Added type apamax.analyticsbuilder.test.Test
+2019-09-04 13:37:22.212 INFO  [7800] - Injected MonitorScript from file C:\dev\PAB-750\src\output-amd64-win\block-sdk/testframework/resources/TestHelpers.mon (769b2550f3308399a6affea0954d2e85), size 9953 bytes, compile time 0.01 seconds
+2019-09-04 13:37:22.213 INFO  [14492] - Sender engine_inject (y508926) (000001CC37867810) (component ID 6732723912205406487/6732442437228695831) disconnected cleanly: Other party requested disconnection
+2019-09-04 13:37:22.307 INFO  [18568] - Sender engine_inject (y508926) (000001CC37865F50) (component ID 6732723913495941399/6732442438519230743) connected from 127.0.0.1:56905
+2019-09-04 13:37:22.312 INFO  [15872] - Added type apamax.analyticsbuilder.samples.DeviceLocationInput
+2019-09-04 13:37:22.312 INFO  [15872] - Added type apamax.analyticsbuilder.samples.DeviceLocationInput_$Parameters
+2019-09-04 13:37:22.312 INFO  [15872] - Injected MonitorScript from file C:\dev\PAB-750\block-sdk\samples\tests\Offset\Output\win32\block-output\files\DeviceLocationInput.mon (db0d6fada90f77f2662e142d725d3980), size 6682 bytes, compile time 0.00 seconds
+2019-09-04 13:37:22.314 INFO  [15872] - Added type apamax.analyticsbuilder.samples.Difference
+2019-09-04 13:37:22.314 INFO  [15872] - Injected MonitorScript from file C:\dev\PAB-750\block-sdk\samples\tests\Offset\Output\win32\block-output\files\Difference.mon (87017c24e49a8061db9a20862ed45a1e), size 2881 bytes, compile time 0.00 seconds
+2019-09-04 13:37:22.322 INFO  [15872] - Added type apamax.analyticsbuilder.samples.DualMeasurementIO
+2019-09-04 13:37:22.322 INFO  [15872] - Added type apamax.analyticsbuilder.samples.DualMeasurementIO_$State
+2019-09-04 13:37:22.322 INFO  [15872] - Added type apamax.analyticsbuilder.samples.DualMeasurementIO_SubOutput
+2019-09-04 13:37:22.322 INFO  [15872] - Added type apamax.analyticsbuilder.samples.DualMeasurementIO_SubInput
+2019-09-04 13:37:22.322 INFO  [15872] - Added type apamax.analyticsbuilder.samples.DualMeasurementIO_$Parameters
+2019-09-04 13:37:22.322 INFO  [15872] - Injected MonitorScript from file C:\dev\PAB-750\block-sdk\samples\tests\Offset\Output\win32\block-output\files\DualMeasurementIO.mon (d1605d115fa7074f905474ff55c9e524), size 12512 bytes, compile time 0.01 seconds
+2019-09-04 13:37:22.323 INFO  [15872] - Added type apamax.analyticsbuilder.samples.WindowContents
+2019-09-04 13:37:22.323 INFO  [15872] - Injected MonitorScript from file C:\dev\PAB-750\block-sdk\samples\tests\Offset\Output\win32\block-output\files\EventsWindowContents.mon (ceb9d7e2311674437eeec92732b673fb), size 1567 bytes, compile time 0.00 seconds
+2019-09-04 13:37:22.326 INFO  [15872] - Added type apamax.analyticsbuilder.samples.HTTPOutput
+2019-09-04 13:37:22.326 INFO  [15872] - Added type apamax.analyticsbuilder.samples.HTTPOutput_$Parameters
+2019-09-04 13:37:22.326 INFO  [15872] - Injected MonitorScript from file C:\dev\PAB-750\block-sdk\samples\tests\Offset\Output\win32\block-output\files\HttpOutputBlock.mon (fb80c8d081698dbd2e7711dd28b14fa4), size 6907 bytes, compile time 0.00 seconds
+2019-09-04 13:37:22.328 INFO  [15872] - Added type apamax.analyticsbuilder.samples.Offset
+2019-09-04 13:37:22.328 INFO  [15872] - Injected MonitorScript from file C:\dev\PAB-750\block-sdk\samples\tests\Offset\Output\win32\block-output\files\Offset.mon (b70bd9d3b3a01082af9e08398b9c7d7d), size 1634 bytes, compile time 0.00 seconds
+2019-09-04 13:37:22.331 INFO  [15872] - Added type apamax.analyticsbuilder.samples.Percentile
+2019-09-04 13:37:22.331 INFO  [15872] - Added type apamax.analyticsbuilder.samples.ValueDuration
+2019-09-04 13:37:22.331 INFO  [15872] - Added type apamax.analyticsbuilder.samples.Percentile_$Parameters
+2019-09-04 13:37:22.331 INFO  [15872] - Injected MonitorScript from file C:\dev\PAB-750\block-sdk\samples\tests\Offset\Output\win32\block-output\files\Percentile.mon (63d18b5d5c870d8a0e20002c996305d9), size 6071 bytes, compile time 0.00 seconds
+2019-09-04 13:37:22.333 INFO  [15872] - Added type apamax.analyticsbuilder.samples.TimeDelay
+2019-09-04 13:37:22.333 INFO  [15872] - Added type apamax.analyticsbuilder.samples.TimeDelay_$Parameters
+2019-09-04 13:37:22.333 INFO  [15872] - Injected MonitorScript from file C:\dev\PAB-750\block-sdk\samples\tests\Offset\Output\win32\block-output\files\TimeDelay.mon (351a1c0bc4c7ed6e0616966b78e04d89), size 3906 bytes, compile time 0.00 seconds
+2019-09-04 13:37:22.336 INFO  [15872] - Added type apamax.analyticsbuilder.samples.TimeWindow
+2019-09-04 13:37:22.336 INFO  [15872] - Added type apamax.analyticsbuilder.samples.TimeWindow_$State
+2019-09-04 13:37:22.336 INFO  [15872] - Added type apamax.analyticsbuilder.samples.TimeWindow_$Parameters
+2019-09-04 13:37:22.336 INFO  [15872] - Injected MonitorScript from file C:\dev\PAB-750\block-sdk\samples\tests\Offset\Output\win32\block-output\files\TimeWindow.mon (ef2d9db79bb5b529262c5f5650efd04a), size 6290 bytes, compile time 0.00 seconds
+2019-09-04 13:37:22.337 INFO  [14492] - Sender engine_inject (y508926) (000001CC37865F50) (component ID 6732723913495941399/6732442438519230743) disconnected cleanly: Other party requested disconnection
+2019-09-04 13:37:22.477 INFO  [18568] - Sender engine_send (y508926) (000001CC37865F50) (component ID 6732723913559642391/6732442438582931735) connected from 127.0.0.1:56908
+2019-09-04 13:37:22.524 INFO  [14492] - Sender engine_send (y508926) (000001CC37865F50) (component ID 6732723913559642391/6732442438582931735) disconnected cleanly: Other party requested disconnection
+2019-09-04 13:37:22.598 INFO  [18568] - Sender engine_send (y508926) (000001CC37E25EB0) (component ID 6732723912986857751/6732442438010147095) connected from 127.0.0.1:56913
+2019-09-04 13:37:22.609 INFO  [21532] - Request <flushAllQueues > received runJob
+2019-09-04 13:37:22.610 INFO  [18108] - apama.analyticsbuilder.framework.ModelManager [9] Analytics Builder runtime ready
+2019-09-04 13:37:22.610 INFO  [18108] - com.apama.scenario.ScenarioService [1] Received com.apama.scenario.ConfigureUpdates("",{"routeUpdate":"true"}) : defaults applicable to all scenarios
+2019-09-04 13:37:22.626 INFO  [14492] - Sender engine_send (y508926) (000001CC37E25EB0) (component ID 6732723912986857751/6732442438010147095) disconnected cleanly: Other party requested disconnection
+2019-09-04 13:37:22.697 INFO  [15872] - Request <flushAllQueues > received Source:127.0.0.1
+2019-09-04 13:37:22.800 INFO  [18568] - Receiver engine_receive (000001CC31585E00) (component ID 6732723913603158295/6732442438626447639) connected from 127.0.0.1:56917
+2019-09-04 13:37:22.800 INFO  [18568] - Receiver engine_receive (000001CC31585E00) initially subscribed to <no channels>
+2019-09-04 13:37:22.800 INFO  [18568] - Blocking receiver engine_receive (000001CC31585E00) will be blocked after 10.000000 seconds or 10240 kb if slow
+2019-09-04 13:37:22.800 INFO  [14492] - Receiver engine_receive (000001CC31585E00) unsubscribed from all channels
+2019-09-04 13:37:22.800 INFO  [14492] - Receiver engine_receive (000001CC31585E00) added subscriptions to [TestOutput]
+2019-09-04 13:37:22.885 INFO  [18568] - Receiver engine_receive (000001CC315852C0) (component ID 6732723912292700439/6732442437315989783) connected from 127.0.0.1:56920
+2019-09-04 13:37:22.885 INFO  [18568] - Receiver engine_receive (000001CC315852C0) initially subscribed to <no channels>
+2019-09-04 13:37:22.885 INFO  [18568] - Blocking receiver engine_receive (000001CC315852C0) will be blocked after 10.000000 seconds or 10240 kb if slow
+2019-09-04 13:37:22.886 INFO  [14492] - Receiver engine_receive (000001CC315852C0) unsubscribed from all channels
+2019-09-04 13:37:22.886 INFO  [14492] - Receiver engine_receive (000001CC315852C0) added subscriptions to [<wildcard channel>]
+2019-09-04 13:37:22.957 INFO  [18568] - Sender engine_send (y508926) (000001CC37E24E30) (component ID 6732723913673937175/6732442438697226519) connected from 127.0.0.1:56923
+2019-09-04 13:37:22.968 INFO  [19388] - apamax.analyticsbuilder.test.TestHelper [24] apamax.analyticsbuilder.test.ModelCreator(apama.analyticsbuilder.ModelState("model_0",{"0":apama.analyticsbuilder.BlockConfiguration("apamax.analyticsbuilder.samples.Offset",{}),"input_value":apama.analyticsbuilder.BlockConfiguration("apamax.analyticsbuilder.test.TestInput",{"inputId":any(string,"value"),"type":any(string,"float")}),"output_output":apama.analyticsbuilder.BlockConfiguration("apamax.analyticsbuilder.test.TestOutput",{"outputId":any(string,"output")})},[apama.analyticsbuilder.Wire("input_value","output","0","value"),apama.analyticsbuilder.Wire("0","output","output_output","input")],{}))
+2019-09-04 13:37:22.969 INFO  [19388] - apama.analyticsbuilder.framework.ModelManager [26] Property Name:analyticsBuilder.timedelay_secs is using value: 1 from apama.analyticsbuilder.Configuration.
+2019-09-04 13:37:22.971 INFO  [19388] - apama.analyticsbuilder.framework.ModelManager [26] Model "model_0" with PRODUCTION mode has started.
+2019-09-04 13:37:23.036 INFO  [14492] - Sender engine_send (y508926) (000001CC37E24E30) (component ID 6732723913673937175/6732442438697226519) disconnected cleanly: Other party requested disconnection
+2019-09-04 13:37:23.099 INFO  [18900] - Request <flushAllQueues 5> received Source:127.0.0.1
+2019-09-04 13:37:23.163 INFO  [18568] - Sender engine_send (y508926) (000001CC37E29660) (component ID 6732723917908349207/6732442442931638551) connected from 127.0.0.1:56927
+2019-09-04 13:37:23.179 INFO  [24136] - apama.analyticsbuilder.GenericForwarder [7] Property Name:analyticsBuilder.numWorkerThreads is using value: 4 from a configurable property.
+2019-09-04 13:37:23.179 INFO  [21464] - apama.analyticsbuilder.framework.ModelManager [30] apamax.analyticsbuilder.test.Input("value","model_0","",any(float,100.75)) @ 1
+2019-09-04 13:37:23.179 INFO  [21464] - apama.analyticsbuilder.framework.ModelManager [30] Property Name:analyticsBuilder.numWorkerThreads is using value: 4 from a configurable property.
+2019-09-04 13:37:23.186 INFO  [20964] - apama.analyticsbuilder.framework.ModelManager [30] TEST: Input model_0.value = 100.75
+2019-09-04 13:37:23.187 INFO  [20964] - apama.analyticsbuilder.framework.ModelManager [30] TEST: Output model_0.output = 200.75
+2019-09-04 13:37:23.193 INFO  [19388] - apama.analyticsbuilder.framework.ModelManager [30] apamax.analyticsbuilder.test.Input("value","model_0","",any(float,10.5)) @ 2
+2019-09-04 13:37:23.193 INFO  [19388] - apama.analyticsbuilder.framework.ModelManager [30] Property Name:analyticsBuilder.numWorkerThreads is using value: 4 from a configurable property.
+2019-09-04 13:37:23.198 INFO  [18108] - apama.analyticsbuilder.framework.ModelManager [30] TEST: Input model_0.value = 10.5
+2019-09-04 13:37:23.198 INFO  [18108] - apama.analyticsbuilder.framework.ModelManager [30] TEST: Output model_0.output = 110.5
+2019-09-04 13:37:23.241 INFO  [14492] - Sender engine_send (y508926) (000001CC37E29660) (component ID 6732723917908349207/6732442442931638551) disconnected cleanly: Other party requested disconnection
+2019-09-04 13:37:23.345 ##### [18900] - Shutting down correlator in response to client (127.0.0.1:56929) request: Shutdown requested by test
+2019-09-04 13:37:23.369 INFO  [23840] - <plugins.TimeFormatPlugin> TimeFormatPlugin unloaded
+2019-09-04 13:37:23.370 INFO  [23840] - MemoryStorePlugin unloaded.
+2019-09-04 13:37:23.372 INFO  [23840] - MessageSenderImpl.Shutdown() - Disconnecting remote receiver 6732723912292700439:6732442437315989783
+2019-09-04 13:37:23.373 INFO  [23840] - MessageSenderImpl.Shutdown() - Disconnecting remote receiver 6732723913603158295:6732442438626447639
+2019-09-04 13:37:23.375 INFO  [23840] - Correlator shutdown is complete

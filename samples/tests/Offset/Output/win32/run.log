@@ -1,0 +1,36 @@
+2019-09-04 13:37:18,124 INFO  ==============================================================
+2019-09-04 13:37:18,125 INFO  Id   : Offset
+2019-09-04 13:37:18,126 INFO  Title: Offset block: To check the basic working of the block
+2019-09-04 13:37:18,126 INFO  ==============================================================
+2019-09-04 13:37:20,668 INFO  Executed analytics_builder, exit status 0, duration 2 secs
+2019-09-04 13:37:20,671 INFO  analytics_builder build extension should not report errors/ warnings ... passed
+2019-09-04 13:37:20,702 INFO  Started correlator<localhost:10760> with process id 20700
+2019-09-04 13:37:21,331 INFO     Component correlator<pid 20700 on localhost:10760> is now running
+2019-09-04 13:37:21,540 INFO  Executed engine_inject <correlator> [ScenarioService.mon MemoryStore.mon JSONPlugin.mon AnyExtractor.mon ManagementImpl.mon Management.mon ConnectivityPluginsControl.mon ConnectivityPlugins.mon HTTPClientEvents.mon AutomaticOnApplicationInitialized.mon], exit status 0
+2019-09-04 13:37:21,849 INFO  Executed engine_inject <correlator> [analyticsbuilder-framework.cdp], exit status 0
+2019-09-04 13:37:21,955 INFO  Executed engine_inject <correlator> [Cumulocity_EventDefinitions.mon], exit status 0
+2019-09-04 13:37:22,013 INFO  Executed engine_inject <correlator> [cumulocity-forward-events.cdp], exit status 0
+2019-09-04 13:37:22,121 INFO  Executed engine_inject <correlator> [cumulocity-inventoryLookup-events.cdp], exit status 0
+2019-09-04 13:37:22,229 INFO  Executed engine_inject <correlator> [TestHelpers.mon], exit status 0
+2019-09-04 13:37:22,388 INFO  Executed engine_inject <correlator> [DeviceLocationInput.mon Difference.mon DualMeasurementIO.mon EventsWindowContents.mon HttpOutputBlock.mon Offset.mon Percentile.mon TimeDelay.mon TimeWindow.mon], exit status 0
+2019-09-04 13:37:22,549 INFO  Executed engine_send <correlator> [block-output_messages.evt block-output_metadata.evt], exit status 0
+2019-09-04 13:37:22,656 INFO  Executed engine_send <correlator> [com.apama.connectivity.ApplicationInitialized()], exit status 0
+2019-09-04 13:37:22,714 INFO  Executed manage <correlator> [-r flushAllQueues], exit status 0
+2019-09-04 13:37:22,721 INFO  Started engine_receive <correlator> [output.evt] with process id 22808
+2019-09-04 13:37:22,813 INFO  Started engine_receive <correlator> [waiter.out] with process id 2812
+2019-09-04 13:37:23,047 INFO  Executed engine_send <correlator> [apamax.analyticsbuilder.test.Test(["apamax.analyticsbuilder.samples.Offset"], "model_0", "{}", "{}", [], {})], exit status 0
+2019-09-04 13:37:23,104 INFO  Executed manage <correlator> [-r flushAllQueues 5], exit status 0
+2019-09-04 13:37:23,112 INFO  Wait for signal "com.apama.scenario.Created" >=1 in waiter.out completed successfully
+2019-09-04 13:37:23,271 INFO  Executed engine_send <correlator> [&FLUSHING(50) (+5 others)], exit status 0
+2019-09-04 13:37:23,273 INFO  Grep on input file correlator.log ... passed
+2019-09-04 13:37:23,275 INFO  Grep on input file correlator.log ... passed
+2019-09-04 13:37:23,277 INFO  Grep on input file correlator.log ... passed
+2019-09-04 13:37:23,284 INFO  Grep on input file output.evt ... passed
+2019-09-04 13:37:23,286 INFO  Grep on input file output.evt ... passed
+2019-09-04 13:37:23,290 INFO  
+2019-09-04 13:37:23,290 INFO  cleanup:
+2019-09-04 13:37:23,398 INFO  Executed shutdown <correlator>, exit status 0
+2019-09-04 13:37:23,398 INFO  
+2019-09-04 13:37:23,399 INFO  Test duration: 5.28 secs
+2019-09-04 13:37:23,400 INFO  Test final outcome:  PASSED
+2019-09-04 13:37:23,401 INFO  

@@ -1,0 +1,6 @@
+&FLUSHING(50)
+&TIME(1)
+apamax.analyticsbuilder.test.Input("value", "model_0", "", any(float, 100.75))
+&TIME(2)
+apamax.analyticsbuilder.test.Input("value", "model_0", "", any(float, 10.5))
+&TIME(5)
