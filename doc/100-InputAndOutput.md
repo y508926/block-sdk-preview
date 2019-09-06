@@ -6,9 +6,9 @@
 
 An input block is a block that receives data from an external (to the model) source, and makes it available to other blocks within the model. An input block will typically have block *outputs* only, though it is permitted to have block inputs. All model evaluations involving sending data between blocks must happen at a specified point in time. Input blocks may take a timestamp from an external source (typically indicating exactly when the input occurred), or may treat the data as having occurred in the near future. As described in the Analytics Builder documentation, the runtime has a global configuration setting `timedelay_secs` which is the delay that the runtime will wait for before processing events. (This allows it to receive events out of order, and it will execute based on timestamp order - provided events are received within this `timedelay_secs` period).
 
-Typically, an input block will listen for events using an `on all <EventType>` listener, started in the `$init` action. On matching an event, the block will extract a timestamp from the event, and create a timer for that value, for the appropriate [partition value](070-Partitions.md). On the timer being triggered, the value from the event is sent as an output. Typically, the event received will be passed as the payload of the timer. If an event is received with a timestamp that is too old, then the `createTimerWith` will throw (this would be in effect requesting a timer trigger in the past, and that is not permitted, as it would result in having to re-evaluate a past model evaluation, and could invalidate previous outputs). If the event is too old, this should be reported to the runtime using the `BlockBase.droppedEvent` action, providing the event and the source timestamp of that event.
+Typically, an input block will listen for events using an `on all <EventType>` listener, started in the `$init` action. On matching an event, the block will extract a timestamp from the event, and create a timer for that value, for the appropriate [partition value](070-Partitions.md). Input blocks must use an absolute, not a relative timer. On the timer being triggered, the value from the event is sent as an output. Typically, the event received will be passed as the payload of the timer. If an event is received with a timestamp that is too old, then the `createTimerWith` will throw (this would be in effect requesting a timer trigger in the past, and that is not permitted, as it would result in having to re-evaluate a past model evaluation, and could invalidate previous outputs). If the event is too old, this should be reported to the runtime using the `BlockBase.droppedEvent` action, providing the event and the source timestamp of that event.
 
-If a block cannot obtain a timestamp, or is configured to ignore the timestamps, it should use an absolute timer. This must be in the future (the timer's value must be greater than `BlockBase.getModelTime()`).
+If a block cannot obtain a timestamp, or is configured to ignore the timestamps, it should use an absolute timer set to a time shortly in the future. This can be achieved using `BlockBase.getModelTime().nextAfter(float.INFINITY)`.
 
 ### Declaring input streams
 
@@ -17,6 +17,10 @@ An input block also needs to declare what event types and fields that identify a
 The `fields` provided to `listensForInput` do not have to reflect exact fields of an event type. For example, when listening to Cumulocity `Measurement` objects, a `fragment` and `series` are specified, but these do not correspond to fields of an event type (instead, the values are keys in the measurements dictionary and sub-dictionary).
 
 The `BlockBase.listensForInput` should be called during a call to `$validate`. The runtime needs to validate that any inputs or outputs for a model are legal in the context of other models running.
+
+### Multiple inputs
+
+For blocks that use multiple inputs, `BlockBase.listensForInput` returns an input identifier that can be added to a `TimerParams` with the `withInputId` method. This allows the framework to identify which input a block is using, and is required if the block has more than one input. This can be stored on the block object itself.
 
 ### Routing inputs to workers and partitions
 
@@ -66,4 +70,4 @@ any deviceId;
 
 For `c8y_deviceOrCurrentDevice`, the parameter (`deviceId` in the above) should be of the `any` type and will be either a `string` for a device or a dictionary with a `currentDevice` entry for the "current device" case.
 
-[< Prev: The Value type](090-ValueType.md) | [Contents](000-contents.md) | [Next: Cumulocity-specific helpers >](105-CumulocityHelper.md) 
+**Note:** Avoid using common id with different type between two input or two output blocks.
